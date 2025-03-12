@@ -4,8 +4,6 @@
 ![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/ranking%20vis.png)
 ![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/det.png)
 
-<iframe src="(https://github.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/blob/main/results/lunar_survival_visualization.html)" width="600" height="400"></iframe>
-
 ## Paired Agent Teams
 
 The system employs a collaborative approach with paired agent teams that work closely together before cross-team integration:
