@@ -1,0 +1,62 @@
+=== Practical Team - Parsed Rankings ===
+
+Rank 1: Box of matches
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 2: Food concentrate
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 3: 50 feet of nylon rope
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 4: Parachute silk
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 5: Portable heating unit
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 6: Two .45 caliber pistols
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 7: One case of dehydrated milk
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 8: Two 100 lb. tanks of oxygen
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 9: Stellar map
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 10: Self-inflating life raft
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 11: Magnetic compass
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 12: 20 liters of water
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 13: Signal flares
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 14: First aid kit, including injection needle
+Justification: No explicit ranking provided
+Confidence: 1
+
+Rank 15: Solar-powered FM receiver-transmitter
+Justification: No explicit ranking provided
+Confidence: 1
+
