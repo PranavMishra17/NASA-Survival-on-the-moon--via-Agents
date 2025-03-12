@@ -1,0 +1,62 @@
+=== Technical Team - Parsed Rankings ===
+
+Rank 1: Two 100 lb. tanks of oxygen
+Justification: Ranked #1 in team consensus
+Confidence: 8
+
+Rank 2: 20 liters of water
+Justification: Ranked #2 in team consensus
+Confidence: 8
+
+Rank 3: Portable heating unit
+Justification: Ranked #3 in team consensus
+Confidence: 8
+
+Rank 4: Solar-powered FM receiver-transmitter
+Justification: Ranked #4 in team consensus
+Confidence: 8
+
+Rank 5: Food concentrate
+Justification: Ranked #5 in team consensus
+Confidence: 8
+
+Rank 6: First aid kit, including injection needle
+Justification: Ranked #6 in team consensus
+Confidence: 8
+
+Rank 7: 50 feet of nylon rope
+Justification: Ranked #7 in team consensus
+Confidence: 8
+
+Rank 8: Stellar map
+Justification: Ranked #8 in team consensus
+Confidence: 8
+
+Rank 9: One case of dehydrated milk
+Justification: Ranked #9 in team consensus
+Confidence: 8
+
+Rank 10: Parachute silk
+Justification: Ranked #10 in team consensus
+Confidence: 8
+
+Rank 11: Self-inflating life raft
+Justification: Ranked #11 in team consensus
+Confidence: 8
+
+Rank 12: Two .45 caliber pistols
+Justification: Ranked #12 in team consensus
+Confidence: 8
+
+Rank 13: Magnetic compass
+Justification: Ranked #13 in team consensus
+Confidence: 8
+
+Rank 14: Signal flares
+Justification: Ranked #14 in team consensus
+Confidence: 8
+
+Rank 15: Box of matches
+Justification: Ranked #15 in team consensus
+Confidence: 8
+

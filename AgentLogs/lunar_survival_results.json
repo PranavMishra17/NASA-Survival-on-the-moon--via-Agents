@@ -1,0 +1,278 @@
+{
+  "final_ranking": [
+    {
+      "rank": 1,
+      "name": "Two 100 lb. tanks of oxygen",
+      "justification": "Ranked #1 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 2,
+      "name": "Portable heating unit",
+      "justification": "Ranked #2 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 3,
+      "name": "20 liters of water",
+      "justification": "Ranked #3 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 4,
+      "name": "Solar-powered FM receiver-transmitter",
+      "justification": "Ranked #4 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 5,
+      "name": "Food concentrate",
+      "justification": "Ranked #5 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 6,
+      "name": "First aid kit, including injection needle",
+      "justification": "Ranked #6 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 7,
+      "name": "50 feet of nylon rope",
+      "justification": "Ranked #7 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 8,
+      "name": "Stellar map",
+      "justification": "Ranked #8 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 9,
+      "name": "One case of dehydrated milk",
+      "justification": "Ranked #9 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 10,
+      "name": "Two .45 caliber pistols",
+      "justification": "Ranked #10 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 11,
+      "name": "Parachute silk",
+      "justification": "Ranked #10 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 12,
+      "name": "Self-inflating life raft",
+      "justification": "Ranked #11 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 13,
+      "name": "Magnetic compass",
+      "justification": "Ranked #13 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 14,
+      "name": "Signal flares",
+      "justification": "Ranked #14 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 15,
+      "name": "Box of matches",
+      "justification": "Ranked #15 in team consensus",
+      "confidence": 8
+    }
+  ],
+  "technical_ranking": [
+    {
+      "rank": 1,
+      "name": "Two 100 lb. tanks of oxygen",
+      "justification": "Ranked #1 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 2,
+      "name": "20 liters of water",
+      "justification": "Ranked #2 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 3,
+      "name": "Portable heating unit",
+      "justification": "Ranked #3 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 4,
+      "name": "Solar-powered FM receiver-transmitter",
+      "justification": "Ranked #4 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 5,
+      "name": "Food concentrate",
+      "justification": "Ranked #5 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 6,
+      "name": "First aid kit, including injection needle",
+      "justification": "Ranked #6 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 7,
+      "name": "50 feet of nylon rope",
+      "justification": "Ranked #7 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 8,
+      "name": "Stellar map",
+      "justification": "Ranked #8 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 9,
+      "name": "One case of dehydrated milk",
+      "justification": "Ranked #9 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 10,
+      "name": "Parachute silk",
+      "justification": "Ranked #10 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 11,
+      "name": "Self-inflating life raft",
+      "justification": "Ranked #11 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 12,
+      "name": "Two .45 caliber pistols",
+      "justification": "Ranked #12 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 13,
+      "name": "Magnetic compass",
+      "justification": "Ranked #13 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 14,
+      "name": "Signal flares",
+      "justification": "Ranked #14 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 15,
+      "name": "Box of matches",
+      "justification": "Ranked #15 in team consensus",
+      "confidence": 8
+    }
+  ],
+  "practical_ranking": [
+    {
+      "rank": 1,
+      "name": "Two 100 lb. tanks of oxygen",
+      "justification": "Ranked #1 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 2,
+      "name": "Portable heating unit",
+      "justification": "Ranked #2 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 3,
+      "name": "20 liters of water",
+      "justification": "Ranked #3 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 4,
+      "name": "Solar-powered FM receiver-transmitter",
+      "justification": "Ranked #4 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 5,
+      "name": "Food concentrate",
+      "justification": "Ranked #5 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 6,
+      "name": "First aid kit, including injection needle",
+      "justification": "Ranked #6 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 7,
+      "name": "50 feet of nylon rope",
+      "justification": "Ranked #7 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 8,
+      "name": "Stellar map",
+      "justification": "Ranked #8 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 9,
+      "name": "One case of dehydrated milk",
+      "justification": "Ranked #9 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 10,
+      "name": "Parachute silk",
+      "justification": "Ranked #10 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 11,
+      "name": "Self-inflating life raft",
+      "justification": "Ranked #11 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 12,
+      "name": "Two .45 caliber pistols",
+      "justification": "Ranked #12 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 13,
+      "name": "Magnetic compass",
+      "justification": "Ranked #13 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 14,
+      "name": "Signal flares",
+      "justification": "Ranked #14 in team consensus",
+      "confidence": 8
+    },
+    {
+      "rank": 15,
+      "name": "Box of matches",
+      "justification": "Ranked #15 in team consensus",
+      "confidence": 8
+    }
+  ]
+}

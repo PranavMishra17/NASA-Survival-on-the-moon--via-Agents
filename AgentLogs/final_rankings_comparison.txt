@@ -1,0 +1,73 @@
+=== Final Rankings vs NASA Comparison ===
+
+TOTAL SCORE: 36 - Category: average
+
+1. Two 100 lb. tanks of oxygen (NASA: 1, Diff: 0)
+2. Portable heating unit (NASA: 13, Diff: 11)
+3. 20 liters of water (NASA: 2, Diff: 1)
+4. Solar-powered FM receiver-transmitter (NASA: 5, Diff: 1)
+5. Food concentrate (NASA: 4, Diff: 1)
+6. First aid kit, including injection needle (NASA: 7, Diff: 1)
+7. 50 feet of nylon rope (NASA: 6, Diff: 1)
+8. Stellar map (NASA: 3, Diff: 5)
+9. One case of dehydrated milk (NASA: 12, Diff: 3)
+10. Two .45 caliber pistols (NASA: 11, Diff: 1)
+11. Parachute silk (NASA: 8, Diff: 3)
+12. Self-inflating life raft (NASA: 9, Diff: 3)
+13. Magnetic compass (NASA: 14, Diff: 1)
+14. Signal flares (NASA: 10, Diff: 4)
+15. Box of matches (NASA: 15, Diff: 0)
+
+
+=== Technical Team Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. 20 liters of water
+3. Portable heating unit
+4. Solar-powered FM receiver-transmitter
+5. Food concentrate
+6. First aid kit, including injection needle
+7. 50 feet of nylon rope
+8. Stellar map
+9. One case of dehydrated milk
+10. Parachute silk
+11. Self-inflating life raft
+12. Two .45 caliber pistols
+13. Magnetic compass
+14. Signal flares
+15. Box of matches
+
+
+=== Practical Team Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. Portable heating unit
+3. 20 liters of water
+4. Solar-powered FM receiver-transmitter
+5. Food concentrate
+6. First aid kit, including injection needle
+7. 50 feet of nylon rope
+8. Stellar map
+9. One case of dehydrated milk
+10. Parachute silk
+11. Self-inflating life raft
+12. Two .45 caliber pistols
+13. Magnetic compass
+14. Signal flares
+15. Box of matches
+
+
+=== Meta Reasoning Final Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. Portable heating unit
+3. 20 liters of water
+4. Solar-powered FM receiver-transmitter
+5. Food concentrate
+6. First aid kit, including injection needle
+7. 50 feet of nylon rope
+8. Stellar map
+9. One case of dehydrated milk
+10. Two .45 caliber pistols
+11. Parachute silk
+12. Self-inflating life raft
+13. Magnetic compass
+14. Signal flares
+15. Box of matches
