@@ -1,0 +1,92 @@
+[
+  {
+    "rank": 1,
+    "name": "Two 100 lb. tanks of oxygen",
+    "justification": "- **Justification**: Oxygen is essential for life. Without it, survival is impossible beyond 3-5 minutes. These tanks ensure a continuous supply for the 200-mile journey.",
+    "confidence": 8
+  },
+  {
+    "rank": 2,
+    "name": "20 liters of water",
+    "justification": "- **Justification**: Water is critical for hydration, physiological functions, and temperature regulation. Dehydration impairs cognitive and physical performance within 24 hours, making water the second most critical resource.",
+    "confidence": 8
+  },
+  {
+    "rank": 3,
+    "name": "Solar-powered FM receiver-transmitter",
+    "justification": "- **Justification**: Communication is vital for navigation, updates, and emergency assistance. The solar-powered design ensures it remains functional during the lunar day.",
+    "confidence": 8
+  },
+  {
+    "rank": 4,
+    "name": "Food concentrate",
+    "justification": "- **Justification**: Compact and nutrient-dense, food concentrate provides the necessary energy for the physically demanding journey. It supports physical and cognitive performance over the multi-day trek.",
+    "confidence": 8
+  },
+  {
+    "rank": 5,
+    "name": "First aid kit, including injection needle",
+    "justification": "- **Justification**: Medical emergencies, such as injuries, dehydration, or radiation exposure, could occur during the journey. The first aid kit is essential for treating these issues and ensuring survival.",
+    "confidence": 8
+  },
+  {
+    "rank": 6,
+    "name": "Stellar map",
+    "justification": "- **Justification**: Navigation is critical for reaching the rendezvous point. The stellar map allows the crew to orient themselves using lunar landmarks and celestial objects, compensating for the lack of GPS or magnetic fields.",
+    "confidence": 8
+  },
+  {
+    "rank": 7,
+    "name": "50 feet of nylon rope",
+    "justification": "- **Justification**: Useful for traversing rough terrain, securing loads, or climbing obstacles. Lightweight and durable, it has multiple survival applications in low gravity.",
+    "confidence": 8
+  },
+  {
+    "rank": 8,
+    "name": "Parachute silk",
+    "justification": "- **Justification**: Multi-purpose and lightweight, parachute silk can be used for insulation, radiation shielding, dust protection, or as a sled for transporting items. Its adaptability makes it valuable.",
+    "confidence": 8
+  },
+  {
+    "rank": 9,
+    "name": "Portable heating unit",
+    "justification": "- **Justification**: Important for maintaining survivable body temperatures in shaded or colder areas, such as craters. Less critical during the lunar day but situationally important for thermal regulation.",
+    "confidence": 8
+  },
+  {
+    "rank": 10,
+    "name": "Signal flares",
+    "justification": "- **Justification**: While ineffective for combustion in the lunar vacuum, signal flares can be repurposed as visual markers or reflectors for signaling the mother ship or marking progress along the route.",
+    "confidence": 8
+  },
+  {
+    "rank": 11,
+    "name": "Self-inflating life raft",
+    "justification": "- **Justification**: Limited utility but could serve as insulation, a cushion, or a sled for transporting heavy items like oxygen tanks. Its bulk and limited adaptability reduce its overall value.",
+    "confidence": 8
+  },
+  {
+    "rank": 12,
+    "name": "Two .45 caliber pistols",
+    "justification": "- **Justification**: Firearms can discharge in a vacuum but have minimal practical use. Could be used for mechanical tasks or signaling via vibrations, but their weight and limited utility make them impractical for the journey.",
+    "confidence": 8
+  },
+  {
+    "rank": 13,
+    "name": "One case of dehydrated milk",
+    "justification": "- **Justification**: Provides nutrition but requires water for rehydration, which is a limited resource. Less efficient than food concentrate and bulky to carry.",
+    "confidence": 8
+  },
+  {
+    "rank": 14,
+    "name": "Magnetic compass",
+    "justification": "- **Justification**: Ineffective on the Moon due to the lack of a global magnetic field. Stellar maps are far more reliable for navigation.",
+    "confidence": 8
+  },
+  {
+    "rank": 15,
+    "name": "Box of matches",
+    "justification": "- **Justification**: Completely useless in the Moon's vacuum, as combustion cannot occur without oxygen. Matches have no practical application in this environment.",
+    "confidence": 8
+  }
+]

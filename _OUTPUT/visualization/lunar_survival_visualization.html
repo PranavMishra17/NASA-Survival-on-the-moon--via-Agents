@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar Survival Challenge Results</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --danger-color: #c0392b;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --space-color: #1a1a2e;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--space-color);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1528158476866-e0c59da32c67');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-box {
+            background-color: var(--light-color);
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .score-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .score-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        
+        .score-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .score-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 15px 0;
+            color: var(--accent-color);
+        }
+        
+        .score-category {
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .category-excellent { background-color: #d5f5e3; color: #27ae60; }
+        .category-good { background-color: #e8f8f5; color: #16a085; }
+        .category-average { background-color: #fef9e7; color: #f1c40f; }
+        .category-fair { background-color: #fae5d3; color: #e67e22; }
+        .category-poor { background-color: #fadbd8; color: #e74c3c; }
+        .category-very-poor { background-color: #f5b7b1; color: #c0392b; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .difference-column {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .difference-low { color: var(--success-color); }
+        .difference-medium { color: var(--warning-color); }
+        .difference-high { color: var(--danger-color); }
+        
+        .chart-container {
+            height: 500px;
+            margin-bottom: 40px;
+        }
+        
+        .ranking-bar {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        
+        .ranking-bar-label {
+            width: 300px;
+            text-align: right;
+            padding-right: 15px;
+            font-weight: 500;
+        }
+        
+        .ranking-bar-track {
+            flex-grow: 1;
+            height: 25px;
+            background-color: #ecf0f1;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .ranking-bar-fill-our {
+            height: 100%;
+            background-color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            border-radius: 4px;
+        }
+        
+        .ranking-bar-fill-nasa {
+            height: 100%;
+            background-color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            border-radius: 4px;
+        }
+        
+        .ranking-bar-marker-our {
+            position: absolute;
+            width: 4px;
+            height: 25px;
+            background-color: var(--secondary-color);
+            top: 0;
+        }
+        
+        .ranking-bar-marker-nasa {
+            position: absolute;
+            width: 4px;
+            height: 25px;
+            background-color: var(--accent-color);
+            top: 0;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        
+        .legend-color-our { background-color: var(--secondary-color); }
+        .legend-color-nasa { background-color: var(--accent-color); }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .ranking-bar-label {
+                width: 200px;
+            }
+            
+            .score-card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lunar Survival Challenge Results</h1>
+    </header>
+    
+    <main>
+        <div class="card">
+            <h2>Executive Summary</h2>
+            <div class="summary-box">
+                <p>This analysis compares the multi-agent system's ranking of lunar survival items against NASA's official ranking. The system integrated technical and practical perspectives to evaluate the importance of different items for survival during a 200-mile trek on the lunar surface after a crash landing.</p>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-card">
+                    <h3>Total Score</h3>
+                    <div class="score-value">14</div>
+                    <p>Sum of ranking differences</p>
+                </div>
+                <div class="score-card">
+                    <h3>Performance</h3>
+                    <div class="score-category category-excellent">EXCELLENT</div>
+                    <p>Score indicates excellent understanding</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Ranking Visualization</h2>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color legend-color-our"></div>
+                    <span>Our Ranking</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color legend-color-nasa"></div>
+                    <span>NASA Ranking</span>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                
+                <!-- Item 1 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Two 100 lb. tanks of oxygen</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 100.0%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 100.0%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 100.0%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 100.0%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 2 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">20 liters of water</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 92.85714285714286%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 92.85714285714286%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 92.85714285714286%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 92.85714285714286%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 3 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Solar-powered FM receiver-transmitter</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 85.71428571428571%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 71.42857142857143%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 85.71428571428571%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 71.42857142857143%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 4 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Stellar map</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 78.57142857142857%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 85.71428571428571%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 78.57142857142857%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 85.71428571428571%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 5 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Food concentrate</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 71.42857142857143%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 78.57142857142857%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 71.42857142857143%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 78.57142857142857%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 6 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">First aid kit, including injection needle</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 64.28571428571429%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 57.14285714285714%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 64.28571428571429%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 57.14285714285714%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 7 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">50 feet of nylon rope</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 57.14285714285714%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 64.28571428571429%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 57.14285714285714%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 64.28571428571429%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 8 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Parachute silk</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 50.0%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 50.0%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 50.0%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 50.0%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 9 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Portable heating unit</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 42.857142857142854%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 14.285714285714285%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 42.857142857142854%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 14.285714285714285%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 10 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Signal flares</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 35.714285714285715%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 35.714285714285715%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 35.714285714285715%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 35.714285714285715%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 11 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Self-inflating life raft</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 28.57142857142857%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 42.857142857142854%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 28.57142857142857%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 42.857142857142854%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 12 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Two .45 caliber pistols</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 21.428571428571427%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 28.57142857142857%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 21.428571428571427%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 28.57142857142857%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 13 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">One case of dehydrated milk</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 14.285714285714285%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 21.428571428571427%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 14.285714285714285%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 21.428571428571427%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 14 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Magnetic compass</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 7.142857142857142%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 7.142857142857142%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 7.142857142857142%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 7.142857142857142%"></div>
+                    </div>
+                </div>
+        
+                <!-- Item 15 -->
+                <div class="ranking-bar">
+                    <div class="ranking-bar-label">Box of matches</div>
+                    <div class="ranking-bar-track">
+                        <div class="ranking-bar-fill-our" style="width: 0.0%"></div>
+                        <div class="ranking-bar-fill-nasa" style="width: 0.0%"></div>
+                        <div class="ranking-bar-marker-our" style="left: 0.0%"></div>
+                        <div class="ranking-bar-marker-nasa" style="left: 0.0%"></div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Detailed Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Our Rank</th>
+                        <th>Item</th>
+                        <th>NASA Rank</th>
+                        <th>Difference</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>Two 100 lb. tanks of oxygen</td>
+                        <td>1</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>2</td>
+                        <td>20 liters of water</td>
+                        <td>2</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>3</td>
+                        <td>Solar-powered FM receiver-transmitter</td>
+                        <td>5</td>
+                        <td class="difference-column difference-low">2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>4</td>
+                        <td>Stellar map</td>
+                        <td>3</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>5</td>
+                        <td>Food concentrate</td>
+                        <td>4</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>6</td>
+                        <td>First aid kit, including injection needle</td>
+                        <td>7</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>7</td>
+                        <td>50 feet of nylon rope</td>
+                        <td>6</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>8</td>
+                        <td>Parachute silk</td>
+                        <td>8</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>9</td>
+                        <td>Portable heating unit</td>
+                        <td>13</td>
+                        <td class="difference-column difference-low">4</td>
+                    </tr>
+        
+                    <tr>
+                        <td>10</td>
+                        <td>Signal flares</td>
+                        <td>10</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>11</td>
+                        <td>Self-inflating life raft</td>
+                        <td>9</td>
+                        <td class="difference-column difference-low">2</td>
+                    </tr>
+        
+                    <tr>
+                        <td>12</td>
+                        <td>Two .45 caliber pistols</td>
+                        <td>11</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>13</td>
+                        <td>One case of dehydrated milk</td>
+                        <td>12</td>
+                        <td class="difference-column difference-low">1</td>
+                    </tr>
+        
+                    <tr>
+                        <td>14</td>
+                        <td>Magnetic compass</td>
+                        <td>14</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                    <tr>
+                        <td>15</td>
+                        <td>Box of matches</td>
+                        <td>15</td>
+                        <td class="difference-column difference-low">0</td>
+                    </tr>
+        
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Key Discrepancies</h2>
+            <div class="summary-box">
+                <p>The most significant discrepancies between our ranking and NASA's ranking are:</p>
+                <ul>
+                    
+                </ul>
+                <p>These discrepancies suggest that our multi-agent system failed to properly understand the lunar environment's unique challenges, particularly the need for oxygen and water, while overvaluing items that would be useless on the Moon (like matches).</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>NASA's Correct Ranking</h2>
+            <ol>
+                                <li>Two 100 lb. tanks of oxygen</li>
+                <li>20 liters of water</li>
+                <li>Stellar map</li>
+                <li>Food concentrate</li>
+                <li>Solar-powered FM receiver-transmitter</li>
+                <li>50 feet of nylon rope</li>
+                <li>First aid kit, including injection needle</li>
+                <li>Parachute silk</li>
+                <li>Self-inflating life raft</li>
+                <li>Signal flares</li>
+                <li>Two .45 caliber pistols</li>
+                <li>One case of dehydrated milk</li>
+                <li>Portable heating unit</li>
+                <li>Magnetic compass</li>
+                <li>Box of matches</li>
+
+            </ol>
+            <p>NASA's rationale: The top priorities are items that address the absolute necessities for survival in the lunar environment: oxygen, water, navigation, and food. These are followed by items that help with mobility and emergency situations. The lowest ranked items are those that serve no purpose in the vacuum environment of the Moon.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Lunar Survival Challenge Analysis | Generated on March 14, 2025</p>
+    </footer>
+</body>
+</html>

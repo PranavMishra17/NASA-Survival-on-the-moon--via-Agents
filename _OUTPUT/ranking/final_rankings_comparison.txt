@@ -1,0 +1,73 @@
+=== Final Rankings vs NASA Comparison ===
+
+TOTAL SCORE: 14 - Category: excellent
+
+1. Two 100 lb. tanks of oxygen (NASA: 1, Diff: 0)
+2. 20 liters of water (NASA: 2, Diff: 0)
+3. Solar-powered FM receiver-transmitter (NASA: 5, Diff: 2)
+4. Stellar map (NASA: 3, Diff: 1)
+5. Food concentrate (NASA: 4, Diff: 1)
+6. First aid kit, including injection needle (NASA: 7, Diff: 1)
+7. 50 feet of nylon rope (NASA: 6, Diff: 1)
+8. Parachute silk (NASA: 8, Diff: 0)
+9. Portable heating unit (NASA: 13, Diff: 4)
+10. Signal flares (NASA: 10, Diff: 0)
+11. Self-inflating life raft (NASA: 9, Diff: 2)
+12. Two .45 caliber pistols (NASA: 11, Diff: 1)
+13. One case of dehydrated milk (NASA: 12, Diff: 1)
+14. Magnetic compass (NASA: 14, Diff: 0)
+15. Box of matches (NASA: 15, Diff: 0)
+
+
+=== Technical Team Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. 20 liters of water
+3. Solar-powered FM receiver-transmitter
+4. Food concentrate
+5. First aid kit, including injection needle
+6. Stellar map
+7. 50 feet of nylon rope
+8. Parachute silk
+9. Portable heating unit
+10. Signal flares
+11. Self-inflating life raft
+12. Two .45 caliber pistols
+13. One case of dehydrated milk
+14. Magnetic compass
+15. Box of matches
+
+
+=== Practical Team Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. 20 liters of water
+3. Solar-powered FM receiver-transmitter
+4. Food concentrate
+5. First aid kit, including injection needle
+6. Stellar map
+7. 50 feet of nylon rope
+8. Parachute silk
+9. Portable heating unit
+10. Signal flares
+11. Self-inflating life raft
+12. Two .45 caliber pistols
+13. One case of dehydrated milk
+14. Magnetic compass
+15. Box of matches
+
+
+=== Meta Reasoning Final Ranking ===
+1. Two 100 lb. tanks of oxygen
+2. 20 liters of water
+3. Solar-powered FM receiver-transmitter
+4. Stellar map
+5. Food concentrate
+6. First aid kit, including injection needle
+7. 50 feet of nylon rope
+8. Parachute silk
+9. Portable heating unit
+10. Signal flares
+11. Self-inflating life raft
+12. Two .45 caliber pistols
+13. One case of dehydrated milk
+14. Magnetic compass
+15. Box of matches
