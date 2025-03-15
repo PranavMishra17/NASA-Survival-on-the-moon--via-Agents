@@ -1,6 +1,6 @@
 # Lunar Survival Challenge: Collaborative Agent Architecture
 
-![Score](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/lunar%20results.png)
+![Score](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/arch.png?token=GHSAT0AAAAAAC6BV6HIF4QPZZO7NPKQ4MQAZ6VA5PQ)
 ![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/ranking%20vis.png)
 ![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/det.png)
 
