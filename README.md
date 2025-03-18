@@ -1,12 +1,12 @@
 # Lunar Survival Challenge: Collaborative Agent Architecture
 
-![Score](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/arch.png?token=GHSAT0AAAAAAC6BV6HIF4QPZZO7NPKQ4MQAZ6VA5PQ)
-![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/ranking%20vis.png)
-![View my HTML page](https://raw.githubusercontent.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/refs/heads/main/det.png)
+![Architecture](https://github.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/blob/47df41cb86326c0bf37d893a79cd1439c6bee4ad/arch.png)
 
 ## Paired Agent Teams
 
 The system employs a collaborative approach with paired agent teams that work closely together before cross-team integration:
+
+![Score](https://github.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/blob/47df41cb86326c0bf37d893a79cd1439c6bee4ad/image_2025-03-18_185135062.png)
 
 ### Knowledge Acquisition Agents
 
@@ -73,6 +73,9 @@ The system employs a collaborative approach with paired agent teams that work cl
 - **Input**: Technical and Practical team rankings with justifications
 - **Process**: Holistic consideration of all perspectives
 - **Output**: Final consensus ranking with comprehensive justifications
+
+![Rank table](https://github.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/blob/47df41cb86326c0bf37d893a79cd1439c6bee4ad/image_2025-03-18_185112195.png)
+![Rank viz](https://github.com/PranavMishra17/NASA-Survival-on-the-moon--via-Agents/blob/47df41cb86326c0bf37d893a79cd1439c6bee4ad/image_2025-03-18_185149938.png)
 
 ## Collaborative Reasoning Framework
 
