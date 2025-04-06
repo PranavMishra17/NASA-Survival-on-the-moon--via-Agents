@@ -1,0 +1,10 @@
+2025-04-06 15:15:21,921 - simulation.sim_20250406_151520 - INFO - Initialized simulation sim_20250406_151520
+2025-04-06 15:15:21,921 - simulation.sim_20250406_151520 - INFO -   Team Leadership: False
+2025-04-06 15:15:21,921 - simulation.sim_20250406_151520 - INFO -   Closed-loop Communication: False
+2025-04-06 15:15:21,921 - simulation.sim_20250406_151520 - INFO - Starting collaborative round
+2025-04-06 15:15:21,922 - simulation.sim_20250406_151520 - INFO - Step 1: Team member performs initial analysis
+2025-04-06 15:15:32,914 - simulation.sim_20250406_151520 - INFO - Step 2: Team leader initiates discussion
+2025-04-06 15:15:51,832 - simulation.sim_20250406_151520 - INFO - Step 3: Synthesize rankings
+2025-04-06 15:15:51,833 - simulation.sim_20250406_151520 - INFO - No team leadership - using average of individual rankings
+2025-04-06 15:15:51,833 - simulation.sim_20250406_151520 - INFO - Collaborative round completed with score: 82
+2025-04-06 15:15:51,833 - simulation.sim_20250406_151520 - INFO - Starting adversarial round

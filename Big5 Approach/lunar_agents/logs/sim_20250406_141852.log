@@ -1,0 +1,16 @@
+2025-04-06 14:18:53,747 - simulation.sim_20250406_141852 - INFO - Initialized simulation sim_20250406_141852
+2025-04-06 14:18:53,747 - simulation.sim_20250406_141852 - INFO -   Team Leadership: False
+2025-04-06 14:18:53,747 - simulation.sim_20250406_141852 - INFO -   Closed-loop Communication: False
+2025-04-06 14:18:53,747 - simulation.sim_20250406_141852 - INFO - Starting collaborative round
+2025-04-06 14:18:53,747 - simulation.sim_20250406_141852 - INFO - Step 1: Team member performs initial analysis
+2025-04-06 14:19:04,023 - simulation.sim_20250406_141852 - INFO - Step 2: Team leader initiates discussion
+2025-04-06 14:19:22,469 - simulation.sim_20250406_141852 - INFO - Step 3: Synthesize rankings
+2025-04-06 14:19:22,469 - simulation.sim_20250406_141852 - INFO - No team leadership - using average of individual rankings
+2025-04-06 14:19:22,469 - simulation.sim_20250406_141852 - INFO - Collaborative round completed with score: 26
+2025-04-06 14:19:22,470 - simulation.sim_20250406_141852 - INFO - Starting adversarial round
+2025-04-06 14:19:22,470 - simulation.sim_20250406_141852 - INFO - Step 1: Agents create individual rankings
+2025-04-06 14:19:39,477 - simulation.sim_20250406_141852 - INFO - Step 2: Adversarial discussion
+2025-04-06 14:20:15,822 - simulation.sim_20250406_141852 - INFO - Step 3: Reach final ranking
+2025-04-06 14:20:15,823 - simulation.sim_20250406_141852 - INFO - No team leadership - using average of individual rankings
+2025-04-06 14:20:15,823 - simulation.sim_20250406_141852 - INFO - Adversarial round completed with score: 20
+2025-04-06 14:20:15,826 - simulation.sim_20250406_141852 - INFO - Results saved to output\sim_20250406_141852_results.json
