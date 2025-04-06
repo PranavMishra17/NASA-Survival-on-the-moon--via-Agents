@@ -1,0 +1,35 @@
+2025-04-06 19:25:57,444 - simulation.sim_baseline_20250406_192557 - INFO - Event logged: simulation_started
+2025-04-06 19:25:57,445 - simulation.sim_baseline_20250406_192557 - INFO - SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:25:58,366 - simulation.sim_baseline_20250406_192557 - INFO - Initialized simulation sim_baseline_20250406_192557
+2025-04-06 19:25:58,366 - simulation.sim_baseline_20250406_192557 - INFO -   Team Leadership: False
+2025-04-06 19:25:58,368 - simulation.sim_baseline_20250406_192557 - INFO -   Closed-loop Communication: False
+2025-04-06 19:25:58,368 - simulation.sim_baseline_20250406_192557 - INFO - Starting collaborative round
+2025-04-06 19:25:58,378 - simulation.sim_baseline_20250406_192557 - INFO - Event logged: simulation_started
+2025-04-06 19:25:58,379 - simulation.sim_baseline_20250406_192557 - INFO - SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:26:15,065 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - initial_analysis - member
+2025-04-06 19:26:24,444 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - leader_discussion - leader
+2025-04-06 19:26:35,849 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - member_response - member
+2025-04-06 19:26:44,843 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_1 - leader
+2025-04-06 19:27:05,720 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_1 - member
+2025-04-06 19:27:14,942 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_2 - leader
+2025-04-06 19:27:41,566 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_2 - member
+2025-04-06 19:27:54,851 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_3 - leader
+2025-04-06 19:28:12,652 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: collaborative - discussion_round_3 - member
+2025-04-06 19:28:12,652 - simulation.sim_baseline_20250406_192557 - INFO - No team leadership - using average of individual rankings
+2025-04-06 19:28:12,652 - simulation.sim_baseline_20250406_192557 - INFO - Collaborative round completed with score: 88
+2025-04-06 19:28:12,653 - simulation.sim_baseline_20250406_192557 - INFO - Starting adversarial round
+2025-04-06 19:28:12,662 - simulation.sim_baseline_20250406_192557 - INFO - Event logged: simulation_started
+2025-04-06 19:28:12,662 - simulation.sim_baseline_20250406_192557 - INFO - SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:28:21,457 - simulation.sim_baseline_20250406_192557 - INFO - Team Leader created initial ranking
+2025-04-06 19:28:29,553 - simulation.sim_baseline_20250406_192557 - INFO - Science Analyst created initial ranking
+2025-04-06 19:28:29,555 - simulation.sim_baseline_20250406_192557 - INFO - Debating item: Stellar map
+2025-04-06 19:28:41,216 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Stellar map_challenge - leader
+2025-04-06 19:29:04,560 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Stellar map_defense - member
+2025-04-06 19:29:14,548 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Stellar map_response - leader
+2025-04-06 19:29:14,549 - simulation.sim_baseline_20250406_192557 - INFO - Debating item: Signal flares
+2025-04-06 19:29:27,042 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Signal flares_challenge - leader
+2025-04-06 19:29:45,098 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Signal flares_defense - member
+2025-04-06 19:29:56,535 - simulation.sim_baseline_20250406_192557 - INFO - Main loop: adversarial - debate_Signal flares_response - leader
+2025-04-06 19:29:56,536 - simulation.sim_baseline_20250406_192557 - INFO - No team leadership - averaging rankings with debate adjustments
+2025-04-06 19:29:56,537 - simulation.sim_baseline_20250406_192557 - INFO - Adversarial round completed with score: 20
+2025-04-06 19:29:56,552 - simulation.sim_baseline_20250406_192557 - INFO - Results saved to output\sim_baseline_20250406_192557_results.json

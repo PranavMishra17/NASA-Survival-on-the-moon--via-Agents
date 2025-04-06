@@ -85,37 +85,69 @@ class LunarSurvivalSimulator:
         # Add the handler to the logger
         self.logger.addHandler(file_handler)
     
-    def run_collaborative_round(self) -> Dict[str, Any]:
-        """
-        Run a collaborative round where agents work together on ranking.
-        
-        Returns:
-            Dictionary with the round results
-        """
+    def run_collaborative_round(self):
+        """Run a collaborative round where agents work together on ranking."""
         self.logger.info("Starting collaborative round")
+        
+        logger = SimulationLogger(
+            self.simulation_id,
+            config.LOG_DIR,
+            self.config
+        )
         
         round_results = {
             "type": "collaborative",
             "exchanges": []
         }
         
-        # Step 1: Team member performs initial analysis
-        self.logger.info("Step 1: Team member performs initial analysis")
-        team_member_analysis = self.team_member.analyze_items()
-        team_member_ranking = self.team_member.get_item_ranking(team_member_analysis)
+        # Step 1: Team leader defines the task if leadership is enabled
+        if self.use_team_leadership:
+            task_definition = self.team_leader.define_task(
+                "Rank the lunar survival items for our 200-mile trek to the rendezvous point"
+            )
+            
+            logger.log_leader_action(
+                "task_definition",
+                task_definition
+            )
+            
+            logger.log_main_loop(
+                "collaborative",
+                "setup",
+                "leader",
+                task_definition
+            )
         
-        # Step 2: Team leader initiates discussion
-        self.logger.info("Step 2: Team leader initiates discussion")
+        # Step 2: Team member performs initial analysis
+        member_analysis = self.team_member.analyze_items()
+        member_ranking = self.team_member.get_item_ranking(member_analysis)
+        
+        logger.log_main_loop(
+            "collaborative",
+            "initial_analysis",
+            "member",
+            member_analysis
+        )
+        
+        # Step 3: Team leader initiates discussion
         if self.use_closed_loop_comm:
-            leader_prompt = f"""
-            As Team Leader, initiate a discussion about ranking the lunar survival items. 
-            Review the list of items and provide your initial thoughts on how they should be ranked.
+            # Use closed-loop communication protocol
+            leader_prompt = """
+            As Team Leader, initiate discussion about ranking the lunar survival items. 
+            Review the list and provide your initial thoughts on how they should be ranked.
             """
             
             exchange = self.comm_handler.facilitate_exchange(
                 self.team_leader, 
                 self.team_member,
                 leader_prompt
+            )
+            
+            logger.log_closed_loop(
+                "leader",
+                exchange[0],
+                exchange[1],
+                exchange[2]
             )
             
             round_results["exchanges"].append({
@@ -128,10 +160,17 @@ class LunarSurvivalSimulator:
             
             # Extract leader's ranking from their message
             leader_ranking = self.team_leader.get_item_ranking(exchange[0])
-            
         else:
+            # Standard communication
             leader_discussion = self.team_leader.lead_discussion(
                 "Ranking the lunar survival items for our 200-mile trek to the rendezvous point."
+            )
+            
+            logger.log_main_loop(
+                "collaborative",
+                "leader_discussion",
+                "leader",
+                leader_discussion
             )
             
             round_results["exchanges"].append({
@@ -143,6 +182,13 @@ class LunarSurvivalSimulator:
             # Team member responds to leader
             member_response = self.team_member.respond_to_leader(leader_discussion)
             
+            logger.log_main_loop(
+                "collaborative",
+                "member_response",
+                "member",
+                member_response
+            )
+            
             round_results["exchanges"].append({
                 "type": "standard",
                 "role": "member",
@@ -151,14 +197,76 @@ class LunarSurvivalSimulator:
             
             # Extract rankings
             leader_ranking = self.team_leader.get_item_ranking(leader_discussion)
-            team_member_ranking = self.team_member.get_item_ranking(member_response)
+            member_ranking = self.team_member.get_item_ranking(member_response)
         
-        # Step 3: Synthesize rankings
-        self.logger.info("Step 3: Synthesize rankings")
+        # Step 4: Facilitate back-and-forth discussion (multiple exchanges)
+        # Allow up to 3 rounds of discussion
+        if not self.use_closed_loop_comm:
+            for i in range(3):
+                # Leader responds to member's last message
+                last_member_message = round_results["exchanges"][-1]["message"]
+                
+                leader_prompt = f"""
+                Continue our discussion about ranking the lunar survival items.
+                Respond to the Science Analyst's points: "{last_member_message[:200]}..."
+                Focus on areas where we might disagree and work toward consensus.
+                """
+                
+                leader_response = self.team_leader.chat(leader_prompt)
+                
+                logger.log_main_loop(
+                    "collaborative",
+                    f"discussion_round_{i+1}",
+                    "leader",
+                    leader_response
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "standard",
+                    "role": "leader",
+                    "message": leader_response
+                })
+                
+                # Member responds to leader
+                member_prompt = f"""
+                Continue our discussion about ranking the lunar survival items.
+                Respond to the Team Leader's points: "{leader_response[:200]}..."
+                Focus on scientific facts about the lunar environment and work toward consensus.
+                """
+                
+                member_response = self.team_member.chat(member_prompt)
+                
+                logger.log_main_loop(
+                    "collaborative",
+                    f"discussion_round_{i+1}",
+                    "member",
+                    member_response
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "standard",
+                    "role": "member",
+                    "message": member_response
+                })
+        
+        # Step 5: Synthesize rankings
         if self.use_team_leadership:
             # Team leader synthesizes the rankings
             final_synthesis = self.team_leader.synthesize_rankings(
-                team_member_ranking, leader_ranking
+                member_ranking, leader_ranking
+            )
+            
+            logger.log_leader_action(
+                "final_synthesis",
+                final_synthesis,
+                {"final_ranking": self.team_leader.get_item_ranking(final_synthesis)}
+            )
+            
+            logger.log_main_loop(
+                "collaborative",
+                "final_synthesis",
+                "leader",
+                final_synthesis
             )
             
             round_results["exchanges"].append({
@@ -172,7 +280,7 @@ class LunarSurvivalSimulator:
         else:
             # Without team leadership, take the average ranking
             self.logger.info("No team leadership - using average of individual rankings")
-            final_ranking = self._average_rankings([leader_ranking, team_member_ranking])
+            final_ranking = self._average_rankings([leader_ranking, member_ranking])
             
             round_results["exchanges"].append({
                 "type": "system",
@@ -192,48 +300,255 @@ class LunarSurvivalSimulator:
         self.results["score"] = score
         
         return round_results
-    
-    def run_adversarial_round(self) -> Dict[str, Any]:
-        """
-        Run an adversarial round where agents defend their individual rankings.
-        
-        Returns:
-            Dictionary with the round results
-        """
+            
+    def run_adversarial_round(self):
+        """Run an adversarial round where agents debate their rankings."""
         self.logger.info("Starting adversarial round")
+        
+        logger = SimulationLogger(
+            self.simulation_id,
+            config.LOG_DIR,
+            self.config
+        )
         
         round_results = {
             "type": "adversarial",
-            "exchanges": [],
-            "configuration": {
-                "leadership": self.use_team_leadership,
-                "closed_loop": self.use_closed_loop_comm
-            }
+            "exchanges": []
         }
         
-        # Create initial rankings separately, then debate differences
+        # Step 1: Both agents create initial rankings
         leader_ranking = self._get_leader_initial_ranking()
         member_ranking = self._get_member_initial_ranking()
         
-        # Identify key disagreements
+        # Step 2: Team leader documents the initial rankings if leadership is enabled
+        if self.use_team_leadership:
+            documentation = self.team_leader.document_agent_capabilities(
+                f"Team Leader ranking: {leader_ranking}\nScience Analyst ranking: {member_ranking}"
+            )
+            
+            logger.log_leader_action(
+                "document_rankings",
+                documentation
+            )
+        
+        # Step 3: Identify key disagreements
         disagreements = self._identify_ranking_disagreements(leader_ranking, member_ranking)
         
-        # Debate each disagreement
+        # Step 4: Debate each disagreement
         for item, positions in disagreements.items():
-            # Structured debate on this specific item
-            debate_result = self._debate_item_ranking(item, positions["leader"], positions["member"])
+            self.logger.info(f"Debating item: {item}")
             
-            # Add complete exchange to results
+            if self.use_closed_loop_comm:
+                # Closed-loop communication for debate
+                challenge_prompt = f"""
+                As Team Leader, debate the ranking of '{item}'. 
+                You ranked it at position #{positions['leader']}, while the Science Analyst ranked it at #{positions['member']}.
+                Explain why your ranking is more appropriate, using clear reasoning.
+                """
+                
+                exchange = self.comm_handler.facilitate_exchange(
+                    self.team_leader,
+                    self.team_member,
+                    challenge_prompt
+                )
+                
+                logger.log_closed_loop(
+                    "leader",
+                    exchange[0],
+                    exchange[1],
+                    exchange[2]
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "closed_loop",
+                    "item": item,
+                    "sender": "leader",
+                    "initial_message": exchange[0],
+                    "acknowledgment": exchange[1],
+                    "verification": exchange[2]
+                })
+                
+                # Member counter-challenges
+                counter_challenge_prompt = f"""
+                As Science Analyst, debate the ranking of '{item}'. 
+                You ranked it at position #{positions['member']}, while the Team Leader ranked it at #{positions['leader']}.
+                Defend your position with scientific facts about the lunar environment.
+                """
+                
+                exchange = self.comm_handler.facilitate_exchange(
+                    self.team_member,
+                    self.team_leader,
+                    counter_challenge_prompt
+                )
+                
+                logger.log_closed_loop(
+                    "member",
+                    exchange[0],
+                    exchange[1],
+                    exchange[2]
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "closed_loop",
+                    "item": item,
+                    "sender": "member",
+                    "initial_message": exchange[0],
+                    "acknowledgment": exchange[1],
+                    "verification": exchange[2]
+                })
+            else:
+                # Standard debate
+                # Leader challenges member's ranking
+                challenge_prompt = f"""
+                As Team Leader, debate the ranking of '{item}'. 
+                You ranked it at position #{positions['leader']}, while the Science Analyst ranked it at #{positions['member']}.
+                Explain why your ranking is more appropriate, using clear reasoning.
+                """
+                
+                leader_challenge = self.team_leader.chat(challenge_prompt)
+                
+                logger.log_main_loop(
+                    "adversarial",
+                    f"debate_{item}_challenge",
+                    "leader",
+                    leader_challenge
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "standard",
+                    "item": item,
+                    "role": "leader",
+                    "message": leader_challenge
+                })
+                
+                # Member defends position
+                defense_prompt = f"""
+                The Team Leader has challenged your ranking of '{item}':
+                
+                "{leader_challenge}"
+                
+                Defend your position with scientific facts about the lunar environment.
+                Explain why you ranked it at position #{positions['member']} instead of #{positions['leader']}.
+                """
+                
+                member_defense = self.team_member.chat(defense_prompt)
+                
+                logger.log_main_loop(
+                    "adversarial",
+                    f"debate_{item}_defense",
+                    "member",
+                    member_defense
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "standard",
+                    "item": item,
+                    "role": "member",
+                    "message": member_defense
+                })
+                
+                # Leader responds to defense
+                response_prompt = f"""
+                The Science Analyst has defended their ranking of '{item}':
+                
+                "{member_defense}"
+                
+                Respond to their defense and suggest a compromise position for this item.
+                Be specific about where this item should be ranked in the final list.
+                """
+                
+                leader_response = self.team_leader.chat(response_prompt)
+                
+                logger.log_main_loop(
+                    "adversarial",
+                    f"debate_{item}_response",
+                    "leader",
+                    leader_response
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "standard",
+                    "item": item,
+                    "role": "leader",
+                    "message": leader_response
+                })
+        
+        # Step 5: Create final consensus ranking
+        if self.use_team_leadership:
+            final_prompt = f"""
+            As Team Leader, after our debates about specific items, create a final consensus ranking
+            that incorporates valid points from both perspectives.
+            
+            IMPORTANT: 
+            1. Your final list must include ALL 15 items exactly ONCE
+            2. The items must be from this list: {', '.join(config.LUNAR_ITEMS)}
+            3. Double-check for any duplicates or missing items
+            
+            Present your final numbered ranking from 1 to 15 with brief justifications.
+            """
+            
+            final_decision = self.team_leader.chat(final_prompt)
+            
+            logger.log_leader_action(
+                "adversarial_final_decision",
+                final_decision,
+                {"final_ranking": self.team_leader.get_item_ranking(final_decision)}
+            )
+            
+            logger.log_main_loop(
+                "adversarial",
+                "final_decision",
+                "leader",
+                final_decision
+            )
+            
             round_results["exchanges"].append({
-                "item": item,
-                "leader_position": positions["leader"],
-                "member_position": positions["member"],
-                "debate": debate_result,
-                "resolution": self._resolve_item_debate(item, debate_result)
+                "type": "standard",
+                "role": "leader",
+                "message": final_decision
+            })
+            
+            final_ranking = self.team_leader.get_item_ranking(final_decision)
+        else:
+            # Without leadership, average rankings with adjustments from debates
+            self.logger.info("No team leadership - averaging rankings with debate adjustments")
+            
+            # Apply debate adjustments
+            adjusted_leader_ranking = leader_ranking.copy()
+            adjusted_member_ranking = member_ranking.copy()
+            
+            # Simple adjustment based on debates
+            for exchange in round_results["exchanges"]:
+                if "item" in exchange:
+                    item = exchange["item"]
+                    # Move the rankings slightly closer together
+                    try:
+                        leader_idx = adjusted_leader_ranking.index(item)
+                        member_idx = adjusted_member_ranking.index(item)
+                        
+                        if abs(leader_idx - member_idx) > 3:
+                            # Move rankings closer by 1 position
+                            if leader_idx < member_idx:
+                                adjusted_leader_ranking.remove(item)
+                                adjusted_leader_ranking.insert(leader_idx + 1, item)
+                                adjusted_member_ranking.remove(item)
+                                adjusted_member_ranking.insert(member_idx - 1, item)
+                            else:
+                                adjusted_leader_ranking.remove(item)
+                                adjusted_leader_ranking.insert(leader_idx - 1, item)
+                                adjusted_member_ranking.remove(item)
+                                adjusted_member_ranking.insert(member_idx + 1, item)
+                    except ValueError:
+                        pass
+            
+            final_ranking = self._average_rankings([adjusted_leader_ranking, adjusted_member_ranking])
+            
+            round_results["exchanges"].append({
+                "type": "system",
+                "message": "Final ranking determined by averaging individual rankings with debate adjustments"
             })
         
-        # Final resolution
-        final_ranking = self._resolve_all_debates(round_results["exchanges"])
+        # Store final ranking
         round_results["final_ranking"] = final_ranking
         
         # Calculate score
@@ -245,8 +560,9 @@ class LunarSurvivalSimulator:
         self.results["final_ranking"] = final_ranking
         self.results["score"] = score
         
-        return round_results
-    
+        return round_results    
+
+
     def save_results(self) -> str:
         """
         Save simulation results to file.
@@ -322,7 +638,7 @@ class LunarSurvivalSimulator:
         
         return "\n".join(formatted)
     
-    def _get_leader_initial_ranking(self) -> List[str]:
+    def _get_leader_initial_ranking(self):
         """Get the team leader's initial ranking of items."""
         prompt = """
         As Team Leader, create a ranking of the lunar survival items based on your knowledge and expertise.
@@ -331,9 +647,10 @@ class LunarSurvivalSimulator:
         """
         
         leader_analysis = self.team_leader.chat(prompt)
+        self.logger.info("Team Leader created initial ranking")
         return self.team_leader.get_item_ranking(leader_analysis)
 
-    def _get_member_initial_ranking(self) -> List[str]:
+    def _get_member_initial_ranking(self):
         """Get the team member's initial ranking of items."""
         prompt = """
         As Science Analyst, create a ranking of the lunar survival items based on your scientific knowledge.
@@ -342,38 +659,36 @@ class LunarSurvivalSimulator:
         """
         
         member_analysis = self.team_member.chat(prompt)
+        self.logger.info("Science Analyst created initial ranking")
         return self.team_member.get_item_ranking(member_analysis)
 
-    def _identify_ranking_disagreements(self, leader_ranking: List[str], member_ranking: List[str]) -> Dict[str, Dict[int, int]]:
+    def _identify_ranking_disagreements(self, leader_ranking, member_ranking):
         """Identify disagreements between leader and member rankings."""
         disagreements = {}
         
         # Find items with significant ranking differences (position differs by >2)
         for item in config.LUNAR_ITEMS:
             try:
-                leader_pos = leader_ranking.index(item) if item in leader_ranking else -1
-                member_pos = member_ranking.index(item) if item in member_ranking else -1
+                leader_pos = leader_ranking.index(item) + 1 if item in leader_ranking else -1
+                member_pos = member_ranking.index(item) + 1 if item in member_ranking else -1
                 
-                if leader_pos >= 0 and member_pos >= 0 and abs(leader_pos - member_pos) > 2:
+                if leader_pos > 0 and member_pos > 0 and abs(leader_pos - member_pos) > 2:
                     disagreements[item] = {
-                        "leader": leader_pos + 1,  # Convert to 1-based ranking
-                        "member": member_pos + 1   # Convert to 1-based ranking
+                        "leader": leader_pos,
+                        "member": member_pos
                     }
             except ValueError:
                 self.logger.warning(f"Item {item} not found in one of the rankings")
         
-        # If too few disagreements, add some more significant items
-        if len(disagreements) < 3:
-            for item in ["Oxygen tanks", "Water", "Stellar map", "Food concentrate"]:
-                if item not in disagreements and item in leader_ranking and item in member_ranking:
-                    leader_pos = leader_ranking.index(item)
-                    member_pos = member_ranking.index(item)
-                    disagreements[item] = {
-                        "leader": leader_pos + 1,
-                        "member": member_pos + 1
-                    }
+        # Limit to 3 most significant disagreements to focus the debate
+        sorted_disagreements = sorted(
+            disagreements.items(), 
+            key=lambda x: abs(x[1]["leader"] - x[1]["member"]),
+            reverse=True
+        )
         
-        return disagreements
+        return dict(sorted_disagreements[:3])
+
 
     def _debate_item_ranking(self, item: str, leader_position: int, member_position: int) -> Dict[str, str]:
         """Facilitate a debate about a specific item's ranking."""

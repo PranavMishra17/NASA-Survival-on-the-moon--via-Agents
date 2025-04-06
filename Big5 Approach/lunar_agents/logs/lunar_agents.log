@@ -2637,3 +2637,549 @@ Science Analyst, please confirm receipt of this compromise suggestion and let me
 **Justification**: Oxygen is the mos...
 2025-04-06 15:41:45,007 [INFO] simulation.sim_20250406_153847: Adversarial round completed with score: 26
 2025-04-06 15:41:45,009 [INFO] simulation.sim_20250406_153847: Results saved to output\sim_20250406_153847_results.json
+2025-04-06 18:45:41,704 [INFO] root: Running all feature combinations
+2025-04-06 18:45:41,707 [INFO] root: Running simulation with: {'leadership': False, 'closed_loop': False}
+2025-04-06 18:45:41,708 [INFO] simulation.sim_baseline_20250406_184541: Event logged: simulation_started
+2025-04-06 18:45:41,709 [INFO] simulation.sim_baseline_20250406_184541: SimulationLogger initialized for sim_baseline_20250406_184541 with configuration: baseline
+2025-04-06 18:45:42,380 [INFO] agent.Team Leader: Initialized Team Leader agent
+2025-04-06 18:45:42,380 [INFO] agent.Team Leader: Added to knowledge base: leadership_principles
+2025-04-06 18:45:42,380 [INFO] agent.Team Leader: Added to knowledge base: big_five_teamwork
+2025-04-06 18:45:42,950 [INFO] agent.Science Analyst: Initialized Science Analyst agent
+2025-04-06 18:45:42,951 [INFO] agent.Science Analyst: Added to knowledge base: lunar_environment
+2025-04-06 18:45:42,951 [INFO] agent.Science Analyst: Added to knowledge base: survival_principles
+2025-04-06 18:45:42,951 [INFO] simulation.sim_baseline_20250406_184541: Initialized simulation sim_baseline_20250406_184541
+2025-04-06 18:45:42,952 [INFO] simulation.sim_baseline_20250406_184541:   Team Leadership: False
+2025-04-06 18:45:42,952 [INFO] simulation.sim_baseline_20250406_184541:   Closed-loop Communication: False
+2025-04-06 18:45:42,953 [INFO] simulation.sim_baseline_20250406_184541: Starting collaborative round
+2025-04-06 18:45:42,964 [INFO] simulation.sim_baseline_20250406_184541: Event logged: simulation_started
+2025-04-06 18:45:42,964 [INFO] simulation.sim_baseline_20250406_184541: SimulationLogger initialized for sim_baseline_20250406_184541 with configuration: baseline
+2025-04-06 18:45:42,964 [INFO] agent.Science Analyst: Received message: 
+        As a Science Analyst, I need you to analyze the importance of the following items for survi...
+2025-04-06 18:45:58,043 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 18:45:58,058 [INFO] agent.Science Analyst: Responded: ### Detailed Analysis of Items for Lunar Survival:
+
+#### Key Considerations:
+1. **Lunar Environment*...
+2025-04-06 18:45:58,060 [INFO] simulation.sim_baseline_20250406_184541: Main loop: collaborative - initial_analysis - member
+2025-04-06 18:45:58,060 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, I need you to lead a discussion on the following topic:
+        
+      ...
+2025-04-06 18:46:04,399 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 18:46:04,401 [INFO] agent.Team Leader: Responded: ### Lunar Survival Team Discussion: Ranking Items for the 200-Mile Trek
+
+#### **Team Leadership Appr...
+2025-04-06 18:46:04,401 [INFO] simulation.sim_baseline_20250406_184541: Main loop: collaborative - leader_discussion - leader
+2025-04-06 18:46:04,402 [INFO] agent.Science Analyst: Received message: 
+        The Team Leader has provided the following input:
+        
+        "### Lunar Survival Team...
+2025-04-06 19:25:57,443 [INFO] root: Running all feature combinations
+2025-04-06 19:25:57,443 [INFO] root: Running simulation with: {'leadership': False, 'closed_loop': False}
+2025-04-06 19:25:57,444 [INFO] simulation.sim_baseline_20250406_192557: Event logged: simulation_started
+2025-04-06 19:25:57,445 [INFO] simulation.sim_baseline_20250406_192557: SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:25:57,927 [INFO] agent.Team Leader: Initialized Team Leader agent
+2025-04-06 19:25:57,928 [INFO] agent.Team Leader: Added to knowledge base: leadership_principles
+2025-04-06 19:25:57,928 [INFO] agent.Team Leader: Added to knowledge base: big_five_teamwork
+2025-04-06 19:25:58,366 [INFO] agent.Science Analyst: Initialized Science Analyst agent
+2025-04-06 19:25:58,366 [INFO] agent.Science Analyst: Added to knowledge base: lunar_environment
+2025-04-06 19:25:58,366 [INFO] agent.Science Analyst: Added to knowledge base: survival_principles
+2025-04-06 19:25:58,366 [INFO] simulation.sim_baseline_20250406_192557: Initialized simulation sim_baseline_20250406_192557
+2025-04-06 19:25:58,366 [INFO] simulation.sim_baseline_20250406_192557:   Team Leadership: False
+2025-04-06 19:25:58,368 [INFO] simulation.sim_baseline_20250406_192557:   Closed-loop Communication: False
+2025-04-06 19:25:58,368 [INFO] simulation.sim_baseline_20250406_192557: Starting collaborative round
+2025-04-06 19:25:58,378 [INFO] simulation.sim_baseline_20250406_192557: Event logged: simulation_started
+2025-04-06 19:25:58,379 [INFO] simulation.sim_baseline_20250406_192557: SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:25:58,379 [INFO] agent.Science Analyst: Received message: 
+        As a Science Analyst, I need you to analyze the importance of the following items for survi...
+2025-04-06 19:26:15,030 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:26:15,063 [INFO] agent.Science Analyst: Responded: ### Detailed Analysis and Ranking of Items for Lunar Survival
+
+The lunar environment presents unique...
+2025-04-06 19:26:15,065 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - initial_analysis - member
+2025-04-06 19:26:15,065 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, I need you to lead a discussion on the following topic:
+        
+      ...
+2025-04-06 19:26:24,440 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:26:24,442 [INFO] agent.Team Leader: Responded: ### Team Discussion on Ranking Lunar Survival Items
+
+Thank you, team, for gathering to address this ...
+2025-04-06 19:26:24,444 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - leader_discussion - leader
+2025-04-06 19:26:24,445 [INFO] agent.Science Analyst: Received message: 
+        The Team Leader has provided the following input:
+        
+        "### Team Discussion on ...
+2025-04-06 19:26:35,846 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:26:35,847 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Message
+
+**Acknowledgment and Confirmation:**
+Thank you, Team Leader, ...
+2025-04-06 19:26:35,849 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - member_response - member
+2025-04-06 19:26:35,849 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:26:44,838 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:26:44,841 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Points
+
+Thank you for your thoughtful acknowledgment and confirmat...
+2025-04-06 19:26:44,843 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_1 - leader
+2025-04-06 19:26:44,844 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:27:05,716 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:27:05,719 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Points
+
+Thank you, Team Leader, for your acknowledgment of my initial ...
+2025-04-06 19:27:05,720 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_1 - member
+2025-04-06 19:27:05,721 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:27:14,937 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:27:14,940 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Points
+
+Thank you, Science Analyst, for your thoughtful response a...
+2025-04-06 19:27:14,942 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_2 - leader
+2025-04-06 19:27:14,943 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:27:41,561 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:27:41,564 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Points
+
+Thank you, Team Leader, for your acknowledgment of my analysis...
+2025-04-06 19:27:41,566 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_2 - member
+2025-04-06 19:27:41,567 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:27:54,849 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:27:54,850 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Points
+
+Thank you, Science Analyst, for your thoughtful response a...
+2025-04-06 19:27:54,851 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_3 - leader
+2025-04-06 19:27:54,851 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:28:12,649 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:28:12,650 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Points
+
+Thank you, Team Leader, for your acknowledgment of my contribu...
+2025-04-06 19:28:12,652 [INFO] simulation.sim_baseline_20250406_192557: Main loop: collaborative - discussion_round_3 - member
+2025-04-06 19:28:12,652 [INFO] simulation.sim_baseline_20250406_192557: No team leadership - using average of individual rankings
+2025-04-06 19:28:12,652 [INFO] simulation.sim_baseline_20250406_192557: Collaborative round completed with score: 88
+2025-04-06 19:28:12,653 [INFO] simulation.sim_baseline_20250406_192557: Starting adversarial round
+2025-04-06 19:28:12,662 [INFO] simulation.sim_baseline_20250406_192557: Event logged: simulation_started
+2025-04-06 19:28:12,662 [INFO] simulation.sim_baseline_20250406_192557: SimulationLogger initialized for sim_baseline_20250406_192557 with configuration: baseline
+2025-04-06 19:28:12,662 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, create a ranking of the lunar survival items based on your knowledge and ex...
+2025-04-06 19:28:21,456 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:28:21,456 [INFO] agent.Team Leader: Responded: ### Final Ranking of Lunar Survival Items with Justifications
+
+Here is the ranked list of the 15 ite...
+2025-04-06 19:28:21,457 [INFO] simulation.sim_baseline_20250406_192557: Team Leader created initial ranking
+2025-04-06 19:28:21,457 [INFO] agent.Science Analyst: Received message: 
+        As Science Analyst, create a ranking of the lunar survival items based on your scientific k...
+2025-04-06 19:28:29,550 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:28:29,552 [INFO] agent.Science Analyst: Responded: ### **Ranking of Lunar Survival Items**
+
+Below is the ranked list of items from most important to le...
+2025-04-06 19:28:29,553 [INFO] simulation.sim_baseline_20250406_192557: Science Analyst created initial ranking
+2025-04-06 19:28:29,555 [INFO] simulation.sim_baseline_20250406_192557: Debating item: Stellar map
+2025-04-06 19:28:29,556 [INFO] agent.Team Leader: Received message: 
+                As Team Leader, debate the ranking of 'Stellar map'. 
+                You ranked it...
+2025-04-06 19:28:41,212 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:28:41,214 [INFO] agent.Team Leader: Responded: ### Debate on the Ranking of the Stellar Map
+
+Thank you for bringing up this point of discussion, Sc...
+2025-04-06 19:28:41,216 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Stellar map_challenge - leader
+2025-04-06 19:28:41,217 [INFO] agent.Science Analyst: Received message: 
+                The Team Leader has challenged your ranking of 'Stellar map':
+                
+    ...
+2025-04-06 19:29:04,557 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:29:04,559 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Debate on the Stellar Map Ranking
+
+Thank you, Team Leader, for present...
+2025-04-06 19:29:04,560 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Stellar map_defense - member
+2025-04-06 19:29:04,561 [INFO] agent.Team Leader: Received message: 
+                The Science Analyst has defended their ranking of 'Stellar map':
+                
+ ...
+2025-04-06 19:29:14,544 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:29:14,547 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Defense of the Stellar Map Ranking
+
+Thank you, Science Analyst, fo...
+2025-04-06 19:29:14,548 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Stellar map_response - leader
+2025-04-06 19:29:14,549 [INFO] simulation.sim_baseline_20250406_192557: Debating item: Signal flares
+2025-04-06 19:29:14,550 [INFO] agent.Team Leader: Received message: 
+                As Team Leader, debate the ranking of 'Signal flares'. 
+                You ranked ...
+2025-04-06 19:29:27,040 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:29:27,041 [INFO] agent.Team Leader: Responded: ### Debate on the Ranking of Signal Flares
+
+Thank you, Science Analyst, for your thoughtful ranking ...
+2025-04-06 19:29:27,042 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Signal flares_challenge - leader
+2025-04-06 19:29:27,042 [INFO] agent.Science Analyst: Received message: 
+                The Team Leader has challenged your ranking of 'Signal flares':
+                
+  ...
+2025-04-06 19:29:45,097 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:29:45,098 [INFO] agent.Science Analyst: Responded: ### Response to Team Leader’s Debate on Signal Flares Ranking
+
+Thank you, Team Leader, for presentin...
+2025-04-06 19:29:45,098 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Signal flares_defense - member
+2025-04-06 19:29:45,099 [INFO] agent.Team Leader: Received message: 
+                The Science Analyst has defended their ranking of 'Signal flares':
+                ...
+2025-04-06 19:29:56,531 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:29:56,533 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Defense of Signal Flares Ranking
+
+Thank you, Science Analyst, for ...
+2025-04-06 19:29:56,535 [INFO] simulation.sim_baseline_20250406_192557: Main loop: adversarial - debate_Signal flares_response - leader
+2025-04-06 19:29:56,536 [INFO] simulation.sim_baseline_20250406_192557: No team leadership - averaging rankings with debate adjustments
+2025-04-06 19:29:56,537 [INFO] simulation.sim_baseline_20250406_192557: Adversarial round completed with score: 20
+2025-04-06 19:29:56,552 [INFO] simulation.sim_baseline_20250406_192557: Results saved to output\sim_baseline_20250406_192557_results.json
+2025-04-06 19:29:56,553 [INFO] root: Running simulation with: {'leadership': True, 'closed_loop': False}
+2025-04-06 19:29:56,556 [INFO] simulation.sim_leadership_20250406_192956: Event logged: simulation_started
+2025-04-06 19:29:56,557 [INFO] simulation.sim_leadership_20250406_192956: SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:29:57,002 [INFO] agent.Team Leader: Initialized Team Leader agent
+2025-04-06 19:29:57,003 [INFO] agent.Team Leader: Added to knowledge base: leadership_principles
+2025-04-06 19:29:57,003 [INFO] agent.Team Leader: Added to knowledge base: big_five_teamwork
+2025-04-06 19:29:57,467 [INFO] agent.Science Analyst: Initialized Science Analyst agent
+2025-04-06 19:29:57,467 [INFO] agent.Science Analyst: Added to knowledge base: lunar_environment
+2025-04-06 19:29:57,467 [INFO] agent.Science Analyst: Added to knowledge base: survival_principles
+2025-04-06 19:29:57,468 [INFO] simulation.sim_leadership_20250406_192956: Initialized simulation sim_leadership_20250406_192956
+2025-04-06 19:29:57,468 [INFO] simulation.sim_leadership_20250406_192956:   Team Leadership: True
+2025-04-06 19:29:57,468 [INFO] simulation.sim_leadership_20250406_192956:   Closed-loop Communication: False
+2025-04-06 19:29:57,468 [INFO] simulation.sim_leadership_20250406_192956: Starting collaborative round
+2025-04-06 19:29:57,470 [INFO] simulation.sim_leadership_20250406_192956: Event logged: simulation_started
+2025-04-06 19:29:57,471 [INFO] simulation.sim_leadership_20250406_192956: SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:29:57,471 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, define the overall approach for: Rank the lunar survival items for our ...
+2025-04-06 19:30:04,204 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:30:04,206 [INFO] agent.Team Leader: Responded: ### Overall Approach: Ranking Lunar Survival Items for the 200-Mile Trek
+
+To ensure the team success...
+2025-04-06 19:30:04,206 [INFO] agent.Team Leader: Updated knowledge base: task_definition
+2025-04-06 19:30:04,208 [INFO] simulation.sim_leadership_20250406_192956: Leader action: task_definition
+2025-04-06 19:30:04,211 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - setup - leader
+2025-04-06 19:30:04,212 [INFO] agent.Science Analyst: Received message: 
+        As a Science Analyst, I need you to analyze the importance of the following items for survi...
+2025-04-06 19:30:18,500 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:30:18,501 [INFO] agent.Science Analyst: Responded: ### Lunar Survival Analysis and Ranking of Items
+
+The Moon's environment is vastly different from Ea...
+2025-04-06 19:30:18,502 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - initial_analysis - member
+2025-04-06 19:30:18,502 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, I need you to lead a discussion on the following topic:
+        
+      ...
+2025-04-06 19:30:28,572 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:30:28,575 [INFO] agent.Team Leader: Responded: ### Leading the Discussion: Ranking Lunar Survival Items for the 200-Mile Trek
+
+As the Team Leader, ...
+2025-04-06 19:30:28,577 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - leader_discussion - leader
+2025-04-06 19:30:28,578 [INFO] agent.Science Analyst: Received message: 
+        The Team Leader has provided the following input:
+        
+        "### Leading the Discuss...
+2025-04-06 19:30:47,277 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:30:47,278 [INFO] agent.Science Analyst: Responded: ### **Response to Team Leader’s Message**
+
+#### **Acknowledgment and Confirmation**
+Team Leader, I h...
+2025-04-06 19:30:47,278 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - member_response - member
+2025-04-06 19:30:47,279 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:30:54,439 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:30:54,440 [INFO] agent.Team Leader: Responded: ### Response to the Science Analyst’s Points  
+
+#### **Acknowledgment and Confirmation**  
+Thank you...
+2025-04-06 19:30:54,441 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_1 - leader
+2025-04-06 19:30:54,441 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:31:04,279 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:04,280 [INFO] agent.Science Analyst: Responded: ### **Response to Team Leader’s Points**
+
+#### **Acknowledgment and Confirmation**  
+Thank you, Team...
+2025-04-06 19:31:04,282 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_1 - member
+2025-04-06 19:31:04,283 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:31:11,252 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:11,254 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Points  
+
+#### **Acknowledgment and Confirmation**  
+Thank you, Sc...
+2025-04-06 19:31:11,254 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_2 - leader
+2025-04-06 19:31:11,255 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:31:27,338 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:27,347 [INFO] agent.Science Analyst: Responded: ### **Response to Team Leader’s Points**
+
+#### **Acknowledgment and Confirmation**
+Thank you, Team L...
+2025-04-06 19:31:27,348 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_2 - member
+2025-04-06 19:31:27,349 [INFO] agent.Team Leader: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:31:38,287 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:38,289 [INFO] agent.Team Leader: Responded: ### Response to Science Analyst’s Points  
+
+#### **Acknowledgment and Confirmation**  
+Thank you, Sc...
+2025-04-06 19:31:38,291 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_3 - leader
+2025-04-06 19:31:38,293 [INFO] agent.Science Analyst: Received message: 
+                Continue our discussion about ranking the lunar survival items.
+                Res...
+2025-04-06 19:31:48,128 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:48,130 [INFO] agent.Science Analyst: Responded: ### **Response to Team Leader’s Points**
+
+#### **Acknowledgment and Confirmation**
+Thank you, Team L...
+2025-04-06 19:31:48,130 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - discussion_round_3 - member
+2025-04-06 19:31:48,132 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, synthesize these rankings into a final consensus.
+        
+        Your...
+2025-04-06 19:31:55,708 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:31:55,710 [INFO] agent.Team Leader: Responded: ### Final Consensus Ranking of Lunar Survival Items
+
+Below is the final ranking of the 15 items, syn...
+2025-04-06 19:31:55,711 [INFO] agent.Team Leader: Updated knowledge base: final_ranking
+2025-04-06 19:31:55,713 [INFO] simulation.sim_leadership_20250406_192956: Leader action: final_synthesis
+2025-04-06 19:31:55,715 [INFO] simulation.sim_leadership_20250406_192956: Main loop: collaborative - final_synthesis - leader
+2025-04-06 19:31:55,717 [INFO] simulation.sim_leadership_20250406_192956: Collaborative round completed with score: 46
+2025-04-06 19:31:55,718 [INFO] simulation.sim_leadership_20250406_192956: Starting adversarial round
+2025-04-06 19:31:55,728 [INFO] simulation.sim_leadership_20250406_192956: Event logged: simulation_started
+2025-04-06 19:31:55,729 [INFO] simulation.sim_leadership_20250406_192956: SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:31:55,730 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, create a ranking of the lunar survival items based on your knowledge and ex...
+2025-04-06 19:32:08,476 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:08,479 [INFO] agent.Team Leader: Responded: ### Final Ranking of Lunar Survival Items
+
+Below is my expert ranking of the 15 survival items, orde...
+2025-04-06 19:32:08,479 [INFO] simulation.sim_leadership_20250406_192956: Team Leader created initial ranking
+2025-04-06 19:32:08,481 [INFO] agent.Science Analyst: Received message: 
+        As Science Analyst, create a ranking of the lunar survival items based on your scientific k...
+2025-04-06 19:32:18,171 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:18,174 [INFO] agent.Science Analyst: Responded: ### **Lunar Survival Items Ranked**
+
+Below is the ranked list of the lunar survival items from 1 (mo...
+2025-04-06 19:32:18,174 [INFO] simulation.sim_leadership_20250406_192956: Science Analyst created initial ranking
+2025-04-06 19:32:18,176 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, document the capabilities and limitations of the team members:
+        
+   ...
+2025-04-06 19:32:25,305 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:25,306 [INFO] agent.Team Leader: Responded: ### Documentation of Team Member Capabilities and Limitations
+
+#### **Team Leader**
+1. **Areas of Ex...
+2025-04-06 19:32:25,307 [INFO] agent.Team Leader: Updated knowledge base: agent_capabilities
+2025-04-06 19:32:25,308 [INFO] simulation.sim_leadership_20250406_192956: Leader action: document_rankings
+2025-04-06 19:32:25,309 [INFO] agent.Team Leader: Received message: 
+            As Team Leader, after our debates about specific items, create a final consensus rankin...
+2025-04-06 19:32:32,792 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:32,794 [INFO] agent.Team Leader: Responded: ### Final Consensus Ranking of Lunar Survival Items
+
+This ranking incorporates valid points from bot...
+2025-04-06 19:32:32,795 [INFO] simulation.sim_leadership_20250406_192956: Leader action: adversarial_final_decision
+2025-04-06 19:32:32,795 [INFO] simulation.sim_leadership_20250406_192956: Main loop: adversarial - final_decision - leader
+2025-04-06 19:32:32,796 [INFO] simulation.sim_leadership_20250406_192956: Adversarial round completed with score: 74
+2025-04-06 19:32:32,798 [INFO] simulation.sim_leadership_20250406_192956: Results saved to output\sim_leadership_20250406_192956_results.json
+2025-04-06 19:32:32,799 [INFO] root: Running simulation with: {'leadership': False, 'closed_loop': True}
+2025-04-06 19:32:32,800 [INFO] simulation.sim_closed_loop_20250406_193232: Event logged: simulation_started
+2025-04-06 19:32:32,800 [INFO] simulation.sim_closed_loop_20250406_193232: SimulationLogger initialized for sim_closed_loop_20250406_193232 with configuration: closed_loop
+2025-04-06 19:32:33,218 [INFO] agent.Team Leader: Initialized Team Leader agent
+2025-04-06 19:32:33,219 [INFO] agent.Team Leader: Added to knowledge base: leadership_principles
+2025-04-06 19:32:33,219 [INFO] agent.Team Leader: Added to knowledge base: big_five_teamwork
+2025-04-06 19:32:33,674 [INFO] agent.Science Analyst: Initialized Science Analyst agent
+2025-04-06 19:32:33,674 [INFO] agent.Science Analyst: Added to knowledge base: lunar_environment
+2025-04-06 19:32:33,674 [INFO] agent.Science Analyst: Added to knowledge base: survival_principles
+2025-04-06 19:32:33,674 [INFO] communication.closed_loop: Initialized closed-loop communication handler
+2025-04-06 19:32:33,675 [INFO] simulation.sim_closed_loop_20250406_193232: Initialized simulation sim_closed_loop_20250406_193232
+2025-04-06 19:32:33,675 [INFO] simulation.sim_closed_loop_20250406_193232:   Team Leadership: False
+2025-04-06 19:32:33,676 [INFO] simulation.sim_closed_loop_20250406_193232:   Closed-loop Communication: True
+2025-04-06 19:32:33,676 [INFO] simulation.sim_closed_loop_20250406_193232: Starting collaborative round
+2025-04-06 19:32:33,685 [INFO] simulation.sim_closed_loop_20250406_193232: Event logged: simulation_started
+2025-04-06 19:32:33,685 [INFO] simulation.sim_closed_loop_20250406_193232: SimulationLogger initialized for sim_closed_loop_20250406_193232 with configuration: closed_loop
+2025-04-06 19:32:33,686 [INFO] agent.Science Analyst: Received message: 
+        As a Science Analyst, I need you to analyze the importance of the following items for survi...
+2025-04-06 19:32:45,135 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:45,137 [INFO] agent.Science Analyst: Responded: ### Analysis of Each Item for Survival on the Lunar Surface
+
+#### Key Considerations:
+1. **Lunar Env...
+2025-04-06 19:32:45,142 [INFO] simulation.sim_closed_loop_20250406_193232: Main loop: collaborative - initial_analysis - member
+2025-04-06 19:32:45,143 [INFO] communication.closed_loop: Starting closed-loop exchange: Team Leader -> Science Analyst
+2025-04-06 19:32:45,143 [INFO] agent.Team Leader: Received message: 
+            As Team Leader, initiate discussion about ranking the lunar survival items. 
+          ...
+2025-04-06 19:32:52,966 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:32:52,968 [INFO] agent.Team Leader: Responded: **Team, let’s begin our discussion on ranking the lunar survival items for the 200-mile trek to the ...
+2025-04-06 19:32:52,969 [INFO] communication.closed_loop: Step 1 - Sender message sent: **Team, let’s begin our discussion on ranking the ...
+2025-04-06 19:32:52,970 [INFO] agent.Science Analyst: Received message: 
+        You have received the following message from the Team Leader:
+        
+        "**Team, let...
+2025-04-06 19:33:03,158 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:33:03,159 [INFO] agent.Science Analyst: Responded: **Acknowledgment and Confirmation:**
+
+Team Leader, I have received your message regarding the priori...
+2025-04-06 19:33:03,160 [INFO] communication.closed_loop: Step 2 - Receiver acknowledgment: **Acknowledgment and Confirmation:**
+
+Team Leader,...
+2025-04-06 19:33:03,161 [INFO] agent.Team Leader: Received message: 
+        You sent the following message to the Science Analyst:
+        
+        "**Team, let’s begi...
+2025-04-06 19:33:07,189 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:33:07,191 [INFO] agent.Team Leader: Responded: **Verification of Understanding:**
+
+Science Analyst, thank you for your thoughtful and detailed resp...
+2025-04-06 19:33:07,192 [INFO] communication.closed_loop: Step 3 - Sender verification: **Verification of Understanding:**
+
+Science Analys...
+2025-04-06 19:33:07,203 [INFO] simulation.sim_closed_loop_20250406_193232: Closed-loop communication from leader completed
+2025-04-06 19:33:07,204 [INFO] simulation.sim_closed_loop_20250406_193232: No team leadership - using average of individual rankings
+2025-04-06 19:33:07,206 [INFO] simulation.sim_closed_loop_20250406_193232: Collaborative round completed with score: 58
+2025-04-06 19:33:07,207 [INFO] simulation.sim_closed_loop_20250406_193232: Starting adversarial round
+2025-04-06 19:33:07,211 [INFO] simulation.sim_closed_loop_20250406_193232: Event logged: simulation_started
+2025-04-06 19:33:07,211 [INFO] simulation.sim_closed_loop_20250406_193232: SimulationLogger initialized for sim_closed_loop_20250406_193232 with configuration: closed_loop
+2025-04-06 19:33:07,213 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, create a ranking of the lunar survival items based on your knowledge and ex...
+2025-04-06 19:33:14,895 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:33:14,897 [INFO] agent.Team Leader: Responded: Here is the final ranked list of lunar survival items, from most important (1) to least important (1...
+2025-04-06 19:33:14,897 [INFO] simulation.sim_closed_loop_20250406_193232: Team Leader created initial ranking
+2025-04-06 19:33:14,898 [INFO] agent.Science Analyst: Received message: 
+        As Science Analyst, create a ranking of the lunar survival items based on your scientific k...
+2025-04-06 19:33:25,488 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:33:25,489 [INFO] agent.Science Analyst: Responded: ### Lunar Survival Items Ranked by Importance
+
+1. **Two 100-Pound Tanks of Oxygen**  
+   - **Justifi...
+2025-04-06 19:33:25,490 [INFO] simulation.sim_closed_loop_20250406_193232: Science Analyst created initial ranking
+2025-04-06 19:33:25,490 [INFO] simulation.sim_closed_loop_20250406_193232: No team leadership - averaging rankings with debate adjustments
+2025-04-06 19:33:25,491 [INFO] simulation.sim_closed_loop_20250406_193232: Adversarial round completed with score: 30
+2025-04-06 19:33:25,492 [INFO] simulation.sim_closed_loop_20250406_193232: Results saved to output\sim_closed_loop_20250406_193232_results.json
+2025-04-06 19:33:25,492 [INFO] root: Running simulation with: {'leadership': True, 'closed_loop': True}
+2025-04-06 19:33:25,494 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Event logged: simulation_started
+2025-04-06 19:33:25,494 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: SimulationLogger initialized for sim_leadership_closed_loop_20250406_193325 with configuration: leadership_closed_loop
+2025-04-06 19:33:25,921 [INFO] agent.Team Leader: Initialized Team Leader agent
+2025-04-06 19:33:25,921 [INFO] agent.Team Leader: Added to knowledge base: leadership_principles
+2025-04-06 19:33:25,921 [INFO] agent.Team Leader: Added to knowledge base: big_five_teamwork
+2025-04-06 19:33:26,386 [INFO] agent.Science Analyst: Initialized Science Analyst agent
+2025-04-06 19:33:26,387 [INFO] agent.Science Analyst: Added to knowledge base: lunar_environment
+2025-04-06 19:33:26,388 [INFO] agent.Science Analyst: Added to knowledge base: survival_principles
+2025-04-06 19:33:26,388 [INFO] communication.closed_loop: Initialized closed-loop communication handler
+2025-04-06 19:33:26,388 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Initialized simulation sim_leadership_closed_loop_20250406_193325
+2025-04-06 19:33:26,388 [INFO] simulation.sim_leadership_closed_loop_20250406_193325:   Team Leadership: True
+2025-04-06 19:33:26,389 [INFO] simulation.sim_leadership_closed_loop_20250406_193325:   Closed-loop Communication: True
+2025-04-06 19:33:26,397 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Starting collaborative round
+2025-04-06 19:33:26,398 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Event logged: simulation_started
+2025-04-06 19:33:26,399 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: SimulationLogger initialized for sim_leadership_closed_loop_20250406_193325 with configuration: leadership_closed_loop
+2025-04-06 19:33:26,399 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, define the overall approach for: Rank the lunar survival items for our ...
+2025-04-06 19:33:34,268 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:33:34,269 [INFO] agent.Team Leader: Responded: ### **Overall Approach:**
+Our goal is to collaboratively rank the lunar survival items in order of i...
+2025-04-06 19:33:34,270 [INFO] agent.Team Leader: Updated knowledge base: task_definition
+2025-04-06 19:33:34,270 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Leader action: task_definition
+2025-04-06 19:33:34,272 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Main loop: collaborative - setup - leader
+2025-04-06 19:33:34,272 [INFO] agent.Science Analyst: Received message: 
+        As a Science Analyst, I need you to analyze the importance of the following items for survi...
+2025-04-06 19:34:00,117 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:00,118 [INFO] agent.Science Analyst: Responded: ### Analysis of Items for Lunar Survival and Trek to Rendezvous Point
+
+To rank the items, I will eva...
+2025-04-06 19:34:00,119 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Main loop: collaborative - initial_analysis - member
+2025-04-06 19:34:00,119 [INFO] communication.closed_loop: Starting closed-loop exchange: Team Leader -> Science Analyst
+2025-04-06 19:34:00,119 [INFO] agent.Team Leader: Received message: 
+            As Team Leader, initiate discussion about ranking the lunar survival items. 
+          ...
+2025-04-06 19:34:06,541 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:06,542 [INFO] agent.Team Leader: Responded: ### **Initiating the Discussion:**
+
+Team, thank you for joining this critical discussion. Our task i...
+2025-04-06 19:34:06,542 [INFO] communication.closed_loop: Step 1 - Sender message sent: ### **Initiating the Discussion:**
+
+Team, thank yo...
+2025-04-06 19:34:06,542 [INFO] agent.Science Analyst: Received message: 
+        You have received the following message from the Team Leader:
+        
+        "### **Initi...
+2025-04-06 19:34:17,750 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:17,751 [INFO] agent.Science Analyst: Responded: ### **Acknowledgment and Confirmation**
+
+Team Leader, I acknowledge receipt of your message and conf...
+2025-04-06 19:34:17,751 [INFO] communication.closed_loop: Step 2 - Receiver acknowledgment: ### **Acknowledgment and Confirmation**
+
+Team Lead...
+2025-04-06 19:34:17,752 [INFO] agent.Team Leader: Received message: 
+        You sent the following message to the Science Analyst:
+        
+        "### **Initiating t...
+2025-04-06 19:34:28,150 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:28,151 [INFO] agent.Team Leader: Responded: ### **Response to Science Analyst**
+
+Thank you for your thorough and thoughtful response. Let me fir...
+2025-04-06 19:34:28,152 [INFO] communication.closed_loop: Step 3 - Sender verification: ### **Response to Science Analyst**
+
+Thank you for...
+2025-04-06 19:34:28,153 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Closed-loop communication from leader completed
+2025-04-06 19:34:28,153 [INFO] agent.Team Leader: Received message: 
+        As the Team Leader, synthesize these rankings into a final consensus.
+        
+        Your...
+2025-04-06 19:34:35,252 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:35,254 [INFO] agent.Team Leader: Responded: ### **Final Consensus Ranking**
+
+Based on the input provided by the team and analysis of the surviva...
+2025-04-06 19:34:35,256 [INFO] agent.Team Leader: Updated knowledge base: final_ranking
+2025-04-06 19:34:35,257 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Leader action: final_synthesis
+2025-04-06 19:34:35,259 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Main loop: collaborative - final_synthesis - leader
+2025-04-06 19:34:35,260 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Collaborative round completed with score: 37
+2025-04-06 19:34:35,261 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Starting adversarial round
+2025-04-06 19:34:35,264 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Event logged: simulation_started
+2025-04-06 19:34:35,264 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: SimulationLogger initialized for sim_leadership_closed_loop_20250406_193325 with configuration: leadership_closed_loop
+2025-04-06 19:34:35,265 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, create a ranking of the lunar survival items based on your knowledge and ex...
+2025-04-06 19:34:44,801 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:34:44,802 [INFO] agent.Team Leader: Responded: ### **Final Ranking of Lunar Survival Items**
+
+Here is the ranked list of lunar survival items, from...
+2025-04-06 19:34:44,803 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Team Leader created initial ranking
+2025-04-06 19:34:44,803 [INFO] agent.Science Analyst: Received message: 
+        As Science Analyst, create a ranking of the lunar survival items based on your scientific k...
+2025-04-06 19:35:00,218 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:35:00,219 [INFO] agent.Science Analyst: Responded: ### **Lunar Survival Items Ranked by Importance**
+
+Here is the scientifically informed ranking of th...
+2025-04-06 19:35:00,220 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Science Analyst created initial ranking
+2025-04-06 19:35:00,220 [INFO] agent.Team Leader: Received message: 
+        As Team Leader, document the capabilities and limitations of the team members:
+        
+   ...
+2025-04-06 19:35:07,072 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:35:07,073 [INFO] agent.Team Leader: Responded: ### **Team Member Capabilities and Limitations**
+
+#### **Team Leader (Yourself):**
+1. **Areas of Exp...
+2025-04-06 19:35:07,073 [INFO] agent.Team Leader: Updated knowledge base: agent_capabilities
+2025-04-06 19:35:07,074 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Leader action: document_rankings
+2025-04-06 19:35:07,074 [INFO] agent.Team Leader: Received message: 
+            As Team Leader, after our debates about specific items, create a final consensus rankin...
+2025-04-06 19:35:17,159 [INFO] httpx: HTTP Request: POST https://vare-labs-azure-openai-resource.openai.azure.com/openai/deployments/VARELab-GPT4o/chat/completions?api-version=2024-08-01-preview "HTTP/1.1 200 OK"
+2025-04-06 19:35:17,160 [INFO] agent.Team Leader: Responded: ### **Final Consensus Ranking of Lunar Survival Items**
+
+This ranking incorporates valid points from...
+2025-04-06 19:35:17,161 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Leader action: adversarial_final_decision
+2025-04-06 19:35:17,162 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Main loop: adversarial - final_decision - leader
+2025-04-06 19:35:17,162 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Adversarial round completed with score: 22
+2025-04-06 19:35:17,164 [INFO] simulation.sim_leadership_closed_loop_20250406_193325: Results saved to output\sim_leadership_closed_loop_20250406_193325_results.json

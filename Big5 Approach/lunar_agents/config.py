@@ -20,7 +20,7 @@ MAX_TOKENS = 1000
 # Simulation settings
 LOG_DIR = "logs"
 OUTPUT_DIR = "output"
-SIMULATION_ROUNDS = 2
+SIMULATION_ROUNDS = 4
 
 # Create required directories
 os.makedirs(LOG_DIR, exist_ok=True)

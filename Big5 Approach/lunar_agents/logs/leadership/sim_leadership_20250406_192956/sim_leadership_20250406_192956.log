@@ -1,0 +1,32 @@
+2025-04-06 19:29:56,556 - simulation.sim_leadership_20250406_192956 - INFO - Event logged: simulation_started
+2025-04-06 19:29:56,557 - simulation.sim_leadership_20250406_192956 - INFO - SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:29:57,468 - simulation.sim_leadership_20250406_192956 - INFO - Initialized simulation sim_leadership_20250406_192956
+2025-04-06 19:29:57,468 - simulation.sim_leadership_20250406_192956 - INFO -   Team Leadership: True
+2025-04-06 19:29:57,468 - simulation.sim_leadership_20250406_192956 - INFO -   Closed-loop Communication: False
+2025-04-06 19:29:57,468 - simulation.sim_leadership_20250406_192956 - INFO - Starting collaborative round
+2025-04-06 19:29:57,470 - simulation.sim_leadership_20250406_192956 - INFO - Event logged: simulation_started
+2025-04-06 19:29:57,471 - simulation.sim_leadership_20250406_192956 - INFO - SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:30:04,208 - simulation.sim_leadership_20250406_192956 - INFO - Leader action: task_definition
+2025-04-06 19:30:04,211 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - setup - leader
+2025-04-06 19:30:18,502 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - initial_analysis - member
+2025-04-06 19:30:28,577 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - leader_discussion - leader
+2025-04-06 19:30:47,278 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - member_response - member
+2025-04-06 19:30:54,441 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_1 - leader
+2025-04-06 19:31:04,282 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_1 - member
+2025-04-06 19:31:11,254 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_2 - leader
+2025-04-06 19:31:27,348 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_2 - member
+2025-04-06 19:31:38,291 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_3 - leader
+2025-04-06 19:31:48,130 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - discussion_round_3 - member
+2025-04-06 19:31:55,713 - simulation.sim_leadership_20250406_192956 - INFO - Leader action: final_synthesis
+2025-04-06 19:31:55,715 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: collaborative - final_synthesis - leader
+2025-04-06 19:31:55,717 - simulation.sim_leadership_20250406_192956 - INFO - Collaborative round completed with score: 46
+2025-04-06 19:31:55,718 - simulation.sim_leadership_20250406_192956 - INFO - Starting adversarial round
+2025-04-06 19:31:55,728 - simulation.sim_leadership_20250406_192956 - INFO - Event logged: simulation_started
+2025-04-06 19:31:55,729 - simulation.sim_leadership_20250406_192956 - INFO - SimulationLogger initialized for sim_leadership_20250406_192956 with configuration: leadership
+2025-04-06 19:32:08,479 - simulation.sim_leadership_20250406_192956 - INFO - Team Leader created initial ranking
+2025-04-06 19:32:18,174 - simulation.sim_leadership_20250406_192956 - INFO - Science Analyst created initial ranking
+2025-04-06 19:32:25,308 - simulation.sim_leadership_20250406_192956 - INFO - Leader action: document_rankings
+2025-04-06 19:32:32,795 - simulation.sim_leadership_20250406_192956 - INFO - Leader action: adversarial_final_decision
+2025-04-06 19:32:32,795 - simulation.sim_leadership_20250406_192956 - INFO - Main loop: adversarial - final_decision - leader
+2025-04-06 19:32:32,796 - simulation.sim_leadership_20250406_192956 - INFO - Adversarial round completed with score: 74
+2025-04-06 19:32:32,798 - simulation.sim_leadership_20250406_192956 - INFO - Results saved to output\sim_leadership_20250406_192956_results.json

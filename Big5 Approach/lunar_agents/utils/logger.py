@@ -56,6 +56,11 @@ class SimulationLogger:
         })
         
         self.logger.info(f"SimulationLogger initialized for {simulation_id} with configuration: {self.config_name}")
+
+        # Create additional log files for different types of communication
+        self.main_loop_file = os.path.join(self.run_dir, f"{simulation_id}_main_loop.jsonl")
+        self.closed_loop_file = os.path.join(self.run_dir, f"{simulation_id}_closed_loop.jsonl")
+        self.leader_file = os.path.join(self.run_dir, f"{simulation_id}_leader.jsonl")
     
     def _setup_logger(self) -> logging.Logger:
         """Set up the file and console loggers."""
@@ -195,14 +200,8 @@ class SimulationLogger:
         # Log full message, not just first 100 chars
         logger.info(f"{message}")
 
-    def log_event(self, event_type: str, data: Dict[str, Any]) -> None:
-        """
-        Log a structured event to the events file.
-        
-        Args:
-            event_type: Type of event
-            data: Event data
-        """
+    def log_event(self, event_type, data):
+        """Log a structured event to the events file."""
         event = {
             "event_type": event_type,
             "timestamp": datetime.now().isoformat(),
@@ -213,3 +212,47 @@ class SimulationLogger:
             f.write(json.dumps(event) + '\n')
         
         self.logger.info(f"Event logged: {event_type}")
+    
+    def log_main_loop(self, round_type, step, agent_role, message):
+        """Log main conversation flow between agents."""
+        event = {
+            "round_type": round_type,
+            "step": step,
+            "agent_role": agent_role,
+            "timestamp": datetime.now().isoformat(),
+            "message": message
+        }
+        
+        with open(self.main_loop_file, 'a') as f:
+            f.write(json.dumps(event) + '\n')
+        
+        self.logger.info(f"Main loop: {round_type} - {step} - {agent_role}")
+    
+    def log_closed_loop(self, sender, initial_message, acknowledgment, verification):
+        """Log closed-loop communication events."""
+        event = {
+            "sender": sender,
+            "timestamp": datetime.now().isoformat(),
+            "initial_message": initial_message,
+            "acknowledgment": acknowledgment,
+            "verification": verification
+        }
+        
+        with open(self.closed_loop_file, 'a') as f:
+            f.write(json.dumps(event) + '\n')
+        
+        self.logger.info(f"Closed-loop communication from {sender} completed")
+    
+    def log_leader_action(self, action_type, content, updates=None):
+        """Log leader-specific actions and knowledge base updates."""
+        event = {
+            "action_type": action_type,
+            "timestamp": datetime.now().isoformat(),
+            "content": content,
+            "knowledge_updates": updates or {}
+        }
+        
+        with open(self.leader_file, 'a') as f:
+            f.write(json.dumps(event) + '\n')
+        
+        self.logger.info(f"Leader action: {action_type}")
