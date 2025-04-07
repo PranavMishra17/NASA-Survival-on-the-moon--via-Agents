@@ -14,13 +14,13 @@ AZURE_DEPLOYMENT = "VARELab-GPT4o"
 AZURE_API_VERSION = "2024-08-01-preview"
 
 # Model settings
-TEMPERATURE = 0.5
-MAX_TOKENS = 1000
+TEMPERATURE = 0.9
+MAX_TOKENS = 1500
 
 # Simulation settings
 LOG_DIR = "logs"
 OUTPUT_DIR = "output"
-SIMULATION_ROUNDS = 4
+SIMULATION_ROUNDS = 5
 
 # Create required directories
 os.makedirs(LOG_DIR, exist_ok=True)

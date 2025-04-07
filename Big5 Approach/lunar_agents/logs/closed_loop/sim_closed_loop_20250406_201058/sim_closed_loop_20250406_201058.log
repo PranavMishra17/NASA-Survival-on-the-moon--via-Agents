@@ -1,0 +1,26 @@
+2025-04-06 20:10:58,146 - simulation.sim_closed_loop_20250406_201058 - INFO - Event logged: simulation_started
+2025-04-06 20:10:58,146 - simulation.sim_closed_loop_20250406_201058 - INFO - SimulationLogger initialized for sim_closed_loop_20250406_201058 with configuration: closed_loop
+2025-04-06 20:10:59,157 - simulation.sim_closed_loop_20250406_201058 - INFO - Initialized simulation sim_closed_loop_20250406_201058
+2025-04-06 20:10:59,157 - simulation.sim_closed_loop_20250406_201058 - INFO -   Team Leadership: False
+2025-04-06 20:10:59,158 - simulation.sim_closed_loop_20250406_201058 - INFO -   Closed-loop Communication: True
+2025-04-06 20:10:59,158 - simulation.sim_closed_loop_20250406_201058 - INFO - Starting collaborative round
+2025-04-06 20:10:59,167 - simulation.sim_closed_loop_20250406_201058 - INFO - Event logged: simulation_started
+2025-04-06 20:10:59,168 - simulation.sim_closed_loop_20250406_201058 - INFO - SimulationLogger initialized for sim_closed_loop_20250406_201058 with configuration: closed_loop
+2025-04-06 20:11:11,086 - simulation.sim_closed_loop_20250406_201058 - INFO - Main loop: collaborative - initial_analysis - member
+2025-04-06 20:11:35,190 - simulation.sim_closed_loop_20250406_201058 - INFO - Closed-loop communication from leader completed
+2025-04-06 20:11:35,191 - simulation.sim_closed_loop_20250406_201058 - INFO - No team leadership - using average of individual rankings
+2025-04-06 20:11:35,191 - simulation.sim_closed_loop_20250406_201058 - INFO - Collaborative round completed with score: 26
+2025-04-06 20:11:35,192 - simulation.sim_closed_loop_20250406_201058 - INFO - Starting adversarial round
+2025-04-06 20:11:35,193 - simulation.sim_closed_loop_20250406_201058 - INFO - Event logged: simulation_started
+2025-04-06 20:11:35,194 - simulation.sim_closed_loop_20250406_201058 - INFO - SimulationLogger initialized for sim_closed_loop_20250406_201058 with configuration: closed_loop
+2025-04-06 20:11:44,708 - simulation.sim_closed_loop_20250406_201058 - INFO - Team Leader created initial ranking
+2025-04-06 20:11:55,599 - simulation.sim_closed_loop_20250406_201058 - INFO - Science Analyst created initial ranking
+2025-04-06 20:11:55,601 - simulation.sim_closed_loop_20250406_201058 - INFO - Debating item: Solar-powered FM receiver-transmitter
+2025-04-06 20:12:33,052 - simulation.sim_closed_loop_20250406_201058 - INFO - Closed-loop communication from leader completed
+2025-04-06 20:13:03,432 - simulation.sim_closed_loop_20250406_201058 - INFO - Closed-loop communication from member completed
+2025-04-06 20:13:03,432 - simulation.sim_closed_loop_20250406_201058 - INFO - Debating item: One case of dehydrated milk
+2025-04-06 20:13:40,423 - simulation.sim_closed_loop_20250406_201058 - INFO - Closed-loop communication from leader completed
+2025-04-06 20:14:27,584 - simulation.sim_closed_loop_20250406_201058 - INFO - Closed-loop communication from member completed
+2025-04-06 20:14:27,585 - simulation.sim_closed_loop_20250406_201058 - INFO - No team leadership - averaging rankings with debate adjustments
+2025-04-06 20:14:27,586 - simulation.sim_closed_loop_20250406_201058 - INFO - Adversarial round completed with score: 18
+2025-04-06 20:14:27,590 - simulation.sim_closed_loop_20250406_201058 - INFO - Results saved to output\sim_closed_loop_20250406_201058_results.json
