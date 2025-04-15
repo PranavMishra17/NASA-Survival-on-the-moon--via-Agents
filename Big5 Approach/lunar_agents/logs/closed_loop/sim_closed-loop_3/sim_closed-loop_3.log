@@ -1,0 +1,18 @@
+2025-04-14 23:59:21,651 - simulation.sim_closed-loop_3 - INFO - Event logged: simulation_started
+2025-04-14 23:59:21,651 - simulation.sim_closed-loop_3 - INFO - SimulationLogger initialized for sim_closed-loop_3 with configuration: closed_loop
+2025-04-14 23:59:22,702 - simulation.sim_closed-loop_3 - INFO - Initialized simulation sim_closed-loop_3
+2025-04-14 23:59:22,702 - simulation.sim_closed-loop_3 - INFO -   Team Leadership: False
+2025-04-14 23:59:22,709 - simulation.sim_closed-loop_3 - INFO -   Closed-loop Communication: True
+2025-04-14 23:59:23,808 - simulation.sim_closed-loop_3 - INFO - Starting adversarial round for perspective sharing
+2025-04-14 23:59:23,810 - simulation.sim_closed-loop_3 - INFO - Event logged: simulation_started
+2025-04-14 23:59:23,846 - simulation.sim_closed-loop_3 - INFO - SimulationLogger initialized for sim_closed-loop_3 with configuration: closed_loop
+2025-04-14 23:59:28,461 - simulation.sim_closed-loop_3 - INFO - Team Leader created initial ranking
+2025-04-14 23:59:32,762 - simulation.sim_closed-loop_3 - INFO - Science Analyst created initial ranking
+2025-04-14 23:59:32,769 - simulation.sim_closed-loop_3 - INFO - Adversarial round completed with score: 46
+2025-04-14 23:59:32,771 - simulation.sim_closed-loop_3 - INFO - Starting collaborative round to build consensus
+2025-04-14 23:59:32,779 - simulation.sim_closed-loop_3 - INFO - Event logged: simulation_started
+2025-04-14 23:59:32,780 - simulation.sim_closed-loop_3 - INFO - SimulationLogger initialized for sim_closed-loop_3 with configuration: closed_loop
+2025-04-14 23:59:39,830 - simulation.sim_closed-loop_3 - INFO - Main loop: collaborative - systematic_approach - member
+2025-04-15 00:00:01,232 - simulation.sim_closed-loop_3 - INFO - Closed-loop communication from member completed
+2025-04-15 00:00:01,234 - simulation.sim_closed-loop_3 - INFO - Collaborative round completed with score: 239
+2025-04-15 00:00:01,236 - simulation.sim_closed-loop_3 - INFO - Results saved to output\sim_closed-loop_3_results.json

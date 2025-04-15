@@ -1,0 +1,20 @@
+2025-04-15 00:02:04,231 - simulation.sim_baseline_4 - INFO - Event logged: simulation_started
+2025-04-15 00:02:04,232 - simulation.sim_baseline_4 - INFO - SimulationLogger initialized for sim_baseline_4 with configuration: baseline
+2025-04-15 00:02:05,372 - simulation.sim_baseline_4 - INFO - Initialized simulation sim_baseline_4
+2025-04-15 00:02:05,372 - simulation.sim_baseline_4 - INFO -   Team Leadership: False
+2025-04-15 00:02:05,372 - simulation.sim_baseline_4 - INFO -   Closed-loop Communication: False
+2025-04-15 00:02:06,474 - simulation.sim_baseline_4 - INFO - Starting adversarial round for perspective sharing
+2025-04-15 00:02:06,476 - simulation.sim_baseline_4 - INFO - Event logged: simulation_started
+2025-04-15 00:02:06,476 - simulation.sim_baseline_4 - INFO - SimulationLogger initialized for sim_baseline_4 with configuration: baseline
+2025-04-15 00:02:18,339 - simulation.sim_baseline_4 - INFO - Team Leader created initial ranking
+2025-04-15 00:02:22,842 - simulation.sim_baseline_4 - INFO - Science Analyst created initial ranking
+2025-04-15 00:02:22,846 - simulation.sim_baseline_4 - INFO - Adversarial round completed with score: 58
+2025-04-15 00:02:22,846 - simulation.sim_baseline_4 - INFO - Starting collaborative round to build consensus
+2025-04-15 00:02:22,851 - simulation.sim_baseline_4 - INFO - Event logged: simulation_started
+2025-04-15 00:02:22,855 - simulation.sim_baseline_4 - INFO - SimulationLogger initialized for sim_baseline_4 with configuration: baseline
+2025-04-15 00:02:32,778 - simulation.sim_baseline_4 - INFO - Main loop: collaborative - systematic_approach - member
+2025-04-15 00:02:42,918 - simulation.sim_baseline_4 - INFO - Main loop: collaborative - final_ranking - member
+2025-04-15 00:02:48,372 - simulation.sim_baseline_4 - INFO - Main loop: collaborative - ranking_feedback - leader
+2025-04-15 00:02:56,606 - simulation.sim_baseline_4 - INFO - Main loop: collaborative - final_resolve - member
+2025-04-15 00:02:56,608 - simulation.sim_baseline_4 - INFO - Collaborative round completed with score: 26
+2025-04-15 00:02:56,613 - simulation.sim_baseline_4 - INFO - Results saved to output\sim_baseline_4_results.json

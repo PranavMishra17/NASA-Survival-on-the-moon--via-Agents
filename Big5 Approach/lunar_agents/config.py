@@ -14,7 +14,7 @@ AZURE_DEPLOYMENT = "VARELab-GPT4o"
 AZURE_API_VERSION = "2024-08-01-preview"
 
 # Model settings
-TEMPERATURE = 0.9
+TEMPERATURE = 1
 MAX_TOKENS = 1500
 
 # Simulation settings
@@ -71,5 +71,6 @@ TEAM_GOAL = "Rank the lunar survival items in order of importance for the 200-mi
 # Agent roles and expertise
 AGENT_ROLES = {
     "Team Leader": "Coordinate team efforts, facilitate decision-making, and ensure team follows effective problem-solving process",
-    "Science Analyst": "Provide scientific analysis of the lunar environment and survival requirements based on technical knowledge"
+    "Science Analyst": "Provide scientific analysis of the lunar environment and survival requirements based on technical knowledge",
+    "Resource Manager": "Analyze resource efficiency, prioritize items based on utility vs weight, and manage limited supplies for optimal survival"
 }

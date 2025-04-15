@@ -1,0 +1,23 @@
+2025-04-14 23:57:56,461 - simulation.sim_leadership_3 - INFO - Event logged: simulation_started
+2025-04-14 23:57:56,461 - simulation.sim_leadership_3 - INFO - SimulationLogger initialized for sim_leadership_3 with configuration: leadership
+2025-04-14 23:57:57,601 - simulation.sim_leadership_3 - INFO - Initialized simulation sim_leadership_3
+2025-04-14 23:57:57,601 - simulation.sim_leadership_3 - INFO -   Team Leadership: True
+2025-04-14 23:57:57,601 - simulation.sim_leadership_3 - INFO -   Closed-loop Communication: False
+2025-04-14 23:57:58,676 - simulation.sim_leadership_3 - INFO - Starting adversarial round for perspective sharing
+2025-04-14 23:57:58,678 - simulation.sim_leadership_3 - INFO - Event logged: simulation_started
+2025-04-14 23:57:58,717 - simulation.sim_leadership_3 - INFO - SimulationLogger initialized for sim_leadership_3 with configuration: leadership
+2025-04-14 23:58:06,139 - simulation.sim_leadership_3 - INFO - Team Leader created initial ranking
+2025-04-14 23:58:10,350 - simulation.sim_leadership_3 - INFO - Science Analyst created initial ranking
+2025-04-14 23:58:10,356 - simulation.sim_leadership_3 - INFO - Adversarial round completed with score: 54
+2025-04-14 23:58:10,356 - simulation.sim_leadership_3 - INFO - Starting collaborative round to build consensus
+2025-04-14 23:58:10,400 - simulation.sim_leadership_3 - INFO - Event logged: simulation_started
+2025-04-14 23:58:10,400 - simulation.sim_leadership_3 - INFO - SimulationLogger initialized for sim_leadership_3 with configuration: leadership
+2025-04-14 23:58:19,657 - simulation.sim_leadership_3 - INFO - Leader action: collaborative_review
+2025-04-14 23:58:19,659 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - review_insights - leader
+2025-04-14 23:58:30,299 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - science_review - member
+2025-04-14 23:58:42,106 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - systematic_approach - leader
+2025-04-14 23:59:01,331 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - final_ranking - leader
+2025-04-14 23:59:14,948 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - ranking_feedback - member
+2025-04-14 23:59:21,602 - simulation.sim_leadership_3 - INFO - Main loop: collaborative - final_resolve - leader
+2025-04-14 23:59:21,604 - simulation.sim_leadership_3 - INFO - Collaborative round completed with score: 156
+2025-04-14 23:59:21,610 - simulation.sim_leadership_3 - INFO - Results saved to output\sim_leadership_3_results.json

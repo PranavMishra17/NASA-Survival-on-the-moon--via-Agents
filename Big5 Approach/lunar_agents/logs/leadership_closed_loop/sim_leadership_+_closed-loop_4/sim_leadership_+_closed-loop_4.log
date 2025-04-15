@@ -1,0 +1,21 @@
+2025-04-15 00:07:09,064 - simulation.sim_leadership_+_closed-loop_4 - INFO - Event logged: simulation_started
+2025-04-15 00:07:09,066 - simulation.sim_leadership_+_closed-loop_4 - INFO - SimulationLogger initialized for sim_leadership_+_closed-loop_4 with configuration: leadership_closed_loop
+2025-04-15 00:07:10,145 - simulation.sim_leadership_+_closed-loop_4 - INFO - Initialized simulation sim_leadership_+_closed-loop_4
+2025-04-15 00:07:10,147 - simulation.sim_leadership_+_closed-loop_4 - INFO -   Team Leadership: True
+2025-04-15 00:07:10,147 - simulation.sim_leadership_+_closed-loop_4 - INFO -   Closed-loop Communication: True
+2025-04-15 00:07:11,258 - simulation.sim_leadership_+_closed-loop_4 - INFO - Starting adversarial round for perspective sharing
+2025-04-15 00:07:11,258 - simulation.sim_leadership_+_closed-loop_4 - INFO - Event logged: simulation_started
+2025-04-15 00:07:11,258 - simulation.sim_leadership_+_closed-loop_4 - INFO - SimulationLogger initialized for sim_leadership_+_closed-loop_4 with configuration: leadership_closed_loop
+2025-04-15 00:07:18,667 - simulation.sim_leadership_+_closed-loop_4 - INFO - Team Leader created initial ranking
+2025-04-15 00:07:23,741 - simulation.sim_leadership_+_closed-loop_4 - INFO - Science Analyst created initial ranking
+2025-04-15 00:07:23,746 - simulation.sim_leadership_+_closed-loop_4 - INFO - Adversarial round completed with score: 60
+2025-04-15 00:07:23,748 - simulation.sim_leadership_+_closed-loop_4 - INFO - Starting collaborative round to build consensus
+2025-04-15 00:07:23,789 - simulation.sim_leadership_+_closed-loop_4 - INFO - Event logged: simulation_started
+2025-04-15 00:07:23,790 - simulation.sim_leadership_+_closed-loop_4 - INFO - SimulationLogger initialized for sim_leadership_+_closed-loop_4 with configuration: leadership_closed_loop
+2025-04-15 00:07:31,473 - simulation.sim_leadership_+_closed-loop_4 - INFO - Leader action: collaborative_review
+2025-04-15 00:07:31,513 - simulation.sim_leadership_+_closed-loop_4 - INFO - Main loop: collaborative - review_insights - leader
+2025-04-15 00:07:45,380 - simulation.sim_leadership_+_closed-loop_4 - INFO - Main loop: collaborative - science_review - member
+2025-04-15 00:07:57,862 - simulation.sim_leadership_+_closed-loop_4 - INFO - Main loop: collaborative - systematic_approach - leader
+2025-04-15 00:08:26,897 - simulation.sim_leadership_+_closed-loop_4 - INFO - Closed-loop communication from leader completed
+2025-04-15 00:08:26,904 - simulation.sim_leadership_+_closed-loop_4 - INFO - Collaborative round completed with score: 31
+2025-04-15 00:08:26,910 - simulation.sim_leadership_+_closed-loop_4 - INFO - Results saved to output\sim_leadership_+_closed-loop_4_results.json

@@ -1,0 +1,31 @@
+2025-04-15 00:02:56,617 - simulation.sim_leadership_4 - INFO - Event logged: simulation_started
+2025-04-15 00:02:56,619 - simulation.sim_leadership_4 - INFO - SimulationLogger initialized for sim_leadership_4 with configuration: leadership
+2025-04-15 00:02:57,690 - simulation.sim_leadership_4 - INFO - Initialized simulation sim_leadership_4
+2025-04-15 00:02:57,690 - simulation.sim_leadership_4 - INFO -   Team Leadership: True
+2025-04-15 00:02:57,692 - simulation.sim_leadership_4 - INFO -   Closed-loop Communication: False
+2025-04-15 00:02:58,765 - simulation.sim_leadership_4 - INFO - Starting adversarial round for perspective sharing
+2025-04-15 00:02:58,770 - simulation.sim_leadership_4 - INFO - Event logged: simulation_started
+2025-04-15 00:02:58,806 - simulation.sim_leadership_4 - INFO - SimulationLogger initialized for sim_leadership_4 with configuration: leadership
+2025-04-15 00:03:10,984 - simulation.sim_leadership_4 - INFO - Team Leader created initial ranking
+2025-04-15 00:03:15,990 - simulation.sim_leadership_4 - INFO - Science Analyst created initial ranking
+2025-04-15 00:03:15,990 - simulation.sim_leadership_4 - INFO - Exploring different perspectives on item: Parachute silk
+2025-04-15 00:03:21,620 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Parachute silk_perspective - leader
+2025-04-15 00:03:33,192 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Parachute silk_science - member
+2025-04-15 00:03:43,885 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Parachute silk_resolution - leader
+2025-04-15 00:03:43,890 - simulation.sim_leadership_4 - INFO - Exploring different perspectives on item: Portable heating unit
+2025-04-15 00:03:49,843 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Portable heating unit_perspective - leader
+2025-04-15 00:04:03,708 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Portable heating unit_science - member
+2025-04-15 00:04:12,309 - simulation.sim_leadership_4 - INFO - Main loop: adversarial - discuss_Portable heating unit_resolution - leader
+2025-04-15 00:04:12,314 - simulation.sim_leadership_4 - INFO - Adversarial round completed with score: 50
+2025-04-15 00:04:12,317 - simulation.sim_leadership_4 - INFO - Starting collaborative round to build consensus
+2025-04-15 00:04:12,356 - simulation.sim_leadership_4 - INFO - Event logged: simulation_started
+2025-04-15 00:04:12,356 - simulation.sim_leadership_4 - INFO - SimulationLogger initialized for sim_leadership_4 with configuration: leadership
+2025-04-15 00:04:23,887 - simulation.sim_leadership_4 - INFO - Leader action: collaborative_review
+2025-04-15 00:04:23,889 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - review_insights - leader
+2025-04-15 00:04:38,636 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - science_review - member
+2025-04-15 00:05:01,361 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - systematic_approach - leader
+2025-04-15 00:05:15,075 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - final_ranking - leader
+2025-04-15 00:05:25,830 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - ranking_feedback - member
+2025-04-15 00:05:33,569 - simulation.sim_leadership_4 - INFO - Main loop: collaborative - final_resolve - leader
+2025-04-15 00:05:33,571 - simulation.sim_leadership_4 - INFO - Collaborative round completed with score: 22
+2025-04-15 00:05:33,577 - simulation.sim_leadership_4 - INFO - Results saved to output\sim_leadership_4_results.json

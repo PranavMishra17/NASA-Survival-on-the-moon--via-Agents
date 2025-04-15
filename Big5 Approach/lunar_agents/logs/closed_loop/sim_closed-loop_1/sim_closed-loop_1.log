@@ -1,0 +1,22 @@
+2025-04-14 23:36:51,556 - simulation.sim_closed-loop_1 - INFO - Event logged: simulation_started
+2025-04-14 23:36:51,558 - simulation.sim_closed-loop_1 - INFO - SimulationLogger initialized for sim_closed-loop_1 with configuration: closed_loop
+2025-04-14 23:36:52,620 - simulation.sim_closed-loop_1 - INFO - Initialized simulation sim_closed-loop_1
+2025-04-14 23:36:52,620 - simulation.sim_closed-loop_1 - INFO -   Team Leadership: False
+2025-04-14 23:36:52,626 - simulation.sim_closed-loop_1 - INFO -   Closed-loop Communication: True
+2025-04-14 23:36:53,730 - simulation.sim_closed-loop_1 - INFO - Starting adversarial round for perspective sharing
+2025-04-14 23:36:53,734 - simulation.sim_closed-loop_1 - INFO - Event logged: simulation_started
+2025-04-14 23:36:53,771 - simulation.sim_closed-loop_1 - INFO - SimulationLogger initialized for sim_closed-loop_1 with configuration: closed_loop
+2025-04-14 23:36:57,852 - simulation.sim_closed-loop_1 - INFO - Team Leader created initial ranking
+2025-04-14 23:37:03,174 - simulation.sim_closed-loop_1 - INFO - Science Analyst created initial ranking
+2025-04-14 23:37:03,178 - simulation.sim_closed-loop_1 - INFO - Exploring different perspectives on item: Life raft
+2025-04-14 23:37:19,151 - simulation.sim_closed-loop_1 - INFO - Closed-loop communication from leader completed
+2025-04-14 23:37:42,906 - simulation.sim_closed-loop_1 - INFO - Closed-loop communication from member completed
+2025-04-14 23:37:57,037 - simulation.sim_closed-loop_1 - INFO - Closed-loop communication from leader completed
+2025-04-14 23:37:57,041 - simulation.sim_closed-loop_1 - INFO - Adversarial round completed with score: 48
+2025-04-14 23:37:57,043 - simulation.sim_closed-loop_1 - INFO - Starting collaborative round to build consensus
+2025-04-14 23:37:57,084 - simulation.sim_closed-loop_1 - INFO - Event logged: simulation_started
+2025-04-14 23:37:57,086 - simulation.sim_closed-loop_1 - INFO - SimulationLogger initialized for sim_closed-loop_1 with configuration: closed_loop
+2025-04-14 23:38:10,149 - simulation.sim_closed-loop_1 - INFO - Main loop: collaborative - systematic_approach - member
+2025-04-14 23:38:39,736 - simulation.sim_closed-loop_1 - INFO - Closed-loop communication from member completed
+2025-04-14 23:38:39,739 - simulation.sim_closed-loop_1 - INFO - Collaborative round completed with score: 26
+2025-04-14 23:38:39,740 - simulation.sim_closed-loop_1 - INFO - Results saved to output\sim_closed-loop_1_results.json

@@ -1,0 +1,24 @@
+2025-04-14 23:56:46,309 - simulation.sim_baseline_3 - INFO - Event logged: simulation_started
+2025-04-14 23:56:46,309 - simulation.sim_baseline_3 - INFO - SimulationLogger initialized for sim_baseline_3 with configuration: baseline
+2025-04-14 23:56:47,437 - simulation.sim_baseline_3 - INFO - Initialized simulation sim_baseline_3
+2025-04-14 23:56:47,437 - simulation.sim_baseline_3 - INFO -   Team Leadership: False
+2025-04-14 23:56:47,439 - simulation.sim_baseline_3 - INFO -   Closed-loop Communication: False
+2025-04-14 23:56:48,569 - simulation.sim_baseline_3 - INFO - Starting adversarial round for perspective sharing
+2025-04-14 23:56:48,571 - simulation.sim_baseline_3 - INFO - Event logged: simulation_started
+2025-04-14 23:56:48,609 - simulation.sim_baseline_3 - INFO - SimulationLogger initialized for sim_baseline_3 with configuration: baseline
+2025-04-14 23:56:54,357 - simulation.sim_baseline_3 - INFO - Team Leader created initial ranking
+2025-04-14 23:56:59,753 - simulation.sim_baseline_3 - INFO - Science Analyst created initial ranking
+2025-04-14 23:56:59,753 - simulation.sim_baseline_3 - INFO - Exploring different perspectives on item: Magnetic compass
+2025-04-14 23:57:02,346 - simulation.sim_baseline_3 - INFO - Main loop: adversarial - discuss_Magnetic compass_perspective - leader
+2025-04-14 23:57:11,869 - simulation.sim_baseline_3 - INFO - Main loop: adversarial - discuss_Magnetic compass_science - member
+2025-04-14 23:57:17,605 - simulation.sim_baseline_3 - INFO - Main loop: adversarial - discuss_Magnetic compass_resolution - leader
+2025-04-14 23:57:17,607 - simulation.sim_baseline_3 - INFO - Adversarial round completed with score: 62
+2025-04-14 23:57:17,607 - simulation.sim_baseline_3 - INFO - Starting collaborative round to build consensus
+2025-04-14 23:57:17,647 - simulation.sim_baseline_3 - INFO - Event logged: simulation_started
+2025-04-14 23:57:17,647 - simulation.sim_baseline_3 - INFO - SimulationLogger initialized for sim_baseline_3 with configuration: baseline
+2025-04-14 23:57:29,582 - simulation.sim_baseline_3 - INFO - Main loop: collaborative - systematic_approach - member
+2025-04-14 23:57:41,631 - simulation.sim_baseline_3 - INFO - Main loop: collaborative - final_ranking - member
+2025-04-14 23:57:48,220 - simulation.sim_baseline_3 - INFO - Main loop: collaborative - ranking_feedback - leader
+2025-04-14 23:57:56,406 - simulation.sim_baseline_3 - INFO - Main loop: collaborative - final_resolve - member
+2025-04-14 23:57:56,413 - simulation.sim_baseline_3 - INFO - Collaborative round completed with score: 28
+2025-04-14 23:57:56,415 - simulation.sim_baseline_3 - INFO - Results saved to output\sim_baseline_3_results.json

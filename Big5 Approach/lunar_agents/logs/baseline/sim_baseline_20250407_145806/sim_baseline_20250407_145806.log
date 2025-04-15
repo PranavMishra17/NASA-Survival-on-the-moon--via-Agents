@@ -1,0 +1,31 @@
+2025-04-07 14:58:06,472 - simulation.sim_baseline_20250407_145806 - INFO - Event logged: simulation_started
+2025-04-07 14:58:06,472 - simulation.sim_baseline_20250407_145806 - INFO - SimulationLogger initialized for sim_baseline_20250407_145806 with configuration: baseline
+2025-04-07 14:58:07,438 - simulation.sim_baseline_20250407_145806 - INFO - Initialized simulation sim_baseline_20250407_145806
+2025-04-07 14:58:07,438 - simulation.sim_baseline_20250407_145806 - INFO -   Team Leadership: False
+2025-04-07 14:58:07,438 - simulation.sim_baseline_20250407_145806 - INFO -   Closed-loop Communication: False
+2025-04-07 14:58:07,438 - simulation.sim_baseline_20250407_145806 - INFO - Starting collaborative round
+2025-04-07 14:58:07,440 - simulation.sim_baseline_20250407_145806 - INFO - Event logged: simulation_started
+2025-04-07 14:58:07,440 - simulation.sim_baseline_20250407_145806 - INFO - SimulationLogger initialized for sim_baseline_20250407_145806 with configuration: baseline
+2025-04-07 14:58:19,185 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - initial_analysis - member
+2025-04-07 14:58:25,122 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - leader_discussion - leader
+2025-04-07 14:58:35,705 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - member_response - member
+2025-04-07 14:58:44,414 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_1 - leader
+2025-04-07 14:58:53,797 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_1 - member
+2025-04-07 14:59:00,298 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_2 - leader
+2025-04-07 14:59:12,169 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_2 - member
+2025-04-07 14:59:21,526 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_3 - leader
+2025-04-07 14:59:35,250 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: collaborative - discussion_round_3 - member
+2025-04-07 14:59:35,251 - simulation.sim_baseline_20250407_145806 - INFO - No team leadership - using average of individual rankings
+2025-04-07 14:59:35,251 - simulation.sim_baseline_20250407_145806 - INFO - Collaborative round completed with score: 66
+2025-04-07 14:59:35,251 - simulation.sim_baseline_20250407_145806 - INFO - Starting adversarial round
+2025-04-07 14:59:35,252 - simulation.sim_baseline_20250407_145806 - INFO - Event logged: simulation_started
+2025-04-07 14:59:35,252 - simulation.sim_baseline_20250407_145806 - INFO - SimulationLogger initialized for sim_baseline_20250407_145806 with configuration: baseline
+2025-04-07 14:59:43,835 - simulation.sim_baseline_20250407_145806 - INFO - Team Leader created initial ranking
+2025-04-07 14:59:53,589 - simulation.sim_baseline_20250407_145806 - INFO - Science Analyst created initial ranking
+2025-04-07 14:59:53,590 - simulation.sim_baseline_20250407_145806 - INFO - Debating item: Magnetic compass
+2025-04-07 15:00:01,947 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: adversarial - debate_Magnetic compass_challenge - leader
+2025-04-07 15:00:24,214 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: adversarial - debate_Magnetic compass_defense - member
+2025-04-07 15:00:39,595 - simulation.sim_baseline_20250407_145806 - INFO - Main loop: adversarial - debate_Magnetic compass_response - leader
+2025-04-07 15:00:39,595 - simulation.sim_baseline_20250407_145806 - INFO - No team leadership - averaging rankings with debate adjustments
+2025-04-07 15:00:39,596 - simulation.sim_baseline_20250407_145806 - INFO - Adversarial round completed with score: 52
+2025-04-07 15:00:39,597 - simulation.sim_baseline_20250407_145806 - INFO - Results saved to output\sim_baseline_20250407_145806_results.json

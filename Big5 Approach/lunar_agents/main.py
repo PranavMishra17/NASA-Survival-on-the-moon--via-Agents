@@ -7,6 +7,7 @@ import logging
 import os
 import json
 from typing import Dict, Any, List
+from datetime import datetime
 
 from simulation.simulator import LunarSurvivalSimulator
 from utils.logger import SimulationLogger
@@ -62,16 +63,80 @@ def run_simulation(use_team_leadership: bool, use_closed_loop_comm: bool, run_ad
         use_closed_loop_comm=use_closed_loop_comm
     )
     
-    # Run collaborative round
-    simulator.run_collaborative_round()
-    
-    # Run adversarial round if requested
+    # Run adversarial round first (reversed order)
     if run_adversarial:
         simulator.run_adversarial_round()
+    
+    # Run collaborative round
+    simulator.run_collaborative_round()
     
     # Save and return results
     simulator.save_results()
     return simulator.results
+
+def run_multiple_simulations(runs=5):
+    """Run multiple simulations and track average scores."""
+    combinations = [
+        {"leadership": False, "closed_loop": False, "name": "Baseline"},
+        {"leadership": True, "closed_loop": False, "name": "Leadership"},
+        {"leadership": False, "closed_loop": True, "name": "Closed-loop"},
+        {"leadership": True, "closed_loop": True, "name": "Leadership + Closed-loop"}
+    ]
+    
+    # Track scores across all runs
+    score_data = {combo["name"]: [] for combo in combinations}
+    
+    # For each run
+    for run in range(1, runs + 1):
+        print(f"\n=== Run {run}/{runs} ===")
+        
+        # For each configuration
+        for combo in combinations:
+            sim_id = f"sim_{combo['name'].replace(' ', '_').lower()}_{run}"
+            print(f"Running {combo['name']}...")
+            
+            # Create and run simulator
+            simulator = LunarSurvivalSimulator(
+                simulation_id=sim_id,
+                use_team_leadership=combo["leadership"],
+                use_closed_loop_comm=combo["closed_loop"]
+            )
+            
+            # First run adversarial round
+            simulator.run_adversarial_round()
+            
+            # Then collaborative round
+            simulator.run_collaborative_round()
+            
+            # Save results
+            simulator.save_results()
+            
+            # Store score
+            score = simulator.results["score"]
+            score_data[combo["name"]].append(score)
+            
+            # Print this run's result
+            print(f"{combo['name'].ljust(25)} Score: {score}")
+    
+    # Calculate and display average scores
+    print("\n=== Average Scores ===")
+    avg_scores = {}
+    for name, scores in score_data.items():
+        avg = sum(scores) / len(scores)
+        avg_scores[name] = avg
+        print(f"{name.ljust(25)} Score: {avg:.1f}")
+    
+    # Save aggregate results
+    output_path = os.path.join(config.OUTPUT_DIR, f"multiple_runs_summary.json")
+    with open(output_path, 'w') as f:
+        json.dump({
+            "runs": runs,
+            "individual_scores": score_data,
+            "average_scores": avg_scores
+        }, f, indent=2)
+    
+    print(f"\nDetailed results saved to: {output_path}")
+    return avg_scores
 
 def run_all_combinations() -> List[Dict[str, Any]]:
     """
@@ -119,8 +184,9 @@ def main():
     parser = argparse.ArgumentParser(description='Run lunar survival agent simulations')
     parser.add_argument('--leadership', action='store_true', help='Use team leadership')
     parser.add_argument('--closedloop', action='store_true', help='Use closed-loop communication')
-    parser.add_argument('--adversarial', action='store_true', help='Run adversarial round')
+    parser.add_argument('--adversarial', action='store_true', help='Run adversarial round before collaborative')
     parser.add_argument('--all', action='store_true', help='Run all feature combinations')
+    parser.add_argument('--runs', type=int, default=1, help='Number of runs for each configuration')
     parser.add_argument('--analyze', action='store_true', help='Analyze previous results')
     
     args = parser.parse_args()
@@ -150,21 +216,25 @@ def main():
         print(f"\nVisualization saved to: {output_path}")
     
     elif args.all:
-        logging.info("Running all feature combinations")
-        results = run_all_combinations()
-        
-        # Print a summary
-        print("\nFinal Results Summary:")
-        for result in results:
-            config = result["config"]
-            features = []
-            if config["use_team_leadership"]:
-                features.append("Leadership")
-            if config["use_closed_loop_comm"]:
-                features.append("Closed-loop")
+        if args.runs > 1:
+            logging.info(f"Running all feature combinations with {args.runs} runs")
+            run_multiple_simulations(runs=args.runs)
+        else:
+            logging.info("Running all feature combinations")
+            results = run_all_combinations()
             
-            feature_str = " + ".join(features) if features else "Baseline"
-            print(f"{feature_str.ljust(25)} Score: {result['score']}")
+            # Print a summary
+            print("\nFinal Results Summary:")
+            for result in results:
+                config = result["config"]
+                features = []
+                if config["use_team_leadership"]:
+                    features.append("Leadership")
+                if config["use_closed_loop_comm"]:
+                    features.append("Closed-loop")
+                
+                feature_str = " + ".join(features) if features else "Baseline"
+                print(f"{feature_str.ljust(25)} Score: {result['score']}")
     else:
         logging.info("Running single simulation")
         result = run_simulation(
@@ -193,5 +263,4 @@ def main():
         print(f"\nDetailed logs available at: {os.path.join(config.LOG_DIR, feature_dir, sim_id)}")
 
 if __name__ == "__main__":
-    from datetime import datetime
     main()

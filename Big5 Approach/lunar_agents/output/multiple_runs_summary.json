@@ -1,0 +1,39 @@
+{
+  "runs": 5,
+  "individual_scores": {
+    "Baseline": [
+      183,
+      36,
+      28,
+      26,
+      26
+    ],
+    "Leadership": [
+      19,
+      41,
+      156,
+      22,
+      173
+    ],
+    "Closed-loop": [
+      26,
+      20,
+      239,
+      214,
+      162
+    ],
+    "Leadership + Closed-loop": [
+      24,
+      161,
+      30,
+      31,
+      148
+    ]
+  },
+  "average_scores": {
+    "Baseline": 59.8,
+    "Leadership": 82.2,
+    "Closed-loop": 132.2,
+    "Leadership + Closed-loop": 78.8
+  }
+}
