@@ -1,0 +1,182 @@
+{
+  "simulation_id": "sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_135211",
+  "config": {
+    "use_team_leadership": true,
+    "use_closed_loop_comm": true,
+    "use_mutual_monitoring": true,
+    "use_shared_mental_model": true
+  },
+  "exchanges": [
+    {
+      "type": "sequential_refinement",
+      "exchanges": [
+        {
+          "type": "initial_ranking",
+          "role": "science",
+          "message": "### Initial Ranking of Lunar Survival Items for 200-Mile Trek\n\nBelow is my scientifically justified ranking of the items, considering survival priorities and the lunar environment.\n\n---\n\n#### **1. Oxygen Tanks**\n- Justification: Oxygen is critical for sustaining life in the vacuum environment of the Moon. Without breathable air, survival time is measured in minutes. This is the highest priority.\n\n#### **2. Water**\n- Justification: Humans need hydration for survival. Dehydration can occur quickly, particularly in low-pressure environments like the Moon. Water is crucial for maintaining physiological functions.\n\n#### **3. Stellar Map**\n- Justification: Navigation is essential to reach the rendezvous point 200 miles away. A stellar map allows the team to pinpoint their location and ensure accurate travel toward the mother ship. GPS is non-functional in the lunar environment, making celestial navigation critical.\n\n#### **4. Solar-Powered FM Receiver-Transmitter**\n- Justification: Communication with the mother ship is vital for coordinating rescue efforts or emergency support. A solar-powered device ensures long-term use without electricity concerns.\n\n#### **5. Portable Heating Unit**\n- Justification: The lunar temperature can drop to lethal levels in shadowed areas. A portable heating unit is essential for protecting against extreme cold and preserving functionality of life-support systems.\n\n#### **6. Food Concentrate**\n- Justification: High-caloric food concentrate provides essential energy for the physically demanding trek. Without adequate energy, fatigue and muscle failure can occur.\n\n#### **7. First Aid Kit**\n- Justification: Injuries are likely given the rocky, uneven terrain. The kit allows treatment for cuts, abrasions, or the potential strain that could threaten progress toward the rendezvous.\n\n#### **8. 50 Feet of Nylon Rope**\n- Justification: The rope is versatile for traversing difficult terrain, stabilizing equipment, or assisting team members during falls in craters or other obstacles.\n\n#### **9. Parachute Silk**\n- Justification: Parachute silk can function as a protective cover against solar radiation or as insulation in shadowed areas. Additionally, it can be repurposed into a makeshift shelter.\n\n#### **10. Signal Flares**\n- Justification: Signal flares are vital for visual signaling to the mother ship or teammate search parties, especially in case of unforeseen detours or accidents.\n\n#### **11. Magnetic Compass**\n- Justification: While useful on Earth, a magnetic compass would be largely ineffective on the Moon due to its weak and irregular magnetic field. Stellar navigation is more reliable.\n\n#### **12. Life Raft**\n- Justification: While extremely bulky, the life raft has limited utility as a physical transport or radiation barrier. However, it is impractical for extended travel across lunar terrain.\n\n#### **13. Two .45 Caliber Pistols**\n- Justification: Firearms are not useful on the Moon, where threats typically stem from environmental factors rather than attackers. They add unnecessary weight and bulk.\n\n#### **14. One Case of Dehydrated Milk**\n- Justification: Although it provides calories, dehydrated milk requires water, which is scarce and better conserved for hydration instead of food preparation.\n\n#### **15. Box of Matches**\n- Justification: Matches are completely useless on the Moon, as there is no atmosphere to support combustion.\n\n---\n\n### Final Notes:\nThis ranking reflects survivability based on the Moon's extreme environment and the trek's requirements. If team members have alternate views, I encourage feedback and evidence-based discussion to align our understanding.\n\n",
+          "ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Stellar map",
+            "Solar-powered FM receiver-transmitter",
+            "Portable heating unit",
+            "Food concentrate",
+            "First aid kit",
+            "50 feet of nylon rope",
+            "Parachute silk",
+            "Signal flares",
+            "Magnetic compass",
+            "Life raft",
+            "Two .45 caliber pistols",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ]
+        },
+        {
+          "type": "refinement",
+          "iteration": 1,
+          "role": "resource",
+          "message": "### Refined Ranking of Lunar Survival Items\n\nBased on the team's shared understanding of the lunar environment, survival priorities, and the initial item ranking, I have refined the list. Each adjustment is evidence-based for optimal resource efficiency and crew survival during the 200-mile trek.\n\n---\n\n#### **1. Oxygen Tanks**  \n- **Acknowledgment:** I fully agree with this ranking. Oxygen is unequivocally the most critical survival resource in a vacuum. Life expectancy without oxygen is measured in minutes.\n\n#### **2. Water**\n- **Acknowledgment:** I agree with the current rank. Water is essential for hydration and physiological functions, particularly under physical exertion. Lunar temperatures can accelerate dehydration.\n\n#### **3. Stellar Map**\n- **Acknowledgment:** I agree with this ranking as navigation is critical. A stellar map provides a reliable means to ensure we arrive at the rendezvous point.\n\n#### **4. Solar-Powered FM Receiver-Transmitter**\n- **Acknowledgment:** Agreed. Communication is vital for rescue coordination or signaling the mother ship in emergencies. Solar power ensures usability throughout the trek.\n\n#### **5. Portable Heating Unit**\n- **Acknowledgment:** I agree that this should remain ranked 5th. Protection from the Moon's extreme cold during the 14 days of darkness is essential for survival and preventing equipment failure.\n\n#### **6. Food Concentrate**\n- **Acknowledgment:** Agreed. This item provides high-caloric energy needed for the physically demanding trek. Effective energy use is vital for preventing exhaustion or collapse.\n\n#### **7. First Aid Kit**\n- **Acknowledgment:** Agreed. Medical supplies are important for treating injuries that would otherwise compromise the team's ability to continue trekking.\n\n#### **8. 50 Feet of Nylon Rope**\n- **Justification for unchanged rank:** Rope is highly versatile for aiding mobility across crevices, stabilizing loads, or assisting teammates in challenging terrains. This versatile functionality justifies its rank.  \n\n#### **9. Signal Flares**  \n- **Adjustment:** I recommend moving this item up one rank (above parachute silk).   \n  **Reasoning:** Signal flares are critical for visual signaling during emergencies or finding the mother ship if deviations occur. Their direct role in safety makes them slightly more important than parachute silk.  \n  **New Rank:** 9  \n\n#### **10. Parachute Silk**  \n- **Adjustment:** I recommend moving parachute silk down one rank.  \n  **Reasoning:** While multipurpose as insulation or radiation protection, it is secondary to signal flares, which provide life-saving, direct communication potential.  \n\n#### **11. Magnetic Compass**  \n- **Acknowledgment:** Agreed. The weak lunar magnetic field renders this minimally useful. Stellar navigation supersedes its function.  \n\n#### **12. Life Raft**  \n- **Acknowledgment:** Agreed. Its bulk makes it impractical, but it can marginally serve as a radiation shield or physical transport in emergencies.  \n\n#### **13. Two .45 Caliber Pistols**  \n- **Acknowledgment:** Agreed. Firearms add weight and have extremely limited functionality in the lunar environment, which poses no physical threats.  \n\n#### **14. One Case of Dehydrated Milk**  \n- **Acknowledgment:** I agree with this rank. Dehydrated milk requires scarce water, already assigned to hydration, and offers minimal caloric utility compared to food concentrate.  \n\n#### **15. Box of Matches**  \n- **Acknowledgment:** Fully agree. Matches are completely useless in a vacuum, as combustion requires oxygen.  \n\n---\n\n### **Final Refined Ranking:**\n\n1. **Oxygen Tanks** \u2013 Critical life-sustaining resource.  \n2. **Water** \u2013 Essential for hydration and physiological survival.  \n3. **Stellar Map** \u2013 Navigation tool for trekking to the rendezvous.  \n4. **Solar-Powered FM Receiver-Transmitter** \u2013 Communication for aid and coordination.  \n5. **Portable Heating Unit** \u2013 Necessary protection against freezing darkness.  \n6. **Food Concentrate** \u2013 Provides crucial energy for the trek.  \n7. **First Aid Kit** \u2013 For injury treatment and maintaining functionality.  \n8. **50 Feet of Nylon Rope** \u2013 Versatile tool for mobility and safety.  \n9. **Signal Flares** \u2013 Visual signaling for emergencies or rescue.  \n10. **Parachute Silk** \u2013 Insulation and radiation protection.  \n11. **Magnetic Compass** \u2013 Limited functionality on the Moon.  \n12. **Life Raft** \u2013 Bulky, marginal utility as transport or barrier.  \n13. **Two .45 Caliber Pistols** \u2013 Unnecessary weight, non-essential.  \n14. **One Case of Dehydrated Milk** \u2013 Water-intensive and low utility.  \n15. **Box of Matches** \u2013 Completely useless in a vacuum.\n\n---\n\n### Key Adjustments:\n1. **Signal Flares moved up to Rank 9** for emergency communication importance.  \n2. **Parachute Silk moved down to Rank 10** as secondary to flares.\n\nLet me know if further clarification or rationale is needed!",
+          "ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Stellar map",
+            "Solar-powered FM receiver-transmitter",
+            "Portable heating unit",
+            "Food concentrate",
+            "First aid kit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Parachute silk",
+            "Magnetic compass",
+            "Life raft",
+            "Two .45 caliber pistols",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ]
+        }
+      ],
+      "iterations": [
+        {
+          "iteration": 0,
+          "current_ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Stellar map",
+            "Solar-powered FM receiver-transmitter",
+            "Portable heating unit",
+            "Food concentrate",
+            "First aid kit",
+            "50 feet of nylon rope",
+            "Parachute silk",
+            "Signal flares",
+            "Magnetic compass",
+            "Life raft",
+            "Two .45 caliber pistols",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ],
+          "current_message": "### Initial Ranking of Lunar Survival Items for 200-Mile Trek\n\nBelow is my scientifically justified ranking of the items, considering survival priorities and the lunar environment.\n\n---\n\n#### **1. Oxygen Tanks**\n- Justification: Oxygen is critical for sustaining life in the vacuum environment of the Moon. Without breathable air, survival time is measured in minutes. This is the highest priority.\n\n#### **2. Water**\n- Justification: Humans need hydration for survival. Dehydration can occur quickly, particularly in low-pressure environments like the Moon. Water is crucial for maintaining physiological functions.\n\n#### **3. Stellar Map**\n- Justification: Navigation is essential to reach the rendezvous point 200 miles away. A stellar map allows the team to pinpoint their location and ensure accurate travel toward the mother ship. GPS is non-functional in the lunar environment, making celestial navigation critical.\n\n#### **4. Solar-Powered FM Receiver-Transmitter**\n- Justification: Communication with the mother ship is vital for coordinating rescue efforts or emergency support. A solar-powered device ensures long-term use without electricity concerns.\n\n#### **5. Portable Heating Unit**\n- Justification: The lunar temperature can drop to lethal levels in shadowed areas. A portable heating unit is essential for protecting against extreme cold and preserving functionality of life-support systems.\n\n#### **6. Food Concentrate**\n- Justification: High-caloric food concentrate provides essential energy for the physically demanding trek. Without adequate energy, fatigue and muscle failure can occur.\n\n#### **7. First Aid Kit**\n- Justification: Injuries are likely given the rocky, uneven terrain. The kit allows treatment for cuts, abrasions, or the potential strain that could threaten progress toward the rendezvous.\n\n#### **8. 50 Feet of Nylon Rope**\n- Justification: The rope is versatile for traversing difficult terrain, stabilizing equipment, or assisting team members during falls in craters or other obstacles.\n\n#### **9. Parachute Silk**\n- Justification: Parachute silk can function as a protective cover against solar radiation or as insulation in shadowed areas. Additionally, it can be repurposed into a makeshift shelter.\n\n#### **10. Signal Flares**\n- Justification: Signal flares are vital for visual signaling to the mother ship or teammate search parties, especially in case of unforeseen detours or accidents.\n\n#### **11. Magnetic Compass**\n- Justification: While useful on Earth, a magnetic compass would be largely ineffective on the Moon due to its weak and irregular magnetic field. Stellar navigation is more reliable.\n\n#### **12. Life Raft**\n- Justification: While extremely bulky, the life raft has limited utility as a physical transport or radiation barrier. However, it is impractical for extended travel across lunar terrain.\n\n#### **13. Two .45 Caliber Pistols**\n- Justification: Firearms are not useful on the Moon, where threats typically stem from environmental factors rather than attackers. They add unnecessary weight and bulk.\n\n#### **14. One Case of Dehydrated Milk**\n- Justification: Although it provides calories, dehydrated milk requires water, which is scarce and better conserved for hydration instead of food preparation.\n\n#### **15. Box of Matches**\n- Justification: Matches are completely useless on the Moon, as there is no atmosphere to support combustion.\n\n---\n\n### Final Notes:\nThis ranking reflects survivability based on the Moon's extreme environment and the trek's requirements. If team members have alternate views, I encourage feedback and evidence-based discussion to align our understanding.\n\n",
+          "current_agent": "science"
+        },
+        {
+          "iteration": 1,
+          "current_ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Stellar map",
+            "Solar-powered FM receiver-transmitter",
+            "Portable heating unit",
+            "Food concentrate",
+            "First aid kit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Parachute silk",
+            "Magnetic compass",
+            "Life raft",
+            "Two .45 caliber pistols",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ],
+          "current_message": "### Refined Ranking of Lunar Survival Items\n\nBased on the team's shared understanding of the lunar environment, survival priorities, and the initial item ranking, I have refined the list. Each adjustment is evidence-based for optimal resource efficiency and crew survival during the 200-mile trek.\n\n---\n\n#### **1. Oxygen Tanks**  \n- **Acknowledgment:** I fully agree with this ranking. Oxygen is unequivocally the most critical survival resource in a vacuum. Life expectancy without oxygen is measured in minutes.\n\n#### **2. Water**\n- **Acknowledgment:** I agree with the current rank. Water is essential for hydration and physiological functions, particularly under physical exertion. Lunar temperatures can accelerate dehydration.\n\n#### **3. Stellar Map**\n- **Acknowledgment:** I agree with this ranking as navigation is critical. A stellar map provides a reliable means to ensure we arrive at the rendezvous point.\n\n#### **4. Solar-Powered FM Receiver-Transmitter**\n- **Acknowledgment:** Agreed. Communication is vital for rescue coordination or signaling the mother ship in emergencies. Solar power ensures usability throughout the trek.\n\n#### **5. Portable Heating Unit**\n- **Acknowledgment:** I agree that this should remain ranked 5th. Protection from the Moon's extreme cold during the 14 days of darkness is essential for survival and preventing equipment failure.\n\n#### **6. Food Concentrate**\n- **Acknowledgment:** Agreed. This item provides high-caloric energy needed for the physically demanding trek. Effective energy use is vital for preventing exhaustion or collapse.\n\n#### **7. First Aid Kit**\n- **Acknowledgment:** Agreed. Medical supplies are important for treating injuries that would otherwise compromise the team's ability to continue trekking.\n\n#### **8. 50 Feet of Nylon Rope**\n- **Justification for unchanged rank:** Rope is highly versatile for aiding mobility across crevices, stabilizing loads, or assisting teammates in challenging terrains. This versatile functionality justifies its rank.  \n\n#### **9. Signal Flares**  \n- **Adjustment:** I recommend moving this item up one rank (above parachute silk).   \n  **Reasoning:** Signal flares are critical for visual signaling during emergencies or finding the mother ship if deviations occur. Their direct role in safety makes them slightly more important than parachute silk.  \n  **New Rank:** 9  \n\n#### **10. Parachute Silk**  \n- **Adjustment:** I recommend moving parachute silk down one rank.  \n  **Reasoning:** While multipurpose as insulation or radiation protection, it is secondary to signal flares, which provide life-saving, direct communication potential.  \n\n#### **11. Magnetic Compass**  \n- **Acknowledgment:** Agreed. The weak lunar magnetic field renders this minimally useful. Stellar navigation supersedes its function.  \n\n#### **12. Life Raft**  \n- **Acknowledgment:** Agreed. Its bulk makes it impractical, but it can marginally serve as a radiation shield or physical transport in emergencies.  \n\n#### **13. Two .45 Caliber Pistols**  \n- **Acknowledgment:** Agreed. Firearms add weight and have extremely limited functionality in the lunar environment, which poses no physical threats.  \n\n#### **14. One Case of Dehydrated Milk**  \n- **Acknowledgment:** I agree with this rank. Dehydrated milk requires scarce water, already assigned to hydration, and offers minimal caloric utility compared to food concentrate.  \n\n#### **15. Box of Matches**  \n- **Acknowledgment:** Fully agree. Matches are completely useless in a vacuum, as combustion requires oxygen.  \n\n---\n\n### **Final Refined Ranking:**\n\n1. **Oxygen Tanks** \u2013 Critical life-sustaining resource.  \n2. **Water** \u2013 Essential for hydration and physiological survival.  \n3. **Stellar Map** \u2013 Navigation tool for trekking to the rendezvous.  \n4. **Solar-Powered FM Receiver-Transmitter** \u2013 Communication for aid and coordination.  \n5. **Portable Heating Unit** \u2013 Necessary protection against freezing darkness.  \n6. **Food Concentrate** \u2013 Provides crucial energy for the trek.  \n7. **First Aid Kit** \u2013 For injury treatment and maintaining functionality.  \n8. **50 Feet of Nylon Rope** \u2013 Versatile tool for mobility and safety.  \n9. **Signal Flares** \u2013 Visual signaling for emergencies or rescue.  \n10. **Parachute Silk** \u2013 Insulation and radiation protection.  \n11. **Magnetic Compass** \u2013 Limited functionality on the Moon.  \n12. **Life Raft** \u2013 Bulky, marginal utility as transport or barrier.  \n13. **Two .45 Caliber Pistols** \u2013 Unnecessary weight, non-essential.  \n14. **One Case of Dehydrated Milk** \u2013 Water-intensive and low utility.  \n15. **Box of Matches** \u2013 Completely useless in a vacuum.\n\n---\n\n### Key Adjustments:\n1. **Signal Flares moved up to Rank 9** for emergency communication importance.  \n2. **Parachute Silk moved down to Rank 10** as secondary to flares.\n\nLet me know if further clarification or rationale is needed!",
+          "current_agent": "resource",
+          "difference_score": 2
+        }
+      ],
+      "final_ranking": [
+        "Oxygen tanks",
+        "Water",
+        "Stellar map",
+        "Solar-powered FM receiver-transmitter",
+        "Portable heating unit",
+        "Food concentrate",
+        "First aid kit",
+        "50 feet of nylon rope",
+        "Signal flares",
+        "Parachute silk",
+        "Magnetic compass",
+        "Life raft",
+        "Two .45 caliber pistols",
+        "One case of dehydrated milk",
+        "Box of matches"
+      ],
+      "final_message": "### Refined Ranking of Lunar Survival Items\n\nBased on the team's shared understanding of the lunar environment, survival priorities, and the initial item ranking, I have refined the list. Each adjustment is evidence-based for optimal resource efficiency and crew survival during the 200-mile trek.\n\n---\n\n#### **1. Oxygen Tanks**  \n- **Acknowledgment:** I fully agree with this ranking. Oxygen is unequivocally the most critical survival resource in a vacuum. Life expectancy without oxygen is measured in minutes.\n\n#### **2. Water**\n- **Acknowledgment:** I agree with the current rank. Water is essential for hydration and physiological functions, particularly under physical exertion. Lunar temperatures can accelerate dehydration.\n\n#### **3. Stellar Map**\n- **Acknowledgment:** I agree with this ranking as navigation is critical. A stellar map provides a reliable means to ensure we arrive at the rendezvous point.\n\n#### **4. Solar-Powered FM Receiver-Transmitter**\n- **Acknowledgment:** Agreed. Communication is vital for rescue coordination or signaling the mother ship in emergencies. Solar power ensures usability throughout the trek.\n\n#### **5. Portable Heating Unit**\n- **Acknowledgment:** I agree that this should remain ranked 5th. Protection from the Moon's extreme cold during the 14 days of darkness is essential for survival and preventing equipment failure.\n\n#### **6. Food Concentrate**\n- **Acknowledgment:** Agreed. This item provides high-caloric energy needed for the physically demanding trek. Effective energy use is vital for preventing exhaustion or collapse.\n\n#### **7. First Aid Kit**\n- **Acknowledgment:** Agreed. Medical supplies are important for treating injuries that would otherwise compromise the team's ability to continue trekking.\n\n#### **8. 50 Feet of Nylon Rope**\n- **Justification for unchanged rank:** Rope is highly versatile for aiding mobility across crevices, stabilizing loads, or assisting teammates in challenging terrains. This versatile functionality justifies its rank.  \n\n#### **9. Signal Flares**  \n- **Adjustment:** I recommend moving this item up one rank (above parachute silk).   \n  **Reasoning:** Signal flares are critical for visual signaling during emergencies or finding the mother ship if deviations occur. Their direct role in safety makes them slightly more important than parachute silk.  \n  **New Rank:** 9  \n\n#### **10. Parachute Silk**  \n- **Adjustment:** I recommend moving parachute silk down one rank.  \n  **Reasoning:** While multipurpose as insulation or radiation protection, it is secondary to signal flares, which provide life-saving, direct communication potential.  \n\n#### **11. Magnetic Compass**  \n- **Acknowledgment:** Agreed. The weak lunar magnetic field renders this minimally useful. Stellar navigation supersedes its function.  \n\n#### **12. Life Raft**  \n- **Acknowledgment:** Agreed. Its bulk makes it impractical, but it can marginally serve as a radiation shield or physical transport in emergencies.  \n\n#### **13. Two .45 Caliber Pistols**  \n- **Acknowledgment:** Agreed. Firearms add weight and have extremely limited functionality in the lunar environment, which poses no physical threats.  \n\n#### **14. One Case of Dehydrated Milk**  \n- **Acknowledgment:** I agree with this rank. Dehydrated milk requires scarce water, already assigned to hydration, and offers minimal caloric utility compared to food concentrate.  \n\n#### **15. Box of Matches**  \n- **Acknowledgment:** Fully agree. Matches are completely useless in a vacuum, as combustion requires oxygen.  \n\n---\n\n### **Final Refined Ranking:**\n\n1. **Oxygen Tanks** \u2013 Critical life-sustaining resource.  \n2. **Water** \u2013 Essential for hydration and physiological survival.  \n3. **Stellar Map** \u2013 Navigation tool for trekking to the rendezvous.  \n4. **Solar-Powered FM Receiver-Transmitter** \u2013 Communication for aid and coordination.  \n5. **Portable Heating Unit** \u2013 Necessary protection against freezing darkness.  \n6. **Food Concentrate** \u2013 Provides crucial energy for the trek.  \n7. **First Aid Kit** \u2013 For injury treatment and maintaining functionality.  \n8. **50 Feet of Nylon Rope** \u2013 Versatile tool for mobility and safety.  \n9. **Signal Flares** \u2013 Visual signaling for emergencies or rescue.  \n10. **Parachute Silk** \u2013 Insulation and radiation protection.  \n11. **Magnetic Compass** \u2013 Limited functionality on the Moon.  \n12. **Life Raft** \u2013 Bulky, marginal utility as transport or barrier.  \n13. **Two .45 Caliber Pistols** \u2013 Unnecessary weight, non-essential.  \n14. **One Case of Dehydrated Milk** \u2013 Water-intensive and low utility.  \n15. **Box of Matches** \u2013 Completely useless in a vacuum.\n\n---\n\n### Key Adjustments:\n1. **Signal Flares moved up to Rank 9** for emergency communication importance.  \n2. **Parachute Silk moved down to Rank 10** as secondary to flares.\n\nLet me know if further clarification or rationale is needed!",
+      "score": 26
+    }
+  ],
+  "final_ranking": [
+    "Oxygen tanks",
+    "Water",
+    "Stellar map",
+    "Solar-powered FM receiver-transmitter",
+    "Portable heating unit",
+    "Food concentrate",
+    "First aid kit",
+    "50 feet of nylon rope",
+    "Signal flares",
+    "Parachute silk",
+    "Magnetic compass",
+    "Life raft",
+    "Two .45 caliber pistols",
+    "One case of dehydrated milk",
+    "Box of matches"
+  ],
+  "nasa_ranking": [
+    "Oxygen tanks",
+    "Water",
+    "Stellar map",
+    "Food concentrate",
+    "Solar-powered FM receiver-transmitter",
+    "50 feet of nylon rope",
+    "First aid kit",
+    "Parachute silk",
+    "Life raft",
+    "Signal flares",
+    "Two .45 caliber pistols",
+    "One case of dehydrated milk",
+    "Portable heating unit",
+    "Magnetic compass",
+    "Box of matches"
+  ],
+  "score": 26,
+  "teamwork_metrics": {
+    "mutual_monitoring": {
+      "total_monitoring_exchanges": 0,
+      "total_issues_detected": 0,
+      "avg_issues_per_exchange": 0.0,
+      "issue_types": {},
+      "issue_resolution_rate": 0.0,
+      "team_monitoring_effectiveness": "low"
+    },
+    "shared_mental_model": {
+      "convergence_trend": "unknown",
+      "final_convergence": 0.40104166666666663,
+      "understanding_completeness": {
+        "science": 0.6055555555555555,
+        "resource": 0.5520833333333334
+      },
+      "avg_completeness": 0.5788194444444444,
+      "effectiveness_rating": "medium"
+    }
+  }
+}

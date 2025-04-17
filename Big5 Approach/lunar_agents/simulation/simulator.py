@@ -17,6 +17,10 @@ from agents.team_member import ModularAgent, create_agent_team
 from communication.closed_loop import ClosedLoopCommunication
 import config
 
+# Add these imports at the top of simulator.py
+from teamwork.mutual_monitoring import MutualMonitoring
+from teamwork.shared_mental_model import SharedMentalModel
+
 # At the top of simulator.py (outside the class)
 def initialize_agents(use_team_leadership, use_closed_loop_comm, simulation_id):
     """Initialize agents with compatibility for both old and new agent structures."""
@@ -75,7 +79,9 @@ class LunarSurvivalSimulator:
     def __init__(self, 
                 simulation_id: str = None,
                 use_team_leadership: bool = True,
-                use_closed_loop_comm: bool = False):
+                use_closed_loop_comm: bool = False,
+                use_mutual_monitoring: bool = False,
+                use_shared_mental_model: bool = False):
         """
         Initialize the simulator.
         
@@ -83,16 +89,22 @@ class LunarSurvivalSimulator:
             simulation_id: Optional ID for the simulation, defaults to timestamp
             use_team_leadership: Whether to use team leadership behaviors
             use_closed_loop_comm: Whether to use closed-loop communication
+            use_mutual_monitoring: Whether to use mutual performance monitoring
+            use_shared_mental_model: Whether to use shared mental model
         """
         # Set simulation ID and configuration
         self.simulation_id = simulation_id or f"sim_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         self.use_team_leadership = use_team_leadership
         self.use_closed_loop_comm = use_closed_loop_comm
+        self.use_mutual_monitoring = use_mutual_monitoring
+        self.use_shared_mental_model = use_shared_mental_model
         
         # Setup logging with enhanced structure
         self.config = {
             "use_team_leadership": use_team_leadership,
             "use_closed_loop_comm": use_closed_loop_comm,
+            "use_mutual_monitoring": use_mutual_monitoring,
+            "use_shared_mental_model": use_shared_mental_model
         }
         self.logger = SimulationLogger(
             simulation_id=self.simulation_id,
@@ -100,32 +112,24 @@ class LunarSurvivalSimulator:
             config=self.config
         ).logger
         
-        # Initialize agents using the new modular design
-        from agents.team_member import ModularAgent
-        
-        # Create specialized agents
-        self.science_agent = ModularAgent(
-            role_type="Science", 
+        # Initialize agents
+        self.team_leader, self.team_member, self.leader, self.science_agent, self.resource_agent = initialize_agents(
+            use_team_leadership=use_team_leadership,
             use_closed_loop_comm=use_closed_loop_comm,
-            can_lead=use_team_leadership
+            simulation_id=self.simulation_id
         )
         
-        self.resource_agent = ModularAgent(
-            role_type="Resource", 
-            use_closed_loop_comm=use_closed_loop_comm,
-            can_lead=False
-        )
+        # Initialize teamwork components
+        self.mutual_monitor = MutualMonitoring() if use_mutual_monitoring else None
+        self.mental_model = SharedMentalModel() if use_shared_mental_model else None
         
-        # Create compatibility mappings for existing code
-        self.team_leader = self.science_agent if use_team_leadership else self.resource_agent
-        self.team_member = self.resource_agent if use_team_leadership else self.science_agent
-        
-        # For new code pattern
-        self.leader = self.team_leader
-        
-        # Knowledge sharing between agents
-        self.science_agent.share_knowledge(self.resource_agent)
-        self.resource_agent.share_knowledge(self.science_agent)
+        # Initialize shared knowledge if using shared mental model
+        if self.mental_model:
+            self.mental_model.initialize_lunar_task_model()
+            self.mental_model.initialize_team_model([
+                self.science_agent.role, 
+                self.resource_agent.role
+            ])
         
         # Create a shared knowledge repository available to both agents
         self.shared_knowledge = {}
@@ -140,19 +144,18 @@ class LunarSurvivalSimulator:
             "exchanges": [],
             "final_ranking": [],
             "nasa_ranking": config.LUNAR_ITEMS,
-            "score": 0
+            "score": 0,
+            "teamwork_metrics": {}
         }
         
         self.logger.info(f"Initialized simulation {self.simulation_id}")
         self.logger.info(f"  Team Leadership: {use_team_leadership}")
         self.logger.info(f"  Closed-loop Communication: {use_closed_loop_comm}")
+        self.logger.info(f"  Mutual Performance Monitoring: {use_mutual_monitoring}")
+        self.logger.info(f"  Shared Mental Model: {use_shared_mental_model}")
         
-        # Initialize agents using external function
-        self.team_leader, self.team_member, self.leader, self.science_agent, self.resource_agent = initialize_agents(
-            use_team_leadership=use_team_leadership,
-            use_closed_loop_comm=use_closed_loop_comm,
-            simulation_id=self.simulation_id
-        )
+        # Initialize shared knowledge between agents
+        self._initialize_shared_knowledge()
 
     def initialize_agents(use_team_leadership, use_closed_loop_comm, simulation_id):
         """
@@ -212,21 +215,21 @@ class LunarSurvivalSimulator:
         """Initialize shared knowledge that both agents can access."""
         # Add lunar environment knowledge
         self.shared_knowledge["lunar_environment"] = {
-            "atmosphere": "No atmosphere, vacuum conditions",
-            "temperature": "Extreme variations (+250°F in sunlight, -250°F in shadow)",
-            "gravity": "1/6 of Earth's gravity",
-            "radiation": "No protection from solar radiation",
-            "day_length": "14 Earth days of daylight, 14 Earth days of darkness",
-            "terrain": "Uneven surfaces, craters, dust"
+            #"atmosphere": "No atmosphere, vacuum conditions",
+            #"temperature": "Extreme variations (+250°F in sunlight, -250°F in shadow)",
+            #"gravity": "1/6 of Earth's gravity",
+            #"radiation": "No protection from solar radiation",
+            #"day_length": "14 Earth days of daylight, 14 Earth days of darkness",
+            #"terrain": "Uneven surfaces, craters, dust"
         }
         
         # Add survival principles
         self.shared_knowledge["survival_principles"] = {
-            "priorities": "Oxygen, water, shelter/temperature regulation, food",
-            "navigation": "Stellar navigation is most reliable without magnetic field",
-            "communication": "No atmosphere to carry sound waves, radio required",
-            "movement": "Conserve energy and resources during trek",
-            "physical_effects": "Vacuum effects on human body, radiation exposure risks"
+            #"priorities": "Oxygen, water, shelter/temperature regulation, food",
+            #"navigation": "Stellar navigation is most reliable without magnetic field",
+            #"communication": "No atmosphere to carry sound waves, radio required",
+            #"movement": "Conserve energy and resources during trek",
+            #"physical_effects": "Vacuum effects on human body, radiation exposure risks"
         }
         
         # Share knowledge with both agents
@@ -512,6 +515,389 @@ class LunarSurvivalSimulator:
         self.results["exchanges"].append(round_results)
         
         return round_results
+    
+    """
+    Sequential refinement method for the lunar survival simulator.
+    This replaces the collaborative and adversarial rounds with an iterative refinement process.
+    """
+    def run_sequential_refinement(self, iterations=4):
+        """
+        Run a sequential refinement process where agents iteratively improve rankings.
+        
+        Args:
+            iterations: Number of refinement iterations to perform
+            
+        Returns:
+            Dictionary with results of the refinement process
+        """
+        self.logger.info("Starting sequential refinement process")
+        
+        logger = SimulationLogger(
+            self.simulation_id,
+            config.LOG_DIR,
+            self.config
+        )
+        
+        round_results = {
+            "type": "sequential_refinement",
+            "exchanges": [],
+            "iterations": []
+        }
+        
+        # Ensure teamwork metrics exist in results
+        if "teamwork_metrics" not in self.results:
+            self.results["teamwork_metrics"] = {}
+        
+        # Step 1: First agent creates an initial ranking with justifications
+        import random
+        start_with_science = random.choice([True, False])
+        
+        self.logger.info(f"Starting with {'Science' if start_with_science else 'Resource'} agent")
+        
+        if start_with_science:
+            first_agent = self.science_agent
+            second_agent = self.resource_agent
+            first_role = "science"
+            second_role = "resource"
+        else:
+            first_agent = self.resource_agent
+            second_agent = self.science_agent  
+            first_role = "resource"
+            second_role = "science"
+        
+        # Initial ranking from first agent
+        first_prompt = f"""
+        As a {first_agent.role} with expertise in your domain, create an initial ranking 
+        of the lunar survival items for a 200-mile trek to the rendezvous point.
+        
+        Consider the specific conditions on the lunar surface and the survival priorities.
+        
+        Rank all 15 items from most important (1) to least important (15), with clear
+        justifications for each item's placement. Present your ranking as a numbered list.
+        
+        Items to rank: {', '.join(config.LUNAR_ITEMS)}
+        """
+        
+        # Apply shared mental model to initial prompt if enabled
+        if self.use_shared_mental_model:
+            first_prompt = self.mental_model.enhance_agent_prompt(first_role, first_prompt)
+        
+        first_message = first_agent.chat(first_prompt)
+        current_ranking = first_agent.get_item_ranking(first_message)
+        
+        logger.log_main_loop(
+            "sequential",
+            "initial_ranking",
+            first_role,
+            first_message
+        )
+        
+        round_results["exchanges"].append({
+            "type": "initial_ranking",
+            "role": first_role,
+            "message": first_message,
+            "ranking": current_ranking
+        })
+        
+        # Apply mutual monitoring to initial ranking if enabled
+        if self.use_mutual_monitoring:
+            monitoring_result = self.mutual_monitor.monitor_ranking(
+                agent_role=first_role,
+                ranking=current_ranking,
+                rationale=first_message
+            )
+            
+            # Generate feedback from the second agent if issues detected
+            if monitoring_result["issues_detected"]:
+                feedback = self.mutual_monitor.generate_feedback(
+                    monitoring_result=monitoring_result,
+                    feedback_agent_role=second_role
+                )
+                
+                logger.log_main_loop(
+                    "sequential",
+                    "initial_monitoring_feedback",
+                    second_role,
+                    feedback
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "monitoring_feedback",
+                    "iteration": 0,
+                    "role": second_role,
+                    "message": feedback
+                })
+                
+                # Let the first agent respond to feedback
+                response_prompt = f"""
+                You've received this feedback from your teammate:
+                
+                "{feedback}"
+                
+                Consider this feedback and respond to it. If you agree with any points raised,
+                explain how you'll address them in your ranking. If you disagree with any points,
+                explain your reasoning.
+                
+                Then provide your updated ranking that takes this feedback into account.
+                """
+                
+                feedback_response = first_agent.chat(response_prompt)
+                updated_ranking = first_agent.get_item_ranking(feedback_response)
+                
+                logger.log_main_loop(
+                    "sequential",
+                    "initial_feedback_response",
+                    first_role,
+                    feedback_response
+                )
+                
+                round_results["exchanges"].append({
+                    "type": "feedback_response",
+                    "iteration": 0,
+                    "role": first_role,
+                    "message": feedback_response,
+                    "ranking": updated_ranking
+                })
+                
+                # Update current ranking with the feedback-adjusted ranking
+                current_ranking = updated_ranking
+                current_message = feedback_response
+            else:
+                current_message = first_message
+        else:
+            current_message = first_message
+        
+        # Update shared mental model with initial understanding if enabled
+        if self.use_shared_mental_model:
+            understanding = self.mental_model.extract_understanding_from_message(current_message)
+            self.mental_model.update_shared_understanding(first_role, understanding)
+        
+        # Store initial ranking for comparison
+        round_results["iterations"].append({
+            "iteration": 0,
+            "current_ranking": current_ranking,
+            "current_message": current_message,
+            "current_agent": first_role
+        })
+        
+        # Step 2: Iterative refinement process
+        refining_agent = second_agent
+        refining_role = second_role
+        
+        for i in range(1, iterations + 1):
+            self.logger.info(f"Iteration {i}: {refining_role} agent refining ranking")
+            
+            refine_prompt = f"""
+            Review the current ranking of lunar survival items:
+            
+            {current_message}
+            
+            Based on your expertise as a {refining_agent.role}, refine this ranking.
+            
+            For each item where you suggest a change in ranking, explain:
+            1. Why you believe the item should be ranked differently
+            2. How your specialized knowledge informs this decision
+            3. The specific reasons for the new position
+            
+            If you agree with the current ranking of an item, briefly acknowledge this.
+            
+            Provide your complete refined ranking as a numbered list from 1-15 with brief justifications.
+            Ensure all items from this list are included exactly once: {', '.join(config.LUNAR_ITEMS)}
+            """
+            
+            # Enhance prompt with shared mental model if enabled
+            if self.use_shared_mental_model:
+                refine_prompt = self.mental_model.enhance_agent_prompt(refining_role, refine_prompt)
+            
+            refined_message = refining_agent.chat(refine_prompt)
+            refined_ranking = refining_agent.get_item_ranking(refined_message)
+            
+            logger.log_main_loop(
+                "sequential",
+                f"{refining_role}_refinement_{i}",
+                refining_role,
+                refined_message
+            )
+            
+            round_results["exchanges"].append({
+                "type": "refinement",
+                "iteration": i,
+                "role": refining_role,
+                "message": refined_message,
+                "ranking": refined_ranking
+            })
+            
+            # Apply mutual monitoring if enabled
+            if self.use_mutual_monitoring:
+                # Monitor the ranking for issues
+                monitoring_result = self.mutual_monitor.monitor_ranking(
+                    agent_role=refining_role,
+                    ranking=refined_ranking,
+                    rationale=refined_message
+                )
+                
+                # Generate feedback from the other agent if issues detected
+                if monitoring_result["issues_detected"]:
+                    feedback_role = "science" if refining_role == "resource" else "resource"
+                    feedback_agent = self.science_agent if feedback_role == "science" else self.resource_agent
+                    
+                    feedback = self.mutual_monitor.generate_feedback(
+                        monitoring_result=monitoring_result,
+                        feedback_agent_role=feedback_role
+                    )
+                    
+                    # Log the feedback
+                    logger.log_main_loop(
+                        "sequential",
+                        f"monitoring_feedback_{i}",
+                        feedback_role,
+                        feedback
+                    )
+                    
+                    round_results["exchanges"].append({
+                        "type": "monitoring_feedback",
+                        "iteration": i,
+                        "role": feedback_role,
+                        "message": feedback
+                    })
+                    
+                    # Let the agent respond to the feedback
+                    response_prompt = f"""
+                    You've received this feedback from your teammate:
+                    
+                    "{feedback}"
+                    
+                    Consider this feedback and respond to it. If you agree with any points raised,
+                    explain how you'll address them in your ranking. If you disagree with any points,
+                    explain your reasoning.
+                    
+                    Then provide your updated ranking that takes this feedback into account.
+                    """
+                    
+                    feedback_response = refining_agent.chat(response_prompt)
+                    updated_ranking = refining_agent.get_item_ranking(feedback_response)
+                    
+                    logger.log_main_loop(
+                        "sequential",
+                        f"feedback_response_{i}",
+                        refining_role,
+                        feedback_response
+                    )
+                    
+                    round_results["exchanges"].append({
+                        "type": "feedback_response",
+                        "iteration": i,
+                        "role": refining_role,
+                        "message": feedback_response,
+                        "ranking": updated_ranking
+                    })
+                    
+                    # Update current ranking with the feedback-adjusted ranking
+                    refined_ranking = updated_ranking
+                    refined_message = feedback_response
+            
+            # Update shared mental model if enabled
+            if self.use_shared_mental_model:
+                # Extract the agent's understanding from their message
+                understanding = self.mental_model.extract_understanding_from_message(refined_message)
+                
+                # Update the shared mental model
+                self.mental_model.update_shared_understanding(refining_role, understanding)
+            
+            # Store iteration results
+            difference_score = self._calculate_ranking_difference(current_ranking, refined_ranking)
+            
+            round_results["iterations"].append({
+                "iteration": i,
+                "current_ranking": refined_ranking,
+                "current_message": refined_message,
+                "current_agent": refining_role,
+                "difference_score": difference_score
+            })
+            
+            # Update for next iteration
+            current_ranking = refined_ranking
+            current_message = refined_message
+            
+            # Swap agents for next iteration
+            if refining_role == "science":
+                refining_agent = self.resource_agent
+                refining_role = "resource"
+            else:
+                refining_agent = self.science_agent  
+                refining_role = "science"
+            
+            # Check if consensus is reached (difference score below threshold)
+            if difference_score <= 10:
+                self.logger.info(f"Consensus reached at iteration {i} with difference score {difference_score}")
+                break
+        
+        # Use the final refined ranking
+        final_ranking = current_ranking
+        final_message = current_message
+        
+        # Calculate score against NASA ranking
+        score = self._calculate_score(final_ranking)
+        
+        # Store results
+        round_results["final_ranking"] = final_ranking
+        round_results["final_message"] = final_message
+        round_results["score"] = score
+        
+        # Add teamwork metrics to the results
+        if self.use_mutual_monitoring:
+            teamwork_metrics = self.mutual_monitor.analyze_team_performance()
+            self.results["teamwork_metrics"]["mutual_monitoring"] = teamwork_metrics
+            self.logger.info(f"Mutual monitoring effectiveness: {teamwork_metrics['team_monitoring_effectiveness']}")
+        
+        if self.use_shared_mental_model:
+            teamwork_metrics = self.mental_model.analyze_mental_model_effectiveness()
+            self.results["teamwork_metrics"]["shared_mental_model"] = teamwork_metrics
+            self.logger.info(f"Shared mental model effectiveness: {teamwork_metrics['effectiveness_rating']}")
+        
+        self.logger.info(f"Sequential refinement completed with score: {score}")
+        self.results["exchanges"].append(round_results)
+        self.results["final_ranking"] = final_ranking
+        self.results["score"] = score
+        
+        return round_results
+
+
+    def _calculate_ranking_difference(self, ranking1, ranking2):
+        """
+        Calculate the sum of absolute differences between two rankings.
+        This measures how different the two rankings are.
+        
+        Args:
+            ranking1: First ranking list
+            ranking2: Second ranking list
+            
+        Returns:
+            Sum of absolute position differences
+        """
+        difference = 0
+        
+        # Create position dictionaries
+        pos1 = {item: i for i, item in enumerate(ranking1)}
+        pos2 = {item: i for i, item in enumerate(ranking2)}
+        
+        # Calculate position differences for each item
+        for item in config.LUNAR_ITEMS:
+            if item in pos1 and item in pos2:
+                difference += abs(pos1[item] - pos2[item])
+        
+        return difference
+
+    def _format_ranking(self, ranking):
+        """Format a ranking list for inclusion in a prompt."""
+        if not ranking:
+            return "No ranking provided"
+        
+        formatted = []
+        for i, item in enumerate(ranking):
+            formatted.append(f"{i+1}. {item}")
+        
+        return "\n".join(formatted)
     
     def _create_preliminary_ranking(self, leader_ranking, member_ranking):
         """

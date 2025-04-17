@@ -160,7 +160,9 @@ class Agent:
         """Get the conversation history."""
         return self.conversation_history
     
-    def get_item_ranking(self, message: str = None) -> List[str]:
+
+        
+    def get_item_ranking(self, message=None):
         """
         Extract the agent's ranking of items from their response.
         
@@ -175,7 +177,7 @@ class Agent:
                 return []
             message = self.conversation_history[-1]["assistant"]
         
-        # This is a simple extraction method - in real applications you'd want more robust parsing
+        # Extract ranking
         ranking = []
         lines = message.split('\n')
         
@@ -187,4 +189,19 @@ class Agent:
                         ranking.append(item)
                         break
         
-        return ranking
+        # Check for duplicates and missing items
+        seen_items = set()
+        valid_ranking = []
+        
+        for item in ranking:
+            if item not in seen_items:
+                seen_items.add(item)
+                valid_ranking.append(item)
+        
+        # Add any missing items at the end
+        for item in config.LUNAR_ITEMS:
+            if item not in seen_items:
+                valid_ranking.append(item)
+                seen_items.add(item)
+        
+        return valid_ranking[:15]  # Ensure only 15 items

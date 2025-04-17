@@ -1,0 +1,17 @@
+2025-04-17 13:59:59,179 - simulation.sim_leadership_20250417_135959 - INFO - Event logged: simulation_started
+2025-04-17 13:59:59,180 - simulation.sim_leadership_20250417_135959 - INFO - SimulationLogger initialized for sim_leadership_20250417_135959 with configuration: leadership
+2025-04-17 14:00:00,064 - simulation.sim_leadership_20250417_135959 - INFO - Initialized simulation sim_leadership_20250417_135959
+2025-04-17 14:00:00,064 - simulation.sim_leadership_20250417_135959 - INFO -   Team Leadership: True
+2025-04-17 14:00:00,064 - simulation.sim_leadership_20250417_135959 - INFO -   Closed-loop Communication: False
+2025-04-17 14:00:00,065 - simulation.sim_leadership_20250417_135959 - INFO -   Mutual Performance Monitoring: False
+2025-04-17 14:00:00,065 - simulation.sim_leadership_20250417_135959 - INFO -   Shared Mental Model: False
+2025-04-17 14:00:00,065 - simulation.sim_leadership_20250417_135959 - INFO - Starting sequential refinement process
+2025-04-17 14:00:00,067 - simulation.sim_leadership_20250417_135959 - INFO - Event logged: simulation_started
+2025-04-17 14:00:00,067 - simulation.sim_leadership_20250417_135959 - INFO - SimulationLogger initialized for sim_leadership_20250417_135959 with configuration: leadership
+2025-04-17 14:00:00,067 - simulation.sim_leadership_20250417_135959 - INFO - Starting with Science agent
+2025-04-17 14:00:09,229 - simulation.sim_leadership_20250417_135959 - INFO - Main loop: sequential - initial_ranking - science
+2025-04-17 14:00:09,229 - simulation.sim_leadership_20250417_135959 - INFO - Iteration 1: resource agent refining ranking
+2025-04-17 14:00:24,137 - simulation.sim_leadership_20250417_135959 - INFO - Main loop: sequential - resource_refinement_1 - resource
+2025-04-17 14:00:24,138 - simulation.sim_leadership_20250417_135959 - INFO - Consensus reached at iteration 1 with difference score 6
+2025-04-17 14:00:24,139 - simulation.sim_leadership_20250417_135959 - INFO - Sequential refinement completed with score: 18
+2025-04-17 14:00:24,144 - simulation.sim_leadership_20250417_135959 - INFO - Results saved to output\sim_leadership_20250417_135959_results.json

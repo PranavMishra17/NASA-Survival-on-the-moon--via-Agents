@@ -1,1 +1,0 @@
-{"event_type": "simulation_started", "timestamp": "2025-04-06T15:33:15.558835", "data": {"simulation_id": "sim_20250406_153315", "timestamp": "2025-04-06T15:33:15.558835", "config": {"use_team_leadership": true, "use_closed_loop_comm": false}, "config_name": "leadership"}}

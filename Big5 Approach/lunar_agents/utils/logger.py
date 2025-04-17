@@ -22,7 +22,7 @@ class SimulationLogger:
         Args:
             simulation_id: ID for the simulation
             log_dir: Directory to store logs
-            config: Configuration options (leadership, closed_loop)
+            config: Configuration options (leadership, closed_loop, etc.)
         """
         self.simulation_id = simulation_id
         self.log_dir = log_dir
@@ -34,6 +34,10 @@ class SimulationLogger:
             config_str.append("leadership")
         if self.config.get("use_closed_loop_comm"):
             config_str.append("closed_loop")
+        if self.config.get("use_mutual_monitoring"):
+            config_str.append("mutual_monitoring")
+        if self.config.get("use_shared_mental_model"):
+            config_str.append("shared_mental_model")
         self.config_name = "_".join(config_str) if config_str else "baseline"
         
         # Create folder structure: logs/[config_name]/[simulation_id]/
@@ -61,6 +65,8 @@ class SimulationLogger:
         self.main_loop_file = os.path.join(self.run_dir, f"{simulation_id}_main_loop.jsonl")
         self.closed_loop_file = os.path.join(self.run_dir, f"{simulation_id}_closed_loop.jsonl")
         self.leader_file = os.path.join(self.run_dir, f"{simulation_id}_leader.jsonl")
+        self.monitoring_file = os.path.join(self.run_dir, f"{simulation_id}_monitoring.jsonl")
+        self.mental_model_file = os.path.join(self.run_dir, f"{simulation_id}_mental_model.jsonl")
     
     def _setup_logger(self) -> logging.Logger:
         """Set up the file and console loggers."""
@@ -116,7 +122,7 @@ class SimulationLogger:
         Log the result of a simulation round.
         
         Args:
-            round_type: Type of round (collaborative, adversarial)
+            round_type: Type of round (collaborative, adversarial, sequential)
             score: Score achieved
             ranking: Final ranking
             metadata: Optional additional metadata
@@ -141,64 +147,11 @@ class SimulationLogger:
             "simulation_id": self.simulation_id,
             "final_score": results.get("score"),
             "final_ranking": results.get("final_ranking"),
+            "teamwork_metrics": results.get("teamwork_metrics", {}),
             "summary": results
         })
         
         self.logger.info(f"Simulation {self.simulation_id} completed with score: {results.get('score')}")
-
-    def setup_logging(simulation_id: str, configuration: Dict[str, bool]) -> logging.Logger:
-        """
-        Set up logging for a simulation run.
-        
-        Args:
-            simulation_id: ID of the simulation
-            configuration: Configuration options (leadership, closed_loop)
-        
-        Returns:
-            Configured logger
-        """
-        # Create configuration string
-        config_str = []
-        if configuration.get("leadership"):
-            config_str.append("leadership")
-        if configuration.get("closed_loop"):
-            config_str.append("closed_loop")
-        config_name = "_".join(config_str) if config_str else "baseline"
-        
-        # Create folder structure
-        run_dir = os.path.join(config.LOG_DIR, config_name, simulation_id)
-        os.makedirs(run_dir, exist_ok=True)
-        
-        # Configure logger
-        logger = logging.getLogger(f"simulation.{simulation_id}")
-        logger.setLevel(logging.INFO)
-        
-        # File handler with full path
-        log_path = os.path.join(run_dir, f"{simulation_id}.log")
-        file_handler = logging.FileHandler(log_path)
-        file_handler.setFormatter(logging.Formatter(
-            '%(asctime)s - %(levelname)s - %(message)s'
-        ))
-        
-        # Add handlers and return
-        logger.addHandler(file_handler)
-        logger.addHandler(logging.StreamHandler())
-        
-        logger.info(f"Initialized logging for {simulation_id} with configuration: {config_name}")
-        return logger
-
-    def log_agent_message(logger: logging.Logger, agent_role: str, message: str):
-        """
-        Log a complete agent message.
-        
-        Args:
-            logger: Logger instance
-            agent_role: Role of the agent (leader/member)
-            message: Complete message text
-        """
-        logger.info(f"Agent {agent_role} message:")
-        # Log full message, not just first 100 chars
-        logger.info(f"{message}")
 
     def log_event(self, event_type, data):
         """Log a structured event to the events file."""
@@ -256,3 +209,33 @@ class SimulationLogger:
             f.write(json.dumps(event) + '\n')
         
         self.logger.info(f"Leader action: {action_type}")
+        
+    def log_monitoring_action(self, monitor_role, target_role, issues, feedback):
+        """Log mutual monitoring actions and feedback."""
+        event = {
+            "monitor_role": monitor_role,
+            "target_role": target_role,
+            "timestamp": datetime.now().isoformat(),
+            "issues_detected": len(issues) > 0,
+            "issues": issues,
+            "feedback": feedback
+        }
+        
+        with open(self.monitoring_file, 'a') as f:
+            f.write(json.dumps(event) + '\n')
+        
+        self.logger.info(f"Monitoring action: {monitor_role} monitored {target_role}, issues: {len(issues)}")
+        
+    def log_mental_model_update(self, agent_role, understanding, convergence):
+        """Log shared mental model updates and convergence metrics."""
+        event = {
+            "agent_role": agent_role,
+            "timestamp": datetime.now().isoformat(),
+            "understanding": understanding,
+            "convergence": convergence
+        }
+        
+        with open(self.mental_model_file, 'a') as f:
+            f.write(json.dumps(event) + '\n')
+        
+        self.logger.info(f"Mental model update from {agent_role}, convergence: {convergence:.2f}")

@@ -1,0 +1,32 @@
+{
+  "runs": 1,
+  "iterations": 3,
+  "individual_scores": {
+    "Baseline": [
+      16
+    ],
+    "Leadership": [
+      16
+    ],
+    "Closed-loop": [
+      20
+    ],
+    "Mutual Monitoring": [
+      16
+    ],
+    "Shared Mental Model": [
+      16
+    ],
+    "All Features": [
+      28
+    ]
+  },
+  "average_scores": {
+    "Baseline": 16.0,
+    "Leadership": 16.0,
+    "Closed-loop": 20.0,
+    "Mutual Monitoring": 16.0,
+    "Shared Mental Model": 16.0,
+    "All Features": 28.0
+  }
+}

@@ -1,0 +1,17 @@
+2025-04-17 13:50:30,507 - simulation.sim_baseline_20250417_135030 - INFO - Event logged: simulation_started
+2025-04-17 13:50:30,508 - simulation.sim_baseline_20250417_135030 - INFO - SimulationLogger initialized for sim_baseline_20250417_135030 with configuration: baseline
+2025-04-17 13:50:31,414 - simulation.sim_baseline_20250417_135030 - INFO - Initialized simulation sim_baseline_20250417_135030
+2025-04-17 13:50:31,414 - simulation.sim_baseline_20250417_135030 - INFO -   Team Leadership: False
+2025-04-17 13:50:31,414 - simulation.sim_baseline_20250417_135030 - INFO -   Closed-loop Communication: False
+2025-04-17 13:50:31,414 - simulation.sim_baseline_20250417_135030 - INFO -   Mutual Performance Monitoring: False
+2025-04-17 13:50:31,415 - simulation.sim_baseline_20250417_135030 - INFO -   Shared Mental Model: False
+2025-04-17 13:50:31,416 - simulation.sim_baseline_20250417_135030 - INFO - Starting sequential refinement process
+2025-04-17 13:50:31,417 - simulation.sim_baseline_20250417_135030 - INFO - Event logged: simulation_started
+2025-04-17 13:50:31,417 - simulation.sim_baseline_20250417_135030 - INFO - SimulationLogger initialized for sim_baseline_20250417_135030 with configuration: baseline
+2025-04-17 13:50:31,417 - simulation.sim_baseline_20250417_135030 - INFO - Starting with Resource agent
+2025-04-17 13:50:40,930 - simulation.sim_baseline_20250417_135030 - INFO - Main loop: sequential - initial_ranking - resource
+2025-04-17 13:50:40,931 - simulation.sim_baseline_20250417_135030 - INFO - Iteration 1: science agent refining ranking
+2025-04-17 13:50:51,986 - simulation.sim_baseline_20250417_135030 - INFO - Main loop: sequential - science_refinement_1 - science
+2025-04-17 13:50:51,987 - simulation.sim_baseline_20250417_135030 - INFO - Consensus reached at iteration 1 with difference score 4
+2025-04-17 13:50:51,988 - simulation.sim_baseline_20250417_135030 - INFO - Sequential refinement completed with score: 14
+2025-04-17 13:50:51,992 - simulation.sim_baseline_20250417_135030 - INFO - Results saved to output\sim_baseline_20250417_135030_results.json

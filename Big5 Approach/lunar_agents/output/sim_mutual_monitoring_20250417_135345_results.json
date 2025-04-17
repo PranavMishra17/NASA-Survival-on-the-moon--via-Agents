@@ -1,0 +1,172 @@
+{
+  "simulation_id": "sim_mutual_monitoring_20250417_135345",
+  "config": {
+    "use_team_leadership": false,
+    "use_closed_loop_comm": false,
+    "use_mutual_monitoring": true,
+    "use_shared_mental_model": false
+  },
+  "exchanges": [
+    {
+      "type": "sequential_refinement",
+      "exchanges": [
+        {
+          "type": "initial_ranking",
+          "role": "science",
+          "message": "### Lunar Survival Item Rankings:\n\n#### **1. Oxygen Tanks**\n**Justification:** Oxygen is the single most critical resource for survival on the moon. Lunar space suits rely on oxygen for breathing, and without it, the crew cannot function or survive. The lunar surface has no breathable atmosphere, so this item is non-negotiable in terms of importance.\n\n#### **2. Water**\n**Justification:** Water is essential for hydration, temperature regulation, and survival during a long trek in the harsh lunar environment. Humans can survive for several days without food but only a few days without water, especially under physically demanding conditions.\n\n#### **3. Solar-Powered FM Receiver-Transmitter**\n**Justification:** Communication is vital for coordinating with the mother ship or rescuers at the rendezvous point. The transmitter could be used to signal for assistance or relay progress, especially if you're delayed or require navigation assistance.\n\n#### **4. Stellar Map**\n**Justification:** Accurate navigation is crucial for ensuring that the crew can successfully find the rendezvous point over a 200-mile trek. A stellar map will help orient the team based on stars and landmarks, as there are no magnetic poles or visible terrestrial navigation aids on the moon.\n\n#### **5. Food Concentrate**\n**Justification:** While food is not as immediately critical as oxygen and water, it will be needed to sustain energy during the prolonged trek. Compact food concentrate ensures efficient use of limited weight and volume while providing necessary nutrients.\n\n#### **6. First Aid Kit**\n**Justification:** Injuries or illnesses during the trek could be life-threatening without access to medical supplies. A first aid kit ensures the crew can treat minor injuries or illnesses and prevent complications.\n\n#### **7. Parachute Silk**\n**Justification:** Parachute silk can serve multiple purposes, including providing shade from solar radiation, being used as a makeshift shelter, or functioning as insulation against extreme lunar temperatures.\n\n#### **8. Portable Heating Unit**\n**Justification:** The temperature on the moon's surface can drop to extreme cold during lunar nights (as low as -280\u00b0F). Although space suits provide insulation, portable heating may be needed in case of prolonged exposure or malfunctions in your suits.\n\n#### **9. 50 Feet of Nylon Rope**\n**Justification:** Nylon rope can be used for climbing over obstacles, towing equipment, securing items, or assisting crewmates in difficult terrain. Its versatility makes it an important tool for the trek.\n\n#### **10. Signal Flares**\n**Justification:** Signal flares are a secondary means of communication and can be used to draw attention if in close proximity to the mother ship or rescue crew. Although not essential for the entire trek, they may prove useful upon nearing the rendezvous point.\n\n#### **11. Two .45 Caliber Pistols**\n**Justification:** On the moon, these have limited utility, as there are no predators or hostile life forms to defend against. Potential uses include propulsion for small objects or creating noise for signaling, but their importance is minimal compared to other survival items.\n\n#### **12. Life Raft**\n**Justification:** A life raft is nearly useless in this situation, as there is no liquid surface on the moon. At best, it could provide additional insulation, protection, or be repurposed to carry items.\n\n#### **13. Magnetic Compass**\n**Justification:** Magnetic compasses are designed to function based on Earth's magnetic field, which is nonexistent on the moon. This item will not function as intended and is therefore largely useless for navigation.\n\n#### **14. One Case of Dehydrated Milk**\n**Justification:** Dehydrated milk may provide some sustenance but is less calorie-dense or practical compared to food concentrate. Additionally, it requires water for rehydration, which is a highly finite resource.\n\n#### **15. Box of Matches**\n**Justification:** The moon has no atmosphere and therefore no oxygen to sustain combustion. Matches are completely useless for starting a fire, making this the least important item.\n\n---\n\nThis ranking prioritizes fundamental survival needs (oxygen, water, navigation, and communication), practical tools, and equipment while eliminating items that lack utility in the lunar environment.",
+          "ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Solar-powered FM receiver-transmitter",
+            "Stellar map",
+            "Food concentrate",
+            "First aid kit",
+            "Parachute silk",
+            "Portable heating unit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Two .45 caliber pistols",
+            "Life raft",
+            "Magnetic compass",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ]
+        },
+        {
+          "type": "refinement",
+          "iteration": 1,
+          "role": "resource",
+          "message": "### Refined Lunar Survival Item Rankings:\n\n#### 1. **Oxygen Tanks**  \n**Justification:** Oxygen remains the most critical resource for survival. Without this, the crew cannot breathe and will not survive the 200-mile trek. This item's importance is non-negotiable.  \n\n#### 2. **Water**  \n**Justification:** Hydration is essential for physical functioning and maintaining energy levels. Water also plays a critical role in managing body temperature and preventing dehydration\u2014especially in such a taxing environment.  \n\n#### 3. **Solar-Powered FM Receiver-Transmitter**  \n**Justification:** Communication is essential for coordinating with the mother ship or possible rescuers. The ability to stay in touch with the team at the rendezvous point significantly increases the survival odds.  \n\n#### 4. **Stellar Map**  \n**Justification:** Navigation tools are absolutely necessary for a 200-mile trek through the featureless and barren lunar surface. The stellar map provides orientation based on celestial objects, ensuring the crew can reach the rendezvous point efficiently.  \n\n#### 5. **Food Concentrate**  \n**Justification:** Food concentrate is compact, lightweight, and calorie-dense, ensuring crew members have the energy necessary for a prolonged multi-day trek. While not as critical as oxygen or water, it is needed for long-term stamina.  \n\n#### 6. **First Aid Kit**  \n**Justification:** Medical emergencies can arise in such a harsh environment, and the first aid kit is essential for treating injuries, preventing infections, and maintaining the health of the crew.  \n\n#### 7. **Parachute Silk**  \n**Reason for Change:** Moved up in ranking due to its versatility. Parachute silk can be valuable in creating solar shields, insulating against temperature extremes, or crafting makeshift protection. It has survival uses that outweigh less adaptable items further down the list.  \n\n#### 8. **Portable Heating Unit**  \n**Justification:** While space suits provide insulation, extreme cold temperatures during lunar traversals could still pose a risk. The heating unit serves as a backup if suit functions fail or during stops in the trek.  \n\n#### 9. **50 Feet of Nylon Rope**  \n**Justification:** Nylon rope's usefulness in traversing obstacles, towing equipment, or aiding crewmates on challenging terrain gives it significant utility during the trek.  \n\n#### 10. **Signal Flares**  \n**Justification:** Signal flares may be the only visible way to alert rescuers if the crew nears the rendezvous point but needs assistance. They are a secondary method of communication and therefore rank lower than the FM receiver-transmitter.  \n\n#### 11. **Two .45 Caliber Pistols**  \n**Justification:** While firearms have very limited uses on the moon, they could potentially be used as propulsion tools or their discharge as audible signaling. However, their importance is marginal compared to other tools.  \n\n#### 12. **Life Raft**  \n**Justification:** The life raft has little value for its intended purpose but could be repurposed as a makeshift carrier for equipment, extra insulation, or solar radiation shielding. Its uses are far more limited than parachute silk, hence the lower ranking.  \n\n#### 13. **Case of Dehydrated Milk**  \n**Reason for Change:** Moved higher than the magnetic compass due to its potential sustenance. While less practical than food concentrate and requiring water for rehydration (a scarce resource), it still has some survival use in calorie provision.  \n\n#### 14. **Magnetic Compass**  \n**Justification:** Magnetic compasses are completely useless on the moon due to the lack of a lunar magnetic field. There are no navigation benefits, making this item one of the least useful for survival.  \n\n#### 15. **Box of Matches**  \n**Justification:** Matches cannot combust on the moon due to the absence of oxygen in the atmosphere. They offer no survival value, making them the least important item.\n\n---\n\n### Final Ranking:\n1. **Oxygen Tanks**  \n2. **Water**  \n3. **Solar-Powered FM Receiver-Transmitter**  \n4. **Stellar Map**  \n5. **Food Concentrate**  \n6. **First Aid Kit**  \n7. **Parachute Silk**  \n8. **Portable Heating Unit**  \n9. **50 Feet of Nylon Rope**  \n10. **Signal Flares**  \n11. **Two .45 Caliber Pistols**  \n12. **Life Raft**  \n13. **Case of Dehydrated Milk**  \n14. **Magnetic Compass**  \n15. **Box of Matches**\n\n### Summary of Changes:\n- **Parachute Silk** was re-ranked higher due to its versatility in shielding and insulation.  \n- **Case of Dehydrated Milk** is ranked above the **Magnetic Compass** as it has marginal caloric use.  \n- The **Portable Heating Unit** remains important but ranks below **Parachute Silk** due to limited situational reliance, as the space suit generally provides sufficient thermal protection.",
+          "ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Solar-powered FM receiver-transmitter",
+            "Stellar map",
+            "Food concentrate",
+            "First aid kit",
+            "Parachute silk",
+            "Portable heating unit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Two .45 caliber pistols",
+            "Life raft",
+            "Magnetic compass",
+            "Box of matches",
+            "One case of dehydrated milk"
+          ]
+        }
+      ],
+      "iterations": [
+        {
+          "iteration": 0,
+          "current_ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Solar-powered FM receiver-transmitter",
+            "Stellar map",
+            "Food concentrate",
+            "First aid kit",
+            "Parachute silk",
+            "Portable heating unit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Two .45 caliber pistols",
+            "Life raft",
+            "Magnetic compass",
+            "One case of dehydrated milk",
+            "Box of matches"
+          ],
+          "current_message": "### Lunar Survival Item Rankings:\n\n#### **1. Oxygen Tanks**\n**Justification:** Oxygen is the single most critical resource for survival on the moon. Lunar space suits rely on oxygen for breathing, and without it, the crew cannot function or survive. The lunar surface has no breathable atmosphere, so this item is non-negotiable in terms of importance.\n\n#### **2. Water**\n**Justification:** Water is essential for hydration, temperature regulation, and survival during a long trek in the harsh lunar environment. Humans can survive for several days without food but only a few days without water, especially under physically demanding conditions.\n\n#### **3. Solar-Powered FM Receiver-Transmitter**\n**Justification:** Communication is vital for coordinating with the mother ship or rescuers at the rendezvous point. The transmitter could be used to signal for assistance or relay progress, especially if you're delayed or require navigation assistance.\n\n#### **4. Stellar Map**\n**Justification:** Accurate navigation is crucial for ensuring that the crew can successfully find the rendezvous point over a 200-mile trek. A stellar map will help orient the team based on stars and landmarks, as there are no magnetic poles or visible terrestrial navigation aids on the moon.\n\n#### **5. Food Concentrate**\n**Justification:** While food is not as immediately critical as oxygen and water, it will be needed to sustain energy during the prolonged trek. Compact food concentrate ensures efficient use of limited weight and volume while providing necessary nutrients.\n\n#### **6. First Aid Kit**\n**Justification:** Injuries or illnesses during the trek could be life-threatening without access to medical supplies. A first aid kit ensures the crew can treat minor injuries or illnesses and prevent complications.\n\n#### **7. Parachute Silk**\n**Justification:** Parachute silk can serve multiple purposes, including providing shade from solar radiation, being used as a makeshift shelter, or functioning as insulation against extreme lunar temperatures.\n\n#### **8. Portable Heating Unit**\n**Justification:** The temperature on the moon's surface can drop to extreme cold during lunar nights (as low as -280\u00b0F). Although space suits provide insulation, portable heating may be needed in case of prolonged exposure or malfunctions in your suits.\n\n#### **9. 50 Feet of Nylon Rope**\n**Justification:** Nylon rope can be used for climbing over obstacles, towing equipment, securing items, or assisting crewmates in difficult terrain. Its versatility makes it an important tool for the trek.\n\n#### **10. Signal Flares**\n**Justification:** Signal flares are a secondary means of communication and can be used to draw attention if in close proximity to the mother ship or rescue crew. Although not essential for the entire trek, they may prove useful upon nearing the rendezvous point.\n\n#### **11. Two .45 Caliber Pistols**\n**Justification:** On the moon, these have limited utility, as there are no predators or hostile life forms to defend against. Potential uses include propulsion for small objects or creating noise for signaling, but their importance is minimal compared to other survival items.\n\n#### **12. Life Raft**\n**Justification:** A life raft is nearly useless in this situation, as there is no liquid surface on the moon. At best, it could provide additional insulation, protection, or be repurposed to carry items.\n\n#### **13. Magnetic Compass**\n**Justification:** Magnetic compasses are designed to function based on Earth's magnetic field, which is nonexistent on the moon. This item will not function as intended and is therefore largely useless for navigation.\n\n#### **14. One Case of Dehydrated Milk**\n**Justification:** Dehydrated milk may provide some sustenance but is less calorie-dense or practical compared to food concentrate. Additionally, it requires water for rehydration, which is a highly finite resource.\n\n#### **15. Box of Matches**\n**Justification:** The moon has no atmosphere and therefore no oxygen to sustain combustion. Matches are completely useless for starting a fire, making this the least important item.\n\n---\n\nThis ranking prioritizes fundamental survival needs (oxygen, water, navigation, and communication), practical tools, and equipment while eliminating items that lack utility in the lunar environment.",
+          "current_agent": "science"
+        },
+        {
+          "iteration": 1,
+          "current_ranking": [
+            "Oxygen tanks",
+            "Water",
+            "Solar-powered FM receiver-transmitter",
+            "Stellar map",
+            "Food concentrate",
+            "First aid kit",
+            "Parachute silk",
+            "Portable heating unit",
+            "50 feet of nylon rope",
+            "Signal flares",
+            "Two .45 caliber pistols",
+            "Life raft",
+            "Magnetic compass",
+            "Box of matches",
+            "One case of dehydrated milk"
+          ],
+          "current_message": "### Refined Lunar Survival Item Rankings:\n\n#### 1. **Oxygen Tanks**  \n**Justification:** Oxygen remains the most critical resource for survival. Without this, the crew cannot breathe and will not survive the 200-mile trek. This item's importance is non-negotiable.  \n\n#### 2. **Water**  \n**Justification:** Hydration is essential for physical functioning and maintaining energy levels. Water also plays a critical role in managing body temperature and preventing dehydration\u2014especially in such a taxing environment.  \n\n#### 3. **Solar-Powered FM Receiver-Transmitter**  \n**Justification:** Communication is essential for coordinating with the mother ship or possible rescuers. The ability to stay in touch with the team at the rendezvous point significantly increases the survival odds.  \n\n#### 4. **Stellar Map**  \n**Justification:** Navigation tools are absolutely necessary for a 200-mile trek through the featureless and barren lunar surface. The stellar map provides orientation based on celestial objects, ensuring the crew can reach the rendezvous point efficiently.  \n\n#### 5. **Food Concentrate**  \n**Justification:** Food concentrate is compact, lightweight, and calorie-dense, ensuring crew members have the energy necessary for a prolonged multi-day trek. While not as critical as oxygen or water, it is needed for long-term stamina.  \n\n#### 6. **First Aid Kit**  \n**Justification:** Medical emergencies can arise in such a harsh environment, and the first aid kit is essential for treating injuries, preventing infections, and maintaining the health of the crew.  \n\n#### 7. **Parachute Silk**  \n**Reason for Change:** Moved up in ranking due to its versatility. Parachute silk can be valuable in creating solar shields, insulating against temperature extremes, or crafting makeshift protection. It has survival uses that outweigh less adaptable items further down the list.  \n\n#### 8. **Portable Heating Unit**  \n**Justification:** While space suits provide insulation, extreme cold temperatures during lunar traversals could still pose a risk. The heating unit serves as a backup if suit functions fail or during stops in the trek.  \n\n#### 9. **50 Feet of Nylon Rope**  \n**Justification:** Nylon rope's usefulness in traversing obstacles, towing equipment, or aiding crewmates on challenging terrain gives it significant utility during the trek.  \n\n#### 10. **Signal Flares**  \n**Justification:** Signal flares may be the only visible way to alert rescuers if the crew nears the rendezvous point but needs assistance. They are a secondary method of communication and therefore rank lower than the FM receiver-transmitter.  \n\n#### 11. **Two .45 Caliber Pistols**  \n**Justification:** While firearms have very limited uses on the moon, they could potentially be used as propulsion tools or their discharge as audible signaling. However, their importance is marginal compared to other tools.  \n\n#### 12. **Life Raft**  \n**Justification:** The life raft has little value for its intended purpose but could be repurposed as a makeshift carrier for equipment, extra insulation, or solar radiation shielding. Its uses are far more limited than parachute silk, hence the lower ranking.  \n\n#### 13. **Case of Dehydrated Milk**  \n**Reason for Change:** Moved higher than the magnetic compass due to its potential sustenance. While less practical than food concentrate and requiring water for rehydration (a scarce resource), it still has some survival use in calorie provision.  \n\n#### 14. **Magnetic Compass**  \n**Justification:** Magnetic compasses are completely useless on the moon due to the lack of a lunar magnetic field. There are no navigation benefits, making this item one of the least useful for survival.  \n\n#### 15. **Box of Matches**  \n**Justification:** Matches cannot combust on the moon due to the absence of oxygen in the atmosphere. They offer no survival value, making them the least important item.\n\n---\n\n### Final Ranking:\n1. **Oxygen Tanks**  \n2. **Water**  \n3. **Solar-Powered FM Receiver-Transmitter**  \n4. **Stellar Map**  \n5. **Food Concentrate**  \n6. **First Aid Kit**  \n7. **Parachute Silk**  \n8. **Portable Heating Unit**  \n9. **50 Feet of Nylon Rope**  \n10. **Signal Flares**  \n11. **Two .45 Caliber Pistols**  \n12. **Life Raft**  \n13. **Case of Dehydrated Milk**  \n14. **Magnetic Compass**  \n15. **Box of Matches**\n\n### Summary of Changes:\n- **Parachute Silk** was re-ranked higher due to its versatility in shielding and insulation.  \n- **Case of Dehydrated Milk** is ranked above the **Magnetic Compass** as it has marginal caloric use.  \n- The **Portable Heating Unit** remains important but ranks below **Parachute Silk** due to limited situational reliance, as the space suit generally provides sufficient thermal protection.",
+          "current_agent": "resource",
+          "difference_score": 2
+        }
+      ],
+      "final_ranking": [
+        "Oxygen tanks",
+        "Water",
+        "Solar-powered FM receiver-transmitter",
+        "Stellar map",
+        "Food concentrate",
+        "First aid kit",
+        "Parachute silk",
+        "Portable heating unit",
+        "50 feet of nylon rope",
+        "Signal flares",
+        "Two .45 caliber pistols",
+        "Life raft",
+        "Magnetic compass",
+        "Box of matches",
+        "One case of dehydrated milk"
+      ],
+      "final_message": "### Refined Lunar Survival Item Rankings:\n\n#### 1. **Oxygen Tanks**  \n**Justification:** Oxygen remains the most critical resource for survival. Without this, the crew cannot breathe and will not survive the 200-mile trek. This item's importance is non-negotiable.  \n\n#### 2. **Water**  \n**Justification:** Hydration is essential for physical functioning and maintaining energy levels. Water also plays a critical role in managing body temperature and preventing dehydration\u2014especially in such a taxing environment.  \n\n#### 3. **Solar-Powered FM Receiver-Transmitter**  \n**Justification:** Communication is essential for coordinating with the mother ship or possible rescuers. The ability to stay in touch with the team at the rendezvous point significantly increases the survival odds.  \n\n#### 4. **Stellar Map**  \n**Justification:** Navigation tools are absolutely necessary for a 200-mile trek through the featureless and barren lunar surface. The stellar map provides orientation based on celestial objects, ensuring the crew can reach the rendezvous point efficiently.  \n\n#### 5. **Food Concentrate**  \n**Justification:** Food concentrate is compact, lightweight, and calorie-dense, ensuring crew members have the energy necessary for a prolonged multi-day trek. While not as critical as oxygen or water, it is needed for long-term stamina.  \n\n#### 6. **First Aid Kit**  \n**Justification:** Medical emergencies can arise in such a harsh environment, and the first aid kit is essential for treating injuries, preventing infections, and maintaining the health of the crew.  \n\n#### 7. **Parachute Silk**  \n**Reason for Change:** Moved up in ranking due to its versatility. Parachute silk can be valuable in creating solar shields, insulating against temperature extremes, or crafting makeshift protection. It has survival uses that outweigh less adaptable items further down the list.  \n\n#### 8. **Portable Heating Unit**  \n**Justification:** While space suits provide insulation, extreme cold temperatures during lunar traversals could still pose a risk. The heating unit serves as a backup if suit functions fail or during stops in the trek.  \n\n#### 9. **50 Feet of Nylon Rope**  \n**Justification:** Nylon rope's usefulness in traversing obstacles, towing equipment, or aiding crewmates on challenging terrain gives it significant utility during the trek.  \n\n#### 10. **Signal Flares**  \n**Justification:** Signal flares may be the only visible way to alert rescuers if the crew nears the rendezvous point but needs assistance. They are a secondary method of communication and therefore rank lower than the FM receiver-transmitter.  \n\n#### 11. **Two .45 Caliber Pistols**  \n**Justification:** While firearms have very limited uses on the moon, they could potentially be used as propulsion tools or their discharge as audible signaling. However, their importance is marginal compared to other tools.  \n\n#### 12. **Life Raft**  \n**Justification:** The life raft has little value for its intended purpose but could be repurposed as a makeshift carrier for equipment, extra insulation, or solar radiation shielding. Its uses are far more limited than parachute silk, hence the lower ranking.  \n\n#### 13. **Case of Dehydrated Milk**  \n**Reason for Change:** Moved higher than the magnetic compass due to its potential sustenance. While less practical than food concentrate and requiring water for rehydration (a scarce resource), it still has some survival use in calorie provision.  \n\n#### 14. **Magnetic Compass**  \n**Justification:** Magnetic compasses are completely useless on the moon due to the lack of a lunar magnetic field. There are no navigation benefits, making this item one of the least useful for survival.  \n\n#### 15. **Box of Matches**  \n**Justification:** Matches cannot combust on the moon due to the absence of oxygen in the atmosphere. They offer no survival value, making them the least important item.\n\n---\n\n### Final Ranking:\n1. **Oxygen Tanks**  \n2. **Water**  \n3. **Solar-Powered FM Receiver-Transmitter**  \n4. **Stellar Map**  \n5. **Food Concentrate**  \n6. **First Aid Kit**  \n7. **Parachute Silk**  \n8. **Portable Heating Unit**  \n9. **50 Feet of Nylon Rope**  \n10. **Signal Flares**  \n11. **Two .45 Caliber Pistols**  \n12. **Life Raft**  \n13. **Case of Dehydrated Milk**  \n14. **Magnetic Compass**  \n15. **Box of Matches**\n\n### Summary of Changes:\n- **Parachute Silk** was re-ranked higher due to its versatility in shielding and insulation.  \n- **Case of Dehydrated Milk** is ranked above the **Magnetic Compass** as it has marginal caloric use.  \n- The **Portable Heating Unit** remains important but ranks below **Parachute Silk** due to limited situational reliance, as the space suit generally provides sufficient thermal protection.",
+      "score": 22
+    }
+  ],
+  "final_ranking": [
+    "Oxygen tanks",
+    "Water",
+    "Solar-powered FM receiver-transmitter",
+    "Stellar map",
+    "Food concentrate",
+    "First aid kit",
+    "Parachute silk",
+    "Portable heating unit",
+    "50 feet of nylon rope",
+    "Signal flares",
+    "Two .45 caliber pistols",
+    "Life raft",
+    "Magnetic compass",
+    "Box of matches",
+    "One case of dehydrated milk"
+  ],
+  "nasa_ranking": [
+    "Oxygen tanks",
+    "Water",
+    "Stellar map",
+    "Food concentrate",
+    "Solar-powered FM receiver-transmitter",
+    "50 feet of nylon rope",
+    "First aid kit",
+    "Parachute silk",
+    "Life raft",
+    "Signal flares",
+    "Two .45 caliber pistols",
+    "One case of dehydrated milk",
+    "Portable heating unit",
+    "Magnetic compass",
+    "Box of matches"
+  ],
+  "score": 22,
+  "teamwork_metrics": {
+    "mutual_monitoring": {
+      "total_monitoring_exchanges": 0,
+      "total_issues_detected": 0,
+      "avg_issues_per_exchange": 0.0,
+      "issue_types": {},
+      "issue_resolution_rate": 0.0,
+      "team_monitoring_effectiveness": "low"
+    }
+  }
+}

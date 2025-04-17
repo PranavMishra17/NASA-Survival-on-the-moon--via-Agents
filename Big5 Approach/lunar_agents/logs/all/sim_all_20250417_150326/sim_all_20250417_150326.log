@@ -1,0 +1,19 @@
+2025-04-17 15:03:26,564 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Event logged: simulation_started
+2025-04-17 15:03:26,565 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - SimulationLogger initialized for sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 with configuration: leadership_closed_loop_mutual_monitoring_shared_mental_model
+2025-04-17 15:03:27,402 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Initialized simulation sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326
+2025-04-17 15:03:27,415 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO -   Team Leadership: True
+2025-04-17 15:03:27,415 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO -   Closed-loop Communication: True
+2025-04-17 15:03:27,415 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO -   Mutual Performance Monitoring: True
+2025-04-17 15:03:27,415 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO -   Shared Mental Model: True
+2025-04-17 15:03:27,416 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Starting sequential refinement process
+2025-04-17 15:03:27,420 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Event logged: simulation_started
+2025-04-17 15:03:27,420 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - SimulationLogger initialized for sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 with configuration: leadership_closed_loop_mutual_monitoring_shared_mental_model
+2025-04-17 15:03:27,420 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Starting with Resource agent
+2025-04-17 15:03:33,530 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Main loop: sequential - initial_ranking - resource
+2025-04-17 15:03:33,534 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Iteration 1: science agent refining ranking
+2025-04-17 15:03:44,670 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Main loop: sequential - science_refinement_1 - science
+2025-04-17 15:03:44,670 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Consensus reached at iteration 1 with difference score 2
+2025-04-17 15:03:44,670 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Mutual monitoring effectiveness: low
+2025-04-17 15:03:44,681 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Shared mental model effectiveness: medium
+2025-04-17 15:03:44,681 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Sequential refinement completed with score: 28
+2025-04-17 15:03:44,682 - simulation.sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326 - INFO - Results saved to output\sim_leadership_closed_loop_mutual_monitoring_shared_mental_model_20250417_150326_results.json

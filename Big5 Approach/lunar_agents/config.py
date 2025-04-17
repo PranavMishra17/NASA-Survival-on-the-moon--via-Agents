@@ -14,7 +14,7 @@ AZURE_DEPLOYMENT = "VARELab-GPT4o"
 AZURE_API_VERSION = "2024-08-01-preview"
 
 # Model settings
-TEMPERATURE = 1
+TEMPERATURE = 0.5
 MAX_TOKENS = 1500
 
 # Simulation settings

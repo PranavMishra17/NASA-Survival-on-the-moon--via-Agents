@@ -1,0 +1,18 @@
+2025-04-17 13:13:58,443 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Event logged: simulation_started
+2025-04-17 13:13:58,444 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - SimulationLogger initialized for sim_mutual_monitoring_20250417_131358 with configuration: mutual_monitoring
+2025-04-17 13:13:59,334 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Initialized simulation sim_mutual_monitoring_20250417_131358
+2025-04-17 13:13:59,335 - simulation.sim_mutual_monitoring_20250417_131358 - INFO -   Team Leadership: False
+2025-04-17 13:13:59,335 - simulation.sim_mutual_monitoring_20250417_131358 - INFO -   Closed-loop Communication: False
+2025-04-17 13:13:59,344 - simulation.sim_mutual_monitoring_20250417_131358 - INFO -   Mutual Performance Monitoring: True
+2025-04-17 13:13:59,344 - simulation.sim_mutual_monitoring_20250417_131358 - INFO -   Shared Mental Model: False
+2025-04-17 13:13:59,345 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Starting sequential refinement process
+2025-04-17 13:13:59,346 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Event logged: simulation_started
+2025-04-17 13:13:59,347 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - SimulationLogger initialized for sim_mutual_monitoring_20250417_131358 with configuration: mutual_monitoring
+2025-04-17 13:13:59,347 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Starting with Science agent
+2025-04-17 13:14:10,273 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Main loop: sequential - initial_ranking - science
+2025-04-17 13:14:10,275 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Iteration 1: resource agent refining ranking
+2025-04-17 13:14:24,199 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Main loop: sequential - resource_refinement_1 - resource
+2025-04-17 13:14:24,201 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Consensus reached at iteration 1 with difference score 2
+2025-04-17 13:14:24,203 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Mutual monitoring effectiveness: low
+2025-04-17 13:14:24,204 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Sequential refinement completed with score: 22
+2025-04-17 13:14:24,207 - simulation.sim_mutual_monitoring_20250417_131358 - INFO - Results saved to output\sim_mutual_monitoring_20250417_131358_results.json

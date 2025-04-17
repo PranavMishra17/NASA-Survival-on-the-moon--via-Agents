@@ -1,2 +1,0 @@
-{"event_type": "simulation_started", "timestamp": "2025-04-06T18:45:41.708192", "data": {"simulation_id": "sim_baseline_20250406_184541", "timestamp": "2025-04-06T18:45:41.708192", "config": {"use_team_leadership": false, "use_closed_loop_comm": false}, "config_name": "baseline"}}
-{"event_type": "simulation_started", "timestamp": "2025-04-06T18:45:42.963606", "data": {"simulation_id": "sim_baseline_20250406_184541", "timestamp": "2025-04-06T18:45:42.963606", "config": {"use_team_leadership": false, "use_closed_loop_comm": false}, "config_name": "baseline"}}

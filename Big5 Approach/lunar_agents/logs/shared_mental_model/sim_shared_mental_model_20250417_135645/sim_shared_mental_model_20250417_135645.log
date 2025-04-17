@@ -1,0 +1,18 @@
+2025-04-17 13:56:45,836 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Event logged: simulation_started
+2025-04-17 13:56:45,837 - simulation.sim_shared_mental_model_20250417_135645 - INFO - SimulationLogger initialized for sim_shared_mental_model_20250417_135645 with configuration: shared_mental_model
+2025-04-17 13:56:46,682 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Initialized simulation sim_shared_mental_model_20250417_135645
+2025-04-17 13:56:46,682 - simulation.sim_shared_mental_model_20250417_135645 - INFO -   Team Leadership: False
+2025-04-17 13:56:46,682 - simulation.sim_shared_mental_model_20250417_135645 - INFO -   Closed-loop Communication: False
+2025-04-17 13:56:46,691 - simulation.sim_shared_mental_model_20250417_135645 - INFO -   Mutual Performance Monitoring: False
+2025-04-17 13:56:46,691 - simulation.sim_shared_mental_model_20250417_135645 - INFO -   Shared Mental Model: True
+2025-04-17 13:56:46,692 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Starting sequential refinement process
+2025-04-17 13:56:46,693 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Event logged: simulation_started
+2025-04-17 13:56:46,694 - simulation.sim_shared_mental_model_20250417_135645 - INFO - SimulationLogger initialized for sim_shared_mental_model_20250417_135645 with configuration: shared_mental_model
+2025-04-17 13:56:46,694 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Starting with Science agent
+2025-04-17 13:56:55,370 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Main loop: sequential - initial_ranking - science
+2025-04-17 13:56:55,372 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Iteration 1: resource agent refining ranking
+2025-04-17 13:57:08,696 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Main loop: sequential - resource_refinement_1 - resource
+2025-04-17 13:57:08,700 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Consensus reached at iteration 1 with difference score 4
+2025-04-17 13:57:08,701 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Shared mental model effectiveness: low
+2025-04-17 13:57:08,703 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Sequential refinement completed with score: 20
+2025-04-17 13:57:08,707 - simulation.sim_shared_mental_model_20250417_135645 - INFO - Results saved to output\sim_shared_mental_model_20250417_135645_results.json

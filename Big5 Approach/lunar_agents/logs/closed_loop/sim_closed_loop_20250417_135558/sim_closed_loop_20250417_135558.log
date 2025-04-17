@@ -1,0 +1,17 @@
+2025-04-17 13:55:58,856 - simulation.sim_closed_loop_20250417_135558 - INFO - Event logged: simulation_started
+2025-04-17 13:55:58,857 - simulation.sim_closed_loop_20250417_135558 - INFO - SimulationLogger initialized for sim_closed_loop_20250417_135558 with configuration: closed_loop
+2025-04-17 13:55:59,697 - simulation.sim_closed_loop_20250417_135558 - INFO - Initialized simulation sim_closed_loop_20250417_135558
+2025-04-17 13:55:59,697 - simulation.sim_closed_loop_20250417_135558 - INFO -   Team Leadership: False
+2025-04-17 13:55:59,697 - simulation.sim_closed_loop_20250417_135558 - INFO -   Closed-loop Communication: True
+2025-04-17 13:55:59,697 - simulation.sim_closed_loop_20250417_135558 - INFO -   Mutual Performance Monitoring: False
+2025-04-17 13:55:59,706 - simulation.sim_closed_loop_20250417_135558 - INFO -   Shared Mental Model: False
+2025-04-17 13:55:59,707 - simulation.sim_closed_loop_20250417_135558 - INFO - Starting sequential refinement process
+2025-04-17 13:55:59,709 - simulation.sim_closed_loop_20250417_135558 - INFO - Event logged: simulation_started
+2025-04-17 13:55:59,709 - simulation.sim_closed_loop_20250417_135558 - INFO - SimulationLogger initialized for sim_closed_loop_20250417_135558 with configuration: closed_loop
+2025-04-17 13:55:59,710 - simulation.sim_closed_loop_20250417_135558 - INFO - Starting with Resource agent
+2025-04-17 13:56:08,900 - simulation.sim_closed_loop_20250417_135558 - INFO - Main loop: sequential - initial_ranking - resource
+2025-04-17 13:56:08,901 - simulation.sim_closed_loop_20250417_135558 - INFO - Iteration 1: science agent refining ranking
+2025-04-17 13:56:24,435 - simulation.sim_closed_loop_20250417_135558 - INFO - Main loop: sequential - science_refinement_1 - science
+2025-04-17 13:56:24,436 - simulation.sim_closed_loop_20250417_135558 - INFO - Consensus reached at iteration 1 with difference score 10
+2025-04-17 13:56:24,436 - simulation.sim_closed_loop_20250417_135558 - INFO - Sequential refinement completed with score: 20
+2025-04-17 13:56:24,438 - simulation.sim_closed_loop_20250417_135558 - INFO - Results saved to output\sim_closed_loop_20250417_135558_results.json

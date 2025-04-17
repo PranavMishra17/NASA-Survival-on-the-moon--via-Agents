@@ -24,20 +24,20 @@ class TeamMember(Agent):
     def _initialize_scientific_knowledge(self):
         """Initialize scientific knowledge about the lunar environment."""
         self.add_to_knowledge_base("lunar_environment", {
-            "atmosphere": "No atmosphere, vacuum conditions",
-            "temperature": "Extreme variations (+250°F in sunlight, -250°F in shadow)",
-            "gravity": "1/6 of Earth's gravity",
-            "radiation": "No protection from solar radiation",
-            "day_length": "14 Earth days of daylight, 14 Earth days of darkness",
-            "terrain": "Uneven surfaces, craters, dust"
+            #"atmosphere": "No atmosphere, vacuum conditions",
+            #"temperature": "Extreme variations (+250°F in sunlight, -250°F in shadow)",
+            #"gravity": "1/6 of Earth's gravity",
+            #"radiation": "No protection from solar radiation",
+            #"day_length": "14 Earth days of daylight, 14 Earth days of darkness",
+            #"terrain": "Uneven surfaces, craters, dust"
         })
         
         self.add_to_knowledge_base("survival_principles", {
-            "priorities": "Oxygen, water, shelter/temperature regulation, food",
-            "navigation": "Stellar navigation is most reliable without magnetic field",
-            "communication": "No atmosphere to carry sound waves, radio required",
-            "movement": "Conserve energy and resources during trek",
-            "physical_effects": "Vacuum effects on human body, radiation exposure risks"
+            #"priorities": "Oxygen, water, shelter/temperature regulation, food",
+            #"navigation": "Stellar navigation is most reliable without magnetic field",
+            #"communication": "No atmosphere to carry sound waves, radio required",
+            #"movement": "Conserve energy and resources during trek",
+            #"physical_effects": "Vacuum effects on human body, radiation exposure risks"
         })
     
     def analyze_items(self) -> str:
@@ -171,80 +171,80 @@ class ModularAgent(Agent):
         """Initialize scientific knowledge about the lunar environment."""
         # Detailed lunar environment knowledge
         self.add_to_knowledge_base("lunar_environment", {
-            "atmosphere": "No atmosphere, complete vacuum conditions which affects heat distribution, sound transmission, and protection from radiation",
-            "temperature": "Extreme variations (+250°F in direct sunlight, -250°F in shadow) with rapid shifts due to lack of atmospheric insulation",
-            "gravity": "1/6 of Earth's gravity (0.166g), requiring less energy for movement but also less stability",
-            "radiation": "No atmospheric or magnetic field protection from solar radiation, cosmic rays, and solar flares",
-            "day_length": "14 Earth days of daylight followed by 14 Earth days of darkness due to lunar rotation",
-            "terrain": "Uneven surfaces, craters, regolith (fine dust) that clings electrostatically to equipment and can damage seals",
-            "visibility": "High contrast between light and shadow areas, causing visual perception difficulties"
+            #"atmosphere": "No atmosphere, complete vacuum conditions which affects heat distribution, sound transmission, and protection from radiation",
+            #"temperature": "Extreme variations (+250°F in direct sunlight, -250°F in shadow) with rapid shifts due to lack of atmospheric insulation",
+            #"gravity": "1/6 of Earth's gravity (0.166g), requiring less energy for movement but also less stability",
+            #"radiation": "No atmospheric or magnetic field protection from solar radiation, cosmic rays, and solar flares",
+            #"day_length": "14 Earth days of daylight followed by 14 Earth days of darkness due to lunar rotation",
+            #"terrain": "Uneven surfaces, craters, regolith (fine dust) that clings electrostatically to equipment and can damage seals",
+            #"visibility": "High contrast between light and shadow areas, causing visual perception difficulties"
         })
         
         # Detailed survival principles
         self.add_to_knowledge_base("survival_principles", {
-            "oxygen": "Absolutely critical; no natural oxygen on lunar surface; survival impossible beyond minutes without it",
-            "water": "Critical for hydration, cooling, and preventing rapid body fluid loss in vacuum environment",
-            "temperature_regulation": "Essential to manage temperature extremes from solar radiation and vacuum conditions",
-            "navigation": "Stellar navigation most reliable; no magnetic field for compass; landmarks and maps crucial",
-            "communication": "No atmosphere to carry sound; radio or visual signals required for distance communication",
-            "radiation_protection": "Necessary to prevent acute radiation syndrome and long-term cell damage",
-            "movement_efficiency": "Important to minimize oxygen consumption and avoid exhaustion in spacesuits"
+            #"oxygen": "Absolutely critical; no natural oxygen on lunar surface; survival impossible beyond minutes without it",
+            #"water": "Critical for hydration, cooling, and preventing rapid body fluid loss in vacuum environment",
+            #"temperature_regulation": "Essential to manage temperature extremes from solar radiation and vacuum conditions",
+            #"navigation": "Stellar navigation most reliable; no magnetic field for compass; landmarks and maps crucial",
+            #"communication": "No atmosphere to carry sound; radio or visual signals required for distance communication",
+            #"radiation_protection": "Necessary to prevent acute radiation syndrome and long-term cell damage",
+            #"movement_efficiency": "Important to minimize oxygen consumption and avoid exhaustion in spacesuits"
         })
         
         # Add scientific reasoning methods
         self.add_to_knowledge_base("scientific_reasoning", {
-            "empirical_analysis": "Evaluating items based on known physical properties and lunar conditions",
-            "survival_hierarchy": "Prioritizing items based on Maslow's hierarchy applied to lunar survival",
-            "resource_criticality": "Assessing which resources cannot be substituted or lived without",
-            "functional_analysis": "Evaluating multiple uses and adaptability of items in emergency situations",
-            "risk_assessment": "Calculating probability and impact of various failure scenarios"
+            #"empirical_analysis": "Evaluating items based on known physical properties and lunar conditions",
+            #"survival_hierarchy": "Prioritizing items based on Maslow's hierarchy applied to lunar survival",
+            #"resource_criticality": "Assessing which resources cannot be substituted or lived without",
+            #"functional_analysis": "Evaluating multiple uses and adaptability of items in emergency situations",
+            #"risk_assessment": "Calculating probability and impact of various failure scenarios"
         })
     
     def _initialize_resource_knowledge(self):
         """Initialize knowledge about resource management for lunar survival."""
         # Resource management principles
         self.add_to_knowledge_base("resource_management", {
-            "prioritization": "Allocating limited resources to highest survival value tasks",
-            "conservation": "Techniques to minimize consumption of non-renewable resources",
-            "repurposing": "Using equipment for alternative purposes when needed",
-            "redundancy": "Ensuring critical functions have backups",
-            "synergy": "Combining resources to increase overall effectiveness"
+            #"prioritization": "Allocating limited resources to highest survival value tasks",
+            #"conservation": "Techniques to minimize consumption of non-renewable resources",
+            #"repurposing": "Using equipment for alternative purposes when needed",
+            #"redundancy": "Ensuring critical functions have backups",
+            #"synergy": "Combining resources to increase overall effectiveness"
         })
         
         # Item utility assessment
         self.add_to_knowledge_base("item_utility", {
-            "primary_function": "Original intended use of each item",
-            "secondary_functions": "Alternative creative uses in emergency situations",
-            "complementary_items": "How items can work together for greater effect",
-            "weight_to_utility_ratio": "Value considering transport effort required",
-            "durability": "Expected lifespan in harsh lunar conditions"
+            #"primary_function": "Original intended use of each item",
+            #"secondary_functions": "Alternative creative uses in emergency situations",
+            #"complementary_items": "How items can work together for greater effect",
+            #"weight_to_utility_ratio": "Value considering transport effort required",
+            #"durability": "Expected lifespan in harsh lunar conditions"
         })
         
         # Basic lunar environment knowledge (less detailed than science specialist)
         self.add_to_knowledge_base("lunar_environment", {
-            "atmosphere": "No atmosphere, vacuum conditions",
-            "temperature": "Extreme variations between sunlight and shadow",
-            "gravity": "1/6 of Earth's gravity",
-            "radiation": "High radiation exposure risk",
-            "terrain": "Dusty, cratered surface challenging for movement"
+            #"atmosphere": "No atmosphere, vacuum conditions",
+            #"temperature": "Extreme variations between sunlight and shadow",
+            #"gravity": "1/6 of Earth's gravity",
+            #"radiation": "High radiation exposure risk",
+            #"terrain": "Dusty, cratered surface challenging for movement"
         })
     
     def _initialize_general_knowledge(self):
         """Initialize general knowledge for non-specialized agents."""
         # Basic lunar environment knowledge
         self.add_to_knowledge_base("lunar_environment", {
-            "atmosphere": "No atmosphere, vacuum conditions",
-            "temperature": "Extreme temperature variations",
-            "gravity": "Low gravity environment",
-            "radiation": "Exposure to solar radiation",
-            "terrain": "Dusty, uneven surfaces"
+            #"atmosphere": "No atmosphere, vacuum conditions",
+            #"temperature": "Extreme temperature variations",
+            #"gravity": "Low gravity environment",
+            #"radiation": "Exposure to solar radiation",
+            #"terrain": "Dusty, uneven surfaces"
         })
         
         # Basic survival principles
         self.add_to_knowledge_base("survival_principles", {
-            "priorities": "Oxygen, water, shelter/temperature, food",
-            "navigation": "Finding way to rendezvous point",
-            "conservation": "Conserving limited resources"
+            #"priorities": "Oxygen, water, shelter/temperature, food",
+            #"navigation": "Finding way to rendezvous point",
+            #"conservation": "Conserving limited resources"
         })
     
     def share_knowledge(self, other_agent):
